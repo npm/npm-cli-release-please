@@ -13,7 +13,9 @@
     "postversion": "npm publish",
     "prepublishOnly": "git push origin --follow-tags",
     "snap": "tap",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "test-all": "npm run test -ws -iwr",
+    "lint-all": "npm run lint -ws -iwr"
   },
   "repository": {
     "type": "git",
