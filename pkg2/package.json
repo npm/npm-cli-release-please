@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "github:npm/template-oss#0473e86",
+    "@npmcli/template-oss": "github:npm/template-oss#lk/release-please-single",
     "tap": "^16.3.0"
   }
 }
