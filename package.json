@@ -45,5 +45,9 @@
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "3.7.1"
+  },
+  "dependencies": {
+    "pkg1": "^1.0.0",
+    "pkg2": "^1.0.0"
   }
 }
