@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -64,7 +64,7 @@
     ]
   },
   "dependencies": {
-    "pkg1": "^1.0.0",
-    "pkg2": "^1.0.0"
+    "pkg1": "^2.0.0",
+    "pkg2": "^1.1.0"
   }
 }
