@@ -16,6 +16,8 @@
 !/CHANGELOG*
 !/.eslintrc.js
 !/.gitignore
+!/AUTHORS
 !/bin/
 !/lib/
 !/package.json
+!/package-lock.json

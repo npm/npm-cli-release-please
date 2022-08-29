@@ -20,6 +20,7 @@
 !/.gitignore
 !/.npmrc
 !/.release-please-manifest.json
+!/AUTHORS
 !/CODE_OF_CONDUCT.md
 !/SECURITY.md
 !/bin/
@@ -28,3 +29,4 @@
 !/pkg1
 !/pkg2
 !/release-please-config.json
+!/package-lock.json

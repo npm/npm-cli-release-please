@@ -29,7 +29,8 @@
   "homepage": "https://github.com/npm/npm-cli-release-please#readme",
   "files": [
     "bin/",
-    "lib/"
+    "lib/",
+    "AUTHORS"
   ],
   "engines": {
     "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
@@ -40,7 +41,7 @@
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "github:npm/template-oss#smoke-test",
+    "@npmcli/template-oss": "github:npm/template-oss#0473e86",
     "tap": "^16.3.0"
   }
 }

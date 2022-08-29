@@ -27,12 +27,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: npm
       - name: Update npm to latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund
-      - id: release
+      - name: Release Please
+        id: release
         run: npx --offline template-oss-release-please
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   post-pr:
     needs: release-please
@@ -49,6 +53,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: npm
       - name: Update npm to latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
@@ -74,6 +79,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: npm
       - name: Update npm to latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
