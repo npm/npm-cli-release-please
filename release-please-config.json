@@ -31,5 +31,8 @@
     },
     "pkg1": {},
     "pkg2": {}
-  }
+  },
+  "plugins": [
+    "node-workspace"
+  ]
 }
