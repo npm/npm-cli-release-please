@@ -34,5 +34,6 @@
   },
   "plugins": [
     "node-workspace"
-  ]
+  ],
+  "exclude-packages-from-root": true
 }
