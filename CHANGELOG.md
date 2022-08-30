@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2](https://github.com/npm/npm-cli-release-please/compare/v1.0.1...v1.0.2) (2022-08-30)
+
+### Bug Fixes
+
+  * [`6372f1d`](https://github.com/npm/npm-cli-release-please/commit/6372f1d5ee864d68d422859a5a0dd3c93f070c23) fix: root date (@lukekarrys)
+
 ## [1.0.1](https://github.com/npm/npm-cli-release-please/compare/v1.0.0...v1.0.1) (2022-08-29)
 
 ### Bug Fixes
