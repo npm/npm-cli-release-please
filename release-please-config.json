@@ -25,10 +25,10 @@
       "hidden": true
     }
   ],
-  "prerelease": true,
   "packages": {
     ".": {
-      "package-name": ""
+      "package-name": "",
+      "prerelease": true
     },
     "pkg1": {},
     "pkg2": {}
