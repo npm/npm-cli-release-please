@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/npm/npm-cli-release-please/compare/v1.0.2...v2.0.0) (2022-08-30)
+
+### ⚠ BREAKING CHANGES
+
+* this new date is a big deal and it breaks everything
+
+### Features
+
+  * [`e2374a8`](https://github.com/npm/npm-cli-release-please/commit/e2374a8c95b172557a9f4df0a64947d8d6caca63) feat: a new date (@lukekarrys)
+
+### Bug Fixes
+
+  * [`172263f`](https://github.com/npm/npm-cli-release-please/commit/172263fcda0ec597bb142d3ed85bee43dab2589c) fix: a date (@lukekarrys)
+
 ## [1.0.2](https://github.com/npm/npm-cli-release-please/compare/v1.0.1...v1.0.2) (2022-08-30)
 
 ### Bug Fixes
