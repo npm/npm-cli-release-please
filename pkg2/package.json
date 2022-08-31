@@ -1,6 +1,6 @@
 {
   "name": "pkg2",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -46,6 +46,6 @@
   },
   "date": "1661916030",
   "dependencies": {
-    "pkg3": "^1.0.0"
+    "pkg3": "^1.1.0"
   }
 }

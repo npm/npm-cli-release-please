@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1.0.0...pkg3-v1.1.0) (2022-08-31)
+
+### Features
+
+  * [`530e9ea`](https://github.com/npm/npm-cli-release-please/commit/530e9ea1e82bf526c5f710e803412833073593be) feat: add dependencies (@lukekarrys)
+
 ## [2.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1.2.0...pkg2-v2.0.0) (2022-08-31)
 
 ### ⚠ BREAKING CHANGES
