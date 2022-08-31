@@ -31,13 +31,14 @@
       "prerelease": true
     },
     "pkg1": {},
-    "pkg2": {}
+    "pkg2": {},
+    "pkg3": {}
   },
   "plugins": [
     "node-workspace",
     "workspace-deps"
   ],
   "exclude-packages-from-root": true,
-  "group-pull-request-title-pattern": "chore: release ${version}",
+  "group-pull-request-title-pattern": "Release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}"
 }
