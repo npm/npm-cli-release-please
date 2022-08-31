@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.0.0-pre.3](https://github.com/npm/npm-cli-release-please/compare/v3.0.0-pre.2...v3.0.0-pre.3) (2022-08-31)
+
+### Features
+
+  * [`c6d3e95`](https://github.com/npm/npm-cli-release-please/commit/c6d3e95fb0878a8c4a628019f5d92dbb6df92641) feat: new date (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * pkg1 bumped from ^4.0.0 to ^4.0.1
+    * pkg2 bumped from ^3.0.0 to ^3.0.1
+
 ## [3.0.0-pre.2](https://github.com/npm/npm-cli-release-please/compare/v3.0.0-pre.1...v3.0.0-pre.2) (2022-08-31)
 
 ### Features

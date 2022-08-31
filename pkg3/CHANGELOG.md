@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1.1.0...pkg3-v1.1.1) (2022-08-31)
+
+### Bug Fixes
+
+  * [`e892c40`](https://github.com/npm/npm-cli-release-please/commit/e892c4071bc09c1283d4dd6ce2f0fec340994662) fix: new workspace datee (@lukekarrys)
+
 ## [1.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1.0.0...pkg3-v1.1.0) (2022-08-31)
 
 ### Features
