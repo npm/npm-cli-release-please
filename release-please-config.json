@@ -38,5 +38,6 @@
     "workspace-deps"
   ],
   "exclude-packages-from-root": true,
-  "group-pull-request-title-pattern": "Release ${version}"
+  "group-pull-request-title-pattern": "Release ${version}",
+  "pull-request-title-pattern": "Release ${version}"
 }
