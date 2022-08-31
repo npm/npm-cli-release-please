@@ -16,7 +16,7 @@
     "posttest": "npm run lint",
     "test-all": "npm run test -ws -iwr",
     "lint-all": "npm run lint -ws -iwr",
-    "authors": "bash scripts/authors.sh && git add AUTHORS && git commit -m \"chore: update AUTHORS\" || true",
+    "authors": "bash scripts/authors.sh",
     "deps": "bash scripts/deps.sh",
     "rp-pull-request": "npm run deps && npm run authors",
     "rp-release": "echo \"The release is done!\""
