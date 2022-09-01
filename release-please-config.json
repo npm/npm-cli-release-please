@@ -25,7 +25,6 @@
       "hidden": true
     }
   ],
-  "prerelease": true,
   "packages": {
     ".": {
       "package-name": ""
