@@ -44,7 +44,7 @@
     "@npmcli/template-oss": "3.8.0",
     "tap": "^16.3.0"
   },
-  "date": "1661993497",
+  "date": "1661997340",
   "dependencies": {
     "pkg3": "^1.1.1"
   }
