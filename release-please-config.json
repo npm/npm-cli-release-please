@@ -31,7 +31,10 @@
     },
     "pkg1": {},
     "pkg2": {},
-    "pkg3": {}
+    "pkg3": {},
+    "workspaces/arbitrary-name": {},
+    "workspaces/not-the-name": {},
+    "workspaces/pkg6": {}
   },
   "plugins": [
     "node-workspace",

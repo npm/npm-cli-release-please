@@ -32,7 +32,8 @@
   "workspaces": [
     "pkg1",
     "pkg2",
-    "pkg3"
+    "pkg3",
+    "workspaces/*"
   ],
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
@@ -62,9 +63,12 @@
     ]
   },
   "dependencies": {
+    "@npmcli/pkg6": "^1.0.0",
     "abbrev": "^1.1.1",
     "pkg1": "^5.0.0-pre.1",
-    "pkg2": "^4.0.0-pre.1"
+    "pkg2": "^4.0.0-pre.1",
+    "pkg4": "^1.0.0",
+    "pkg5": "^1.0.0"
   },
   "date": "1662006856"
 }

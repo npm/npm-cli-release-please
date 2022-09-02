@@ -1,0 +1,45 @@
+{
+  "name": "pkg4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "lintfix": "npm run lint -- --fix",
+    "snap": "tap",
+    "posttest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm-cli-release-please.git",
+    "directory": "workspaces/not-the-name"
+  },
+  "keywords": [],
+  "author": "GitHub Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/npm-cli-release-please/issues"
+  },
+  "homepage": "https://github.com/npm/npm-cli-release-please#readme",
+  "files": [
+    "bin/",
+    "lib/",
+    "AUTHORS"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "3.8.1"
+  },
+  "devDependencies": {
+    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/template-oss": "3.8.1",
+    "tap": "^16.3.0"
+  },
+  "date": "1662006856"
+}
