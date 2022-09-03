@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.0-pre.1...pkg3-v2.0.0) (2022-09-03)
+
+### Bug Fixes
+
+  * [`af563f1`](https://github.com/npm/npm-cli-release-please/commit/af563f1f6297f9c52bc9b878c57d516bb3682377) fix: ready for release (@lukekarrys)
+
 ## [2.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.0-pre.0...pkg3-v2.0.0-pre.1) (2022-09-01)
 
 ### ⚠ BREAKING CHANGES
