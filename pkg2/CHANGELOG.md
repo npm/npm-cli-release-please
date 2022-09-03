@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v4.0.0-pre.1...pkg2-v4.0.0) (2022-09-03)
+
+### Bug Fixes
+
+  * [`af563f1`](https://github.com/npm/npm-cli-release-please/commit/af563f1f6297f9c52bc9b878c57d516bb3682377) fix: ready for release (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg3 bumped from ^2.0.0-pre.1 to ^2.0.0
+
 ## [4.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v4.0.0-pre.0...pkg2-v4.0.0-pre.1) (2022-09-01)
 
 ### ⚠ BREAKING CHANGES

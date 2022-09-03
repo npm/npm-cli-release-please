@@ -1,6 +1,6 @@
 {
   "name": "pkg1",
-  "version": "5.0.0-pre.1",
+  "version": "5.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
     "@npmcli/template-oss": "3.8.1",
-    "pkg2": "^4.0.0-pre.1",
+    "pkg2": "^4.0.0",
     "tap": "^16.3.0"
   },
   "date": "10"

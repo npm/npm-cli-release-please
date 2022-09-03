@@ -1,5 +1,48 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.0-pre.1...pkg1-v5.0.0) (2022-09-03)
+
+### ⚠ BREAKING CHANGES
+
+* this is a breaking change
+    * more info
+    * more info
+* this is a breaking CHANGE
+    #### more context here
+    - more of this
+    - and this
+    - this
+* hello this is more context more more
+    - more things
+    - more things
+* lots of stuff here \#### this is a special lines i think mofd mofd more more more
+* this is a breaking changes that is multiple lines long does it render altogher
+* it is also a breaking change that will impact a lot of users
+
+### Features
+
+  * [`a403372`](https://github.com/npm/npm-cli-release-please/commit/a4033723d88cd9919374a3a6559d002635581549) feat: breaking context (@lukekarrys)
+  * [`6130f2c`](https://github.com/npm/npm-cli-release-please/commit/6130f2c968308e330c0a511886bdbf3166860b37) feat: a feat (@lukekarrys)
+  * [`f60da13`](https://github.com/npm/npm-cli-release-please/commit/f60da13a24e9db7318d68013c4775b1eb704dc2b) feat: try this (@lukekarrys)
+  * [`9804737`](https://github.com/npm/npm-cli-release-please/commit/9804737ceebde84459d66cac6cab5b17fd7f4df7) feat: this is a breaking change with special markdown (@lukekarrys)
+  * [`968a3ff`](https://github.com/npm/npm-cli-release-please/commit/968a3ff600cede309d8c0d3ba07cb46c565ecd82) feat: how does this render? (@lukekarrys)
+  * [`c0eaa9f`](https://github.com/npm/npm-cli-release-please/commit/c0eaa9f3cca8613438b794118700a5be8e24c859) [#19](https://github.com/npm/npm-cli-release-please/pull/19) feat: a squashed commit via PR (@lukekarrys)
+  * [`b7e347e`](https://github.com/npm/npm-cli-release-please/commit/b7e347e0ad1be89eed89c8f7e0bfe51165335da3) [#18](https://github.com/npm/npm-cli-release-please/pull/18) feat: a rebased commit through a PR (@lukekarrys)
+  * [`d2c84c8`](https://github.com/npm/npm-cli-release-please/commit/d2c84c86bddba97e806176bf09a29d06d414a031) feat: this is very new (@lukekarrys)
+  * [`8266508`](https://github.com/npm/npm-cli-release-please/commit/82665084a1f89869ae4323c3be152ffebd3be03d) feat: a new feature (@lukekarrys)
+
+### Bug Fixes
+
+  * [`500f2f0`](https://github.com/npm/npm-cli-release-please/commit/500f2f0c447cc7f0919cb38c59b5250200ae0a19) fix: things happened (@lukekarrys)
+  * [`af563f1`](https://github.com/npm/npm-cli-release-please/commit/af563f1f6297f9c52bc9b878c57d516bb3682377) fix: ready for release (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * pkg2 bumped from ^4.0.0-pre.1 to ^4.0.0
+
 ## [5.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.0-pre.0...pkg1-v5.0.0-pre.1) (2022-09-01)
 
 ### ⚠ BREAKING CHANGES
