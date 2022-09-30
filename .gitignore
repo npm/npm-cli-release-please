@@ -12,6 +12,7 @@
 !/.gitignore
 !/.npmrc
 !/.release-please-manifest.json
+!/AUTHORS
 !/bin/
 !/CHANGELOG*
 !/CODE_OF_CONDUCT.md
