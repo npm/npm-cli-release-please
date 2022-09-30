@@ -26,15 +26,14 @@
   "homepage": "https://github.com/npm/npm-cli-release-please#readme",
   "files": [
     "bin/",
-    "lib/",
-    "AUTHORS"
+    "lib/"
   ],
   "engines": {
-    "node": ">=16.0.0"
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "3.8.1"
+    "version": "4.4.4"
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
@@ -44,5 +43,11 @@
   "date": "1662006856",
   "dependencies": {
     "@npmcli/pkg3": "^2.0.0"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
   }
 }
