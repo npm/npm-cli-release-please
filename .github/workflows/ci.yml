@@ -35,7 +35,9 @@ jobs:
             os: ubuntu-latest
             shell: bash
         node-version:
-          - 16
+          - 14.17.0
+          - 16.13.0
+          - 18.0.0
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
@@ -90,7 +92,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.x
           cache: npm
       - name: Install npm@latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
@@ -113,11 +115,13 @@ jobs:
           - name: Linux
             os: ubuntu-latest
             shell: bash
-          - name: macOS
-            os: macos-latest
-            shell: bash
         node-version:
-          - 16
+          - 14.17.0
+          - 14.x
+          - 16.13.0
+          - 16.x
+          - 18.0.0
+          - 18.x
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
