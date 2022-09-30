@@ -11,8 +11,8 @@
     "lintfix": "npm run lint -- --fix",
     "snap": "tap",
     "posttest": "npm run lint",
-    "test-all": "npm run test -ws -iwr",
-    "lint-all": "npm run lint -ws -iwr",
+    "test-all": "npm run test -ws -iwr --if-present",
+    "lint-all": "npm run lint -ws -iwr --if-present",
     "authors": "bash scripts/authors.sh",
     "deps": "bash scripts/deps.sh",
     "rp-pull-request": "npm run deps && npm run authors",
@@ -43,6 +43,8 @@
   "files": [
     "bin/",
     "lib/",
+    "bin/",
+    "lib/",
     "AUTHORS"
   ],
   "engines": {
@@ -50,7 +52,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "3.8.1",
+    "version": "4.4.4",
     "lockfile": true,
     "ciVersions": [
       "16"
@@ -70,5 +72,20 @@
     "pkg4": "^1.1.0",
     "pkg5": "^1.1.0"
   },
-  "date": "1662006856"
+  "date": "1662006856",
+  "tap": {
+    "test-ignore": "^(pkg1|pkg2|pkg3|workspaces)/",
+    "nyc-arg": [
+      "--exclude",
+      "pkg1/**",
+      "--exclude",
+      "pkg2/**",
+      "--exclude",
+      "pkg3/**",
+      "--exclude",
+      "workspaces/**",
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  }
 }

@@ -10,6 +10,12 @@ const localConfigs = readdir(__dirname)
 
 module.exports = {
   root: true,
+  ignorePatterns: [
+    'pkg1/**',
+    'pkg2/**',
+    'pkg3/**',
+    'workspaces/**',
+  ],
   extends: [
     '@npmcli',
     ...localConfigs,
