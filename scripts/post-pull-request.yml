@@ -19,7 +19,7 @@ jobs:
         run: git status
       - name: Git status
         run: |
-          npm pkg set touch=$(echo $RANDOM)
+          npm pkg set touch=$RANDOM
           git add .
           git commit -am "chore: touch file"
           git push 
