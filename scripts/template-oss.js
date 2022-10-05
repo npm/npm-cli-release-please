@@ -5,4 +5,9 @@ module.exports = {
   allowPaths: [
     '/AUTHORS',
   ],
+  rootRepo: {
+    add: {
+      '.github/workflows/post-pull-request.yml': './post-pull-request.yml',
+    },
+  },
 }
