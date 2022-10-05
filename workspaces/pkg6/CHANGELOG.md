@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.1.0...pkg6-v1.2.0) (2022-10-05)
+
+### Features
+
+* [`ab9d91a`](https://github.com/npm/npm-cli-release-please/commit/ab9d91af187e4f2d5dabb5f6b50d1bdc851ddfd8) this is only a commit to a workspace (@lukekarrys)
+
 ## [1.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.0.0...pkg6-v1.1.0) (2022-09-03)
 
 ### Features

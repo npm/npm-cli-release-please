@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.1](https://github.com/npm/npm-cli-release-please/compare/v3.0.0...v3.0.1) (2022-10-05)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.1.0...pkg6-v1.2.0): `@npmcli/pkg6@1.2.0`
+
 ## [3.0.0](https://github.com/npm/npm-cli-release-please/compare/v3.0.0-pre.5...v3.0.0) (2022-09-03)
 
 ### Features
