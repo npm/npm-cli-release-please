@@ -23,6 +23,7 @@ jobs:
     steps:
       - name: Get Workflow Job
         uses: actions/github-script@v6
+        result-encoding: string
 
         id: workflow-job
         with:
@@ -106,6 +107,7 @@ jobs:
     steps:
       - name: Get Workflow Job
         uses: actions/github-script@v6
+        result-encoding: string
 
         id: workflow-job
         env:
