@@ -51,7 +51,7 @@ jobs:
           name: Lint All
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -137,7 +137,7 @@ jobs:
           name: Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:

@@ -117,7 +117,7 @@ jobs:
           name: Release
           sha: ${{ steps.release.outputs.pr-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
 
   update:
     needs: release
@@ -197,7 +197,7 @@ jobs:
           name: Release
           sha: ${{ steps.commit.outputs.sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.3.1
         if: always()
