@@ -35,7 +35,8 @@ jobs:
             })
             console.log(data)
             console.log(data.jobs.map(j => j.name))
-            const jobName = `Lint All${process.env.JOB_NAME}`
+            const { JOB_NAME = '' } = process.env
+            const jobName = `Lint All${JOB_NAME}`
             console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
@@ -119,7 +120,8 @@ jobs:
             })
             console.log(data)
             console.log(data.jobs.map(j => j.name))
-            const jobName = `Test All${process.env.JOB_NAME}`
+            const { JOB_NAME = '' } = process.env
+            const jobName = `Test All${JOB_NAME}`
             console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
