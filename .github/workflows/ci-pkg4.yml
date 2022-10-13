@@ -95,9 +95,9 @@ jobs:
       - name: Install Dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Lint
-        run: npm run lint --ignore-scripts
+        run: npm run lint --ignore-scripts -w pkg4
       - name: Post Lint
-        run: npm run postlint --ignore-scripts
+        run: npm run postlint --ignore-scripts -w pkg4
 
   test:
     name: Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
