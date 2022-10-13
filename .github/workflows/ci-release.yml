@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        id: workflow-job-${{ inputs.check-sha }}
+        id: workflow-job
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
@@ -45,7 +45,7 @@ jobs:
           name: Lint All
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ inputs.check-sha }}.outputs.result }}"}
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -101,7 +101,7 @@ jobs:
     steps:
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        id: workflow-job-${{ inputs.check-sha }}
+        id: workflow-job
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
@@ -123,7 +123,7 @@ jobs:
           name: Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ inputs.check-sha }}.outputs.result }}"}
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:

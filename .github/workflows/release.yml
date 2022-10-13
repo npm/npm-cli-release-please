@@ -88,7 +88,7 @@ jobs:
             return commentId
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        id: workflow-job-${{ steps.release.outputs.pr-sha }}
+        id: workflow-job
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
@@ -110,7 +110,7 @@ jobs:
           name: Release
           sha: ${{ steps.release.outputs.pr-sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ steps.release.outputs.pr-sha }}.outputs.result }}"}
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
 
   update:
     needs: release
@@ -162,7 +162,7 @@ jobs:
           echo "::set-output  name=sha::$(git rev-parse HEAD)"
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        id: workflow-job-${{ steps.commit.outputs.sha }}
+        id: workflow-job
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
@@ -184,7 +184,7 @@ jobs:
           name: Release
           sha: ${{ steps.commit.outputs.sha }}
           output: |
-            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ steps.commit.outputs.sha }}.outputs.result }}"}
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job.outputs.result }}"}
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.3.1
         if: always()

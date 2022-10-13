@@ -33,12 +33,12 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.5.1",
+    "version": "1.0.0-a287b7e08744ee07dce3a2d86d2f181b97dc8c39",
     "content": "../../scripts/template-oss.js"
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "file:../../scripts/npmcli-template-oss-4.5.1.tgz",
+    "@npmcli/template-oss": "file:../../scripts/template-oss.tgz",
     "tap": "^16.3.0"
   },
   "date": "1662006856",
