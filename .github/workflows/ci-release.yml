@@ -21,6 +21,20 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Get Workflow Job
+        uses: actions/github-script@v6
+        id: workflow-job-${{ inputs.check-sha }}
+        with:
+          script: |
+            const { data } = await github.rest.actions.listJobsForWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+              run_id: context.runId,
+              per_page: 100
+            })
+            const jobName = 'Lint All'
+            const job = data.jobs.filter(j => j.name === jobName)
+            return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -30,12 +44,8 @@ jobs:
           status: in_progress
           name: Lint All
           sha: ${{ inputs.check-sha }}
-          # XXX: this does not work when using the default GITHUB_TOKEN.
-          # Instead we post the main job url to the PR as a comment which
-          # will link to all the other checks. To work around this we would
-          # need to create a GitHub that would create on-demand tokens.
-          # https://github.com/LouisBrunner/checks-action/issues/18
-          # details_url:
+          output: |
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ inputs.check-sha }}.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -89,6 +99,20 @@ jobs:
       run:
         shell: ${{ matrix.platform.shell }}
     steps:
+      - name: Get Workflow Job
+        uses: actions/github-script@v6
+        id: workflow-job-${{ inputs.check-sha }}
+        with:
+          script: |
+            const { data } = await github.rest.actions.listJobsForWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+              run_id: context.runId,
+              per_page: 100
+            })
+            const jobName = 'Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}'
+            const job = data.jobs.filter(j => j.name === jobName)
+            return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -98,12 +122,8 @@ jobs:
           status: in_progress
           name: Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
           sha: ${{ inputs.check-sha }}
-          # XXX: this does not work when using the default GITHUB_TOKEN.
-          # Instead we post the main job url to the PR as a comment which
-          # will link to all the other checks. To work around this we would
-          # need to create a GitHub that would create on-demand tokens.
-          # https://github.com/LouisBrunner/checks-action/issues/18
-          # details_url:
+          output: |
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ inputs.check-sha }}.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:

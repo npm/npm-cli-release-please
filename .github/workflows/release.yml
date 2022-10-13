@@ -3,6 +3,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -52,17 +53,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx --offline template-oss-release-please ${{ github.ref_name }}
+          npx --offline template-oss-release-please ${{ github.ref_name }} ${{ github.event_name }}
       - name: Post Pull Request Comment
         if: steps.release.outputs.pr-number
         uses: actions/github-script@v6
         id: pr-comment
         env:
           PR_NUMBER: ${{ steps.release.outputs.pr-number }}
+          REF_NAME: ${{ github.ref_name }}
         with:
           script: |
+            const { REF_NAME, PR_NUMBER } = process.env
             const repo = { owner: context.repo.owner, repo: context.repo.repo }
-            const issue = { ...repo, issue_number: process.env.PR_NUMBER }
+            const issue = { ...repo, issue_number: PR_NUMBER }
 
             const { data: workflow } = await github.rest.actions.getWorkflowRun({ ...repo, run_id: context.runId })
 
@@ -72,6 +75,9 @@ jobs:
             let commentId = comments?.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith(body))?.id
 
             body += `- Release workflow run: ${workflow.html_url}`
+            body += `- This PR will be updated for every non-\`chore:\` commit that is pushed to ${REF_NAME}. To force it to run after a \`chore:\` commit:`
+            body += `  - Push the \`chore:\` commit to ${REF_NAME}`
+            body += `  - Run \`gh workflow run release.yml -r ${REF_NAME}\``
             if (commentId) {
               await github.rest.issues.updateComment({ ...repo, comment_id: commentId, body })
             } else {
@@ -80,6 +86,20 @@ jobs:
             }
 
             return commentId
+      - name: Get Workflow Job
+        uses: actions/github-script@v6
+        id: workflow-job-${{ steps.release.outputs.pr-sha }}
+        with:
+          script: |
+            const { data } = await github.rest.actions.listJobsForWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+              run_id: context.runId,
+              per_page: 100
+            })
+            const jobName = 'Release Please'
+            const job = data.jobs.filter(j => j.name === jobName)
+            return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -89,12 +109,8 @@ jobs:
           status: in_progress
           name: Release
           sha: ${{ steps.release.outputs.pr-sha }}
-          # XXX: this does not work when using the default GITHUB_TOKEN.
-          # Instead we post the main job url to the PR as a comment which
-          # will link to all the other checks. To work around this we would
-          # need to create a GitHub that would create on-demand tokens.
-          # https://github.com/LouisBrunner/checks-action/issues/18
-          # details_url:
+          output: |
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ steps.release.outputs.pr-sha }}.outputs.result }}"}
 
   update:
     needs: release
@@ -144,6 +160,20 @@ jobs:
           git commit --all --amend --no-edit || true
           git push --force-with-lease
           echo "::set-output  name=sha::$(git rev-parse HEAD)"
+      - name: Get Workflow Job
+        uses: actions/github-script@v6
+        id: workflow-job-${{ steps.commit.outputs.sha }}
+        with:
+          script: |
+            const { data } = await github.rest.actions.listJobsForWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+              run_id: context.runId,
+              per_page: 100
+            })
+            const jobName = 'Update - Release'
+            const job = data.jobs.filter(j => j.name === jobName)
+            return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -153,12 +183,8 @@ jobs:
           status: in_progress
           name: Release
           sha: ${{ steps.commit.outputs.sha }}
-          # XXX: this does not work when using the default GITHUB_TOKEN.
-          # Instead we post the main job url to the PR as a comment which
-          # will link to all the other checks. To work around this we would
-          # need to create a GitHub that would create on-demand tokens.
-          # https://github.com/LouisBrunner/checks-action/issues/18
-          # details_url:
+          output: |
+            {"summary":"Workflow Job","text_description":"${{ steps.workflow-job-${{ steps.commit.outputs.sha }}.outputs.result }}"}
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.3.1
         if: always()
