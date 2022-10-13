@@ -37,7 +37,7 @@ jobs:
             console.log(data.jobs.map(j => j.name))
             const jobName = `Lint All${process.env.JOB_NAME || ''}`
             console.log(jobName)
-            const job = data.jobs.filter(j => j.name.endsWith(jobName))
+            const job = data.jobs.find(j => j.name.endsWith(jobName))
             console.log(job?.html_url)
             return job?.html_url
       - name: Create Check
@@ -122,7 +122,7 @@ jobs:
             console.log(data.jobs.map(j => j.name))
             const jobName = `Test All${process.env.JOB_NAME || ''}`
             console.log(jobName)
-            const job = data.jobs.filter(j => j.name.endsWith(jobName))
+            const job = data.jobs.find(j => j.name.endsWith(jobName))
             console.log(job?.html_url)
             return job?.html_url
       - name: Create Check
