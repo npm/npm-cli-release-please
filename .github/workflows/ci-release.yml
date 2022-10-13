@@ -35,10 +35,10 @@ jobs:
             })
             console.log(data)
             console.log(data.jobs.map(j => j.name))
-            const { JOB_NAME = '' } = process.env
-            const jobName = `Lint All${JOB_NAME}`
+            const jobName = `Lint All${process.env.JOB_NAME || ''}`
             console.log(jobName)
-            const job = data.jobs.filter(j => j.name === jobName)
+            const job = data.jobs.filter(j => j.name.endsWith(jobName))
+            console.log(job?.html_url)
             return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
@@ -120,10 +120,10 @@ jobs:
             })
             console.log(data)
             console.log(data.jobs.map(j => j.name))
-            const { JOB_NAME = '' } = process.env
-            const jobName = `Test All${JOB_NAME}`
+            const jobName = `Test All${process.env.JOB_NAME || ''}`
             console.log(jobName)
-            const job = data.jobs.filter(j => j.name === jobName)
+            const job = data.jobs.filter(j => j.name.endsWith(jobName))
+            console.log(job?.html_url)
             return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
