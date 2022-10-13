@@ -33,7 +33,10 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            const jobName = 'Lint All'
+            console.log(data)
+            console.log(data.jobs.map(j => j.name))
+            const jobName = `Lint All${process.env.JOB_NAME}`
+            console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
       - name: Create Check
@@ -104,6 +107,8 @@ jobs:
         uses: actions/github-script@v6
 
         id: workflow-job
+        env:
+          JOB_NAME: " - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
@@ -112,7 +117,10 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            const jobName = 'Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}'
+            console.log(data)
+            console.log(data.jobs.map(j => j.name))
+            const jobName = `Test All${process.env.JOB_NAME}`
+            console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
       - name: Create Check

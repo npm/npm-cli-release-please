@@ -99,7 +99,10 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            const jobName = 'Release Please'
+            console.log(data)
+            console.log(data.jobs.map(j => j.name))
+            const jobName = `Release${process.env.JOB_NAME}`
+            console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
       - name: Create Check
@@ -174,7 +177,10 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            const jobName = 'Update - Release'
+            console.log(data)
+            console.log(data.jobs.map(j => j.name))
+            const jobName = `Release${process.env.JOB_NAME}`
+            console.log(jobName)
             const job = data.jobs.filter(j => j.name === jobName)
             return job?.html_url
       - name: Create Check
