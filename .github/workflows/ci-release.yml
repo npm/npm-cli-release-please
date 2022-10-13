@@ -28,7 +28,7 @@ jobs:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
               owner: context.repo.owner,
-              repo: context.repo.repo
+              repo: context.repo.repo,
               run_id: context.runId,
               per_page: 100
             })
@@ -106,7 +106,7 @@ jobs:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
               owner: context.repo.owner,
-              repo: context.repo.repo
+              repo: context.repo.repo,
               run_id: context.runId,
               per_page: 100
             })
