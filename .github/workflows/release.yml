@@ -78,6 +78,7 @@ jobs:
             body += `- This PR will be updated for every non-\`chore:\` commit that is pushed to ${REF_NAME}. To force it to run after a \`chore:\` commit:\n`
             body += `  - Push the \`chore:\` commit to ${REF_NAME}\n`
             body += `  - Run \`gh workflow run release.yml -r ${REF_NAME}\``
+
             if (commentId) {
               await github.rest.issues.updateComment({ ...repo, comment_id: commentId, body })
             } else {
