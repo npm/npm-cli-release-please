@@ -76,5 +76,6 @@
       "tap-snapshots/**"
     ]
   },
-  "touch": "22463"
+  "touch": "22463",
+  "touch1": "20668"
 }
