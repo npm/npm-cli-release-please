@@ -89,10 +89,10 @@ jobs:
             return commentId
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        result-encoding: string
         if: steps.release.outputs.pr-number
         id: workflow-job
         with:
+          result-encoding: string
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
               owner: context.repo.owner,
@@ -169,10 +169,10 @@ jobs:
           echo "::set-output  name=sha::$(git rev-parse HEAD)"
       - name: Get Workflow Job
         uses: actions/github-script@v6
-        result-encoding: string
 
         id: workflow-job
         with:
+          result-encoding: string
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
               owner: context.repo.owner,

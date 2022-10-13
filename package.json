@@ -49,7 +49,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "1.0.0-ccc7b307ea2453edc3fa7189f6066edffb7b1143",
+    "version": "1.0.0-7f18f42169348e6eb526843ddcdc0fca939e549d",
     "content": "./scripts/template-oss.js"
   },
   "dependencies": {
