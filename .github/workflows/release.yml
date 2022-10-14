@@ -91,6 +91,9 @@ jobs:
         uses: actions/github-script@v6
         if: steps.release.outputs.pr-number
         id: workflow-job
+        env:
+          JOB_NAME: "Release"
+          MATRIX_NAME: ""
         with:
           result-encoding: string
           script: |
@@ -100,12 +103,9 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            console.log(data)
-            console.log(data.jobs.map(j => j.name))
-            const jobName = `Release Please${process.env.JOB_NAME || ''}`
-            console.log(jobName)
+            const jobName = process.env.JOB_NAME + process.env.MATRIX_NAME
             const job = data.jobs.find(j => j.name.endsWith(jobName))
-            console.log(job?.html_url)
+            console.log(jobName, data.jobs.map(j => j.name), job)
             return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
@@ -171,6 +171,9 @@ jobs:
         uses: actions/github-script@v6
 
         id: workflow-job
+        env:
+          JOB_NAME: "Update - Release"
+          MATRIX_NAME: ""
         with:
           result-encoding: string
           script: |
@@ -180,12 +183,9 @@ jobs:
               run_id: context.runId,
               per_page: 100
             })
-            console.log(data)
-            console.log(data.jobs.map(j => j.name))
-            const jobName = `Update - Release${process.env.JOB_NAME || ''}`
-            console.log(jobName)
+            const jobName = process.env.JOB_NAME + process.env.MATRIX_NAME
             const job = data.jobs.find(j => j.name.endsWith(jobName))
-            console.log(job?.html_url)
+            console.log(jobName, data.jobs.map(j => j.name), job)
             return job?.html_url
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
