@@ -24,23 +24,27 @@ jobs:
       - name: Get Workflow Job
         uses: actions/github-script@v6
 
-        id: workflow-job
+        id: check-summary
         env:
           JOB_NAME: "Lint All"
           MATRIX_NAME: ""
         with:
           result-encoding: string
           script: |
+            const { owner, repo } = context.repo
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner,
+              repo,
               run_id: context.runId,
               per_page: 100
             })
             const jobName = process.env.JOB_NAME + process.env.MATRIX_NAME
             const job = data.jobs.find(j => j.name.endsWith(jobName))
-            console.log(jobName, data.jobs.map(j => j.name), job)
-            return job?.html_url
+            const jobUrl = job?.html_url
+            if (jobUrl) {
+              const shaUrl = `${context.serverUrl}/${owner}/${repo}/commit/${{ inputs.check-sha }}` 
+              return `This check is assosciated with ${shaUrl}.\n\nFor run logs, click here: ${jobUrl}`
+            }
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -51,7 +55,7 @@ jobs:
           name: Lint All
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"${{ steps.check-summary.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -108,23 +112,27 @@ jobs:
       - name: Get Workflow Job
         uses: actions/github-script@v6
 
-        id: workflow-job
+        id: check-summary
         env:
           JOB_NAME: "Test All"
           MATRIX_NAME: " - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
         with:
           result-encoding: string
           script: |
+            const { owner, repo } = context.repo
             const { data } = await github.rest.actions.listJobsForWorkflowRun({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner,
+              repo,
               run_id: context.runId,
               per_page: 100
             })
             const jobName = process.env.JOB_NAME + process.env.MATRIX_NAME
             const job = data.jobs.find(j => j.name.endsWith(jobName))
-            console.log(jobName, data.jobs.map(j => j.name), job)
-            return job?.html_url
+            const jobUrl = job?.html_url
+            if (jobUrl) {
+              const shaUrl = `${context.serverUrl}/${owner}/${repo}/commit/${{ inputs.check-sha }}` 
+              return `This check is assosciated with ${shaUrl}.\n\nFor run logs, click here: ${jobUrl}`
+            }
       - name: Create Check
         uses: LouisBrunner/checks-action@v1.3.1
         id: check
@@ -135,7 +143,7 @@ jobs:
           name: Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
           sha: ${{ inputs.check-sha }}
           output: |
-            {"summary":"For run logs, click here: ${{ steps.workflow-job.outputs.result }}"}
+            {"summary":"${{ steps.check-summary.outputs.result }}"}
       - name: Checkout
         uses: actions/checkout@v3
         with:
