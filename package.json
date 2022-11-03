@@ -36,8 +36,8 @@
     "workspaces/*"
   ],
   "devDependencies": {
-    "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "4.5.1",
+    "@npmcli/eslint-config": "^4.0.0",
+    "@npmcli/template-oss": "4.8.0",
     "tap": "^16.3.0"
   },
   "files": [
@@ -49,12 +49,12 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.5.1",
+    "version": "4.8.0",
     "content": "./scripts/template-oss.js"
   },
   "dependencies": {
     "@npmcli/pkg6": "^1.1.0",
-    "abbrev": "^1.1.1",
+    "abbrev": "^2.0.0",
     "pkg1": "^5.0.0",
     "pkg2": "^4.0.0",
     "pkg4": "^1.1.0",
