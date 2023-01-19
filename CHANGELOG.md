@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.2](https://github.com/npm/npm-cli-release-please/compare/v3.0.1...v3.0.2) (2023-01-19)
+
+### Bug Fixes
+
+* [`3c1e1a5`](https://github.com/npm/npm-cli-release-please/commit/3c1e1a5868ba673763afc44c6a4685ce24bfecd7) test my ssh commit verification (@lukekarrys)
+* [`b63a209`](https://github.com/npm/npm-cli-release-please/commit/b63a209f0570cb68a55b96354b8f9b8eb3bd0487) release (@lukekarrys)
+* [`33d6bff`](https://github.com/npm/npm-cli-release-please/commit/33d6bff15f300ec91a6cdb54f3e24c666b023d0b) release (@lukekarrys)
+* [`64a7526`](https://github.com/npm/npm-cli-release-please/commit/64a7526f4f850b9c296f9f87417e45a210efa65c) new date (@lukekarrys)
+
+### Dependencies
+
+* [`e70bd6c`](https://github.com/npm/npm-cli-release-please/commit/e70bd6cc354eee6f334e5f577e25aced36346ad8) [#72](https://github.com/npm/npm-cli-release-please/pull/72) bump json5 from 1.0.1 to 1.0.2
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.2.0...pkg6-v1.2.1): `@npmcli/pkg6@1.2.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.0...pkg1-v5.0.1): `pkg1@5.0.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg2-v4.0.0...pkg2-v4.0.1): `pkg2@4.0.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg4-v1.1.0...pkg4-v1.1.1): `pkg4@1.1.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1.1.0...pkg5-v1.1.1): `pkg5@1.1.1`
+
 ## [3.0.1](https://github.com/npm/npm-cli-release-please/compare/v3.0.0...v3.0.1) (2022-11-03)
 
 ### Bug Fixes
