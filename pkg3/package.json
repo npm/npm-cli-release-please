@@ -37,9 +37,9 @@
     "content": "../scripts/template-oss.js"
   },
   "devDependencies": {
-    "@npmcli/eslint-config": "^4.0.0",
+    "@npmcli/eslint-config": "^4.0.1",
     "@npmcli/template-oss": "file:../scripts/npmcli-template-oss-4.9.0.tgz",
-    "tap": "^16.3.0"
+    "tap": "^16.3.4"
   },
   "tap": {
     "nyc-arg": [
