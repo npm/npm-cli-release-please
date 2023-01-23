@@ -19,5 +19,5 @@ jobs:
     name: build nodejs@$\{{ inputs.nodeVersion }} npm@$\{{ inputs.npmVersion }}
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: $\{{ fromJSON(inputs) }}
+      - name: Test
+        run: echo "We did it"

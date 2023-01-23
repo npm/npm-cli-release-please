@@ -7,19 +7,8 @@ on:
         description: npm version to test
         type: string
         required: true
-      prNumber:
-        description: pr number of release
-        type: string
-        required: true
 
 jobs:
-  comment-pr:
-    name: Comment PR
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo $\{{ inputs.prNumber }}
-      - run: env
-
   node-integration:
     name: nodejs@$\{{ matrix.nodeVersion }} integration
     strategy:

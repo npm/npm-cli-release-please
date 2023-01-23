@@ -1,19 +1,29 @@
 {{> release }}
 
-  release-env:
-    name: Release Env
+  release-comment:
+    name: Release Comment
     runs-on: ubuntu-latest
-    needs: [release]
+    needs: [ release ]
     if: needs.release.outputs.release
     steps:
-      - run: echo $\{{ needs.release.outputs.release }}
-      - run: env
+      - name: Pull Request Release Comment
+        uses: actions/github-script@v6
+        env:
+          PR_NUMBER: $\{{ fromJSON(needs.release.outputs.release).prNumber }}
+          RUN_ID: $\{{ env.GITHUB_RUN_ID }}
+        with:
+          script: |
+            const { RUN_ID, PR_NUMBER } = process.env
+            const repo = { owner: context.repo.owner, repo: context.repo.repo }
+            const issue = { ...repo, issue_number: PR_NUMBER }
+            let body = `Link to workflow run for this release: `
+            body += `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${RUN_ID}`    
+            await github.rest.issues.createComment({ ...issue, body })
 
   release-integration:
     name: Nodejs Integration - Release
-    needs: [release]
+    needs: [ release ]
     if: needs.release.outputs.release
     uses: ./.github/workflows/release-integration.yml
     with:
       npmVersion: $\{{ fromJSON(needs.release.outputs.release).version }}
-      prNumber: $\{{ fromJSON(needs.release.outputs.release).prNumber }}
