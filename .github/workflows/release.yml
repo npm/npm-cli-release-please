@@ -19,6 +19,7 @@ jobs:
   release:
     outputs:
       pr: ${{ steps.release.outputs.pr }}
+      release: ${{ steps.release.outputs.release }}
       releases: ${{ steps.release.outputs.releases }}
       release-flags: ${{ steps.release.outputs.release-flags }}
       branch: ${{ steps.release.outputs.pr-branch }}
@@ -75,9 +76,9 @@ jobs:
             const comments = await github.paginate(github.rest.issues.listComments, issue)
             let commentId = comments?.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith(body))?.id
 
-            body += `Release workflow run: ${workflow.html_url}\n\n#### Force CI to Rerun for This Release\n\n`
+            body += `Release workflow run: ${workflow.html_url}\n\n#### Force CI to Update This Release\n\n`
             body += `This PR will be updated and CI will run for every non-\`chore:\` commit that is pushed to \`main\`. `
-            body += `To force CI to rerun, run this command:\n\n`
+            body += `To force CI to update this PR, run this command:\n\n`
             body += `\`\`\`\ngh workflow run release.yml -r ${REF_NAME}\n\`\`\``
 
             if (commentId) {
@@ -170,7 +171,7 @@ jobs:
           RELEASE_COMMENT_ID: ${{ needs.release.outputs.comment-id }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm exec --offline -- template-oss-release-manager
+          npm exec --offline -- template-oss-release-manager --lockfile=true
           npm run rp-pull-request --ignore-scripts -ws -iwr --if-present
       - name: Commit
         id: commit
@@ -300,3 +301,10 @@ jobs:
           RELEASES: ${{ needs.release.outputs.releases }}
         run: |
           npm run rp-release --ignore-scripts --if-present ${{ join(fromJSON(needs.release.outputs.release-flags), ' ') }}
+
+  release-integration:
+    name: Nodejs Integration - Release
+    needs: [ release ]
+    if: needs.release.output.release
+    run: |
+      echo ${{ needs.release.outputs.release }}
