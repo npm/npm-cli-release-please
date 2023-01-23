@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.0.3](https://github.com/npm/npm-cli-release-please/compare/v3.0.2...v3.0.3) (2023-01-23)
+
+### Bug Fixes
+
+* [`0a81207`](https://github.com/npm/npm-cli-release-please/commit/0a812079e2567fb36b6eecb442eab7b4d9f2f731) workflow (@lukekarrys)
+* [`21b01d9`](https://github.com/npm/npm-cli-release-please/commit/21b01d91a3be3f6fa39f536efc8bf1de3fca8eee) workflow (@lukekarrys)
+* [`f67f8ea`](https://github.com/npm/npm-cli-release-please/commit/f67f8ea9883b568e4b38b1721167a09c0cdf38e3) workflow (@lukekarrys)
+* [`68835e9`](https://github.com/npm/npm-cli-release-please/commit/68835e9215e735a61d4c4557ffd55d0e1e02779b) workflow (@lukekarrys)
+* [`a425f34`](https://github.com/npm/npm-cli-release-please/commit/a425f34fc8ce6d28ebc1cff644ef97757153ab41) lint (@lukekarrys)
+* [`c6cb403`](https://github.com/npm/npm-cli-release-please/commit/c6cb403fda42412a00e91c95616c1ebfdfb94daa) release integration test (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.2): `@npmcli/pkg6@1.2.2`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.2): `pkg1@5.0.2`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.2): `pkg2@4.0.2`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.2): `pkg4@1.1.2`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.2): `pkg5@1.1.2`
+
 ## [3.0.2](https://github.com/npm/npm-cli-release-please/compare/v3.0.1...v3.0.2) (2023-01-23)
 
 ### Bug Fixes
