@@ -13,7 +13,7 @@ module.exports = {
   },
   workspaceRepo: {
     add: {
-      '.github/workflows/release.yml': false
-    }
-  }
+      '.github/workflows/release.yml': false,
+    },
+  },
 }
