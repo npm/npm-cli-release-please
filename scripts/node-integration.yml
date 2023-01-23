@@ -1,0 +1,23 @@
+name: nodejs integration
+
+on:
+  workflow_call:
+    inputs:
+      nodeVersion:
+        description: 'nodejs version'
+        required: true
+        type: string
+        default: nightly
+      npmVersion:
+        description: 'npm version'
+        required: true
+        type: string
+        default: git
+
+jobs:
+  build-nodejs:
+    name: build nodejs@$\{{ inputs.nodeVersion }} npm@$\{{ inputs.npmVersion }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: $\{{ fromJSON(inputs) }}

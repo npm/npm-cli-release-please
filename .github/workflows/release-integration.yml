@@ -1,0 +1,37 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Release Integration
+
+on:
+  workflow_call:
+    inputs:
+      npmVersion:
+        description: npm version to test
+        type: string
+        required: true
+      prNumber:
+        description: pr number of release
+        type: string
+        required: true
+
+jobs:
+  comment-pr:
+    name: Comment PR
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.prNumber }}
+      - run: env
+
+  node-integration:
+    name: nodejs@${{ matrix.nodeVersion }} integration
+    strategy:
+      fail-fast: false
+      matrix:
+        nodeVersion:
+          - 18
+          - 19
+          - nightly
+    uses: ./.github/workflows/node-integration.yml
+    with:
+      nodeVersion: ${{ matrix.nodeVersion }}
+      npmVersion: ${{ inputs.npmVersion }}
