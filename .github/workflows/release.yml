@@ -307,4 +307,4 @@ jobs:
     needs: [ release ]
     if: needs.release.output.release
     steps:
-      run: echo ${{ needs.release.outputs.release }}
+      - run: echo ${{ needs.release.outputs.release }}
