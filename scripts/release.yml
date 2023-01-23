@@ -4,5 +4,6 @@
     name: Nodejs Integration - Release
     needs: [release]
     if: needs.release.output.release
+    runs-on: ubuntu-latest
     steps:
       - run: echo $\{{ needs.release.outputs.release }}
