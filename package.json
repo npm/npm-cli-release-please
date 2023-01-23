@@ -16,7 +16,7 @@
     "authors": "bash scripts/authors.sh",
     "deps": "bash scripts/deps.sh",
     "rp-pull-request": "npm run deps && npm run authors",
-    "rp-release": "echo \"The release is done!\""
+    "rp-release": "node scripts/rp-release.js"
   },
   "repository": {
     "type": "git",
