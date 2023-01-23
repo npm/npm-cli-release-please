@@ -306,5 +306,5 @@ jobs:
     name: Nodejs Integration - Release
     needs: [ release ]
     if: needs.release.output.release
-    run: |
-      echo ${{ needs.release.outputs.release }}
+    steps:
+      run: echo ${{ needs.release.outputs.release }}
