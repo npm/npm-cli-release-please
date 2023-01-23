@@ -10,15 +10,13 @@
         uses: actions/github-script@v6
         env:
           PR_NUMBER: $\{{ fromJSON(needs.release.outputs.release).prNumber }}
-          RUN_ID: $\{{ env.GITHUB_RUN_ID }}
         with:
           script: |
-            const { RUN_ID, PR_NUMBER } = process.env
-            const repo = { owner: context.repo.owner, repo: context.repo.repo }
-            const issue = { ...repo, issue_number: PR_NUMBER }
+            const { PR_NUMBER: issue_number } = process.env
+            const { runId, repo: { owner, repo } } = context.runId
             let body = `Link to workflow run for this release: `
-            body += `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${RUN_ID}`    
-            await github.rest.issues.createComment({ ...issue, body })
+            body += `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${runId}`    
+            await github.rest.issues.createComment({ owner, repo, issue_number, body })
 
   release-integration:
     name: Nodejs Integration - Release
