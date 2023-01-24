@@ -286,6 +286,7 @@ jobs:
             const { PR_NUMBER: issue_number } = process.env
             const { runId, repo: { owner, repo } } = context
 
+            const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`
             let body = '## Release Workflow\n\n'
 
             const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
@@ -300,7 +301,7 @@ jobs:
               owner,
               repo,
               issue_number,
-              body: `${body}- Workflow run: https://github.com/${owner}/${repo}/actions/runs/${runId}` 
+              body: `${body}- Workflow run: :arrows_counterclockwise: ${runUrl}`,
             })
 
   release-integration:
@@ -325,11 +326,11 @@ jobs:
         run: |
           result=""
           if [[ "${{ contains(needs.*.result, 'failure') }}" == "true" ]]; then
-            result="failure"
+            result="x"
           elif [[ "${{ contains(needs.*.result, 'cancelled') }}" == "true" ]]; then
-            result="cancelled"
+            result="heavy_multiplication_x"
           else
-            result="success"
+            result="white_check_mark"
           fi
           echo "::set-output name=result::$result"
       - name: Update Release PR Comment
@@ -350,6 +351,6 @@ jobs:
                 owner,
                 repo,
                 comment_id: updateComment.id,
-                body: `${updateComment.body}\n- Workflow result: ${RESULT}`
+                body: updateComment.body.replace(/Workflow run: :([a-z_]+):/, `Workflow run: :${RESULT}:`),
               })
             }
