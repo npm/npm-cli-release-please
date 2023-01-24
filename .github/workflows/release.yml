@@ -350,10 +350,13 @@ jobs:
             const updateComment = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith('## Release Workflow\n\n'))
 
             if (updateComment) {
+              console.log('Found comment to update:', JSON.stringify(comment, null, 2))
               await github.rest.issues.updateComment({
                 owner,
                 repo,
                 comment_id: updateComment.id,
                 body: updateComment.body.replace(/Workflow run: :([a-z_]+):/, `Workflow run: :${RESULT}:`),
               })
+            } else {
+              console.log('No matching comments found:', JSON.stringify(comments, null, 2))
             }
