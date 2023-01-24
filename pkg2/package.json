@@ -49,5 +49,6 @@
       "--exclude",
       "tap-snapshots/**"
     ]
-  }
+  },
+  "touch1": "5905"
 }
