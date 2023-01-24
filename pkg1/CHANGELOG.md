@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.2...pkg1-v5.0.3) (2023-01-24)
+
+### Bug Fixes
+
+* [`fac1230`](https://github.com/npm/npm-cli-release-please/commit/fac1230d2db7972892139d122968d55c9500f3df) stuff (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.3): `pkg2@4.0.3`
+
 ## [5.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.1...pkg1-v5.0.2) (2023-01-23)
 
 ### Bug Fixes
