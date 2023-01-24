@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.0.16](https://github.com/npm/npm-cli-release-please/compare/v3.0.15...v3.0.16) (2023-01-24)
+
+### Bug Fixes
+
+* [`efc6b4c`](https://github.com/npm/npm-cli-release-please/commit/efc6b4caa0447de004da658202a125345aa66b66) all (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.4): `@npmcli/pkg6@1.2.4`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.4): `pkg1@5.0.4`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.4): `pkg2@4.0.4`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.4): `pkg4@1.1.4`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.4): `pkg5@1.1.4`
+
 ## [3.0.15](https://github.com/npm/npm-cli-release-please/compare/v3.0.14...v3.0.15) (2023-01-24)
 
 ### Bug Fixes
