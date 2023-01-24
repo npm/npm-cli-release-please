@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.11](https://github.com/npm/npm-cli-release-please/compare/v3.0.10...v3.0.11) (2023-01-24)
+
+### Bug Fixes
+
+* [`d9a2971`](https://github.com/npm/npm-cli-release-please/commit/d9a29715a54d1e3e7952877f34d10272455d2c9e) workflows (@lukekarrys)
+
 ## [3.0.10](https://github.com/npm/npm-cli-release-please/compare/v3.0.9...v3.0.10) (2023-01-24)
 
 ### Bug Fixes
