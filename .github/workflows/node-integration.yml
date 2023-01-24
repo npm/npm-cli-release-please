@@ -22,4 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo "We did it"
+        run: |
+          if [ "${{ inputs.nodeVersion }}" == "nightly" ]; then
+            exit 1
+          fi
