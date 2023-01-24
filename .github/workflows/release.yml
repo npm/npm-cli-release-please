@@ -326,11 +326,31 @@ jobs:
         run: npm -v
       - name: View in Registry
         run: |
-          for row in $(echo '${{ toJSON(needs.release.outputs.releases) }}' | jq -r '.[] | @base64'); do
-            NAME=$(echo "$row" | base64 --decode | jq .pkgName)
-            VERSION=$(echo "$row" | base64 --decode | jq .version)
-            npm view $NAME@$VERSION
+          RELEASES='${{ toJSON(needs.release.outputs.releases) }}'
+          EXIT_CODE=0
+
+          function is_published {
+            if npm view "$@" --loglevel=error > /dev/null; then
+              echo 0
+            else
+              echo 1
+            fi
+          }
+
+          for release in $(echo $RELEASES | jq -r '.[] | @base64'); do
+            name=$(echo "$release" | base64 --decode | jq -r .pkgName)
+            version=$(echo "$release" | base64 --decode | jq -r .version)
+            spec="$name@$version"
+            status=$(is_published "$spec")
+            if [[ "$status" -eq 1 ]]; then
+              echo "$spec ERROR"
+              EXIT_CODE=$status
+            else
+              echo "$spec OK"
+            fi
           done
+
+          exit $EXIT_CODE
 
   post-release-integration:
     needs: [ release, release-integration ]
