@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.20](https://github.com/npm/npm-cli-release-please/compare/v3.0.19...v3.0.20) (2023-01-24)
+
+### Bug Fixes
+
+* [`ed86037`](https://github.com/npm/npm-cli-release-please/commit/ed86037bb6f47580418350d3f95860599afaee13) comment on failed release (@lukekarrys)
+
 ## [3.0.19](https://github.com/npm/npm-cli-release-please/compare/v3.0.18...v3.0.19) (2023-01-24)
 
 ### Bug Fixes
