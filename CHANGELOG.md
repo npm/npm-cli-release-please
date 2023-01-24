@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.17](https://github.com/npm/npm-cli-release-please/compare/v3.0.16...v3.0.17) (2023-01-24)
+
+### Bug Fixes
+
+* [`ce7e624`](https://github.com/npm/npm-cli-release-please/commit/ce7e6244e5442d81e9c46e6e0095b419cfc5cd5f) npm view (@lukekarrys)
+* [`2bc3145`](https://github.com/npm/npm-cli-release-please/commit/2bc3145daf2da6b14a89a8266bd981aeaa3d1931) touch all (@lukekarrys)
+* [`33fa555`](https://github.com/npm/npm-cli-release-please/commit/33fa555c461ba7c8966d61f8808e6f88e5500978) all (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.5): `@npmcli/pkg6@1.2.5`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.5): `pkg1@5.0.5`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.5): `pkg2@4.0.5`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.5): `pkg4@1.1.5`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.5): `pkg5@1.1.5`
+
 ## [3.0.16](https://github.com/npm/npm-cli-release-please/compare/v3.0.15...v3.0.16) (2023-01-24)
 
 ### Bug Fixes
