@@ -77,7 +77,7 @@ jobs:
             body += `Release workflow run: ${workflow.html_url}\n\n#### Force CI to Update This Release\n\n`
             body += `This PR will be updated and CI will run for every non-\`chore:\` commit that is pushed to \`main\`. `
             body += `To force CI to update this PR, run this command:\n\n`
-            body += `\`\`\`\ngh workflow run release.yml -r ${REF_NAME}\n\`\`\``
+            body += `\`\`\`\ngh workflow run release.yml -r ${REF_NAME} -R ${owner}/${repo}\n\`\`\``
 
             if (commentId) {
               await github.rest.issues.updateComment({ owner, repo, comment_id: commentId, body })
