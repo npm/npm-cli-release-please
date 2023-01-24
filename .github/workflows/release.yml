@@ -326,7 +326,6 @@ jobs:
         run: npm -v
       - name: View in Registry
         run: |
-          RELEASES='${{ toJSON(needs.release.outputs.releases) }}'
           EXIT_CODE=0
 
           function is_published {
@@ -337,7 +336,7 @@ jobs:
             fi
           }
 
-          for release in $(echo $RELEASES | jq -r '.[] | @base64'); do
+          for release in $(echo '${{ toJSON(needs.release.outputs.releases) }}' | jq -r '.[] | @base64'); do
             name=$(echo "$release" | base64 --decode | jq -r .pkgName)
             version=$(echo "$release" | base64 --decode | jq -r .version)
             spec="$name@$version"
