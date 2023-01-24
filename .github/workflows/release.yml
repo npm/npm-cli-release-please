@@ -64,16 +64,15 @@ jobs:
           REF_NAME: ${{ github.ref_name }}
         with:
           script: |
-            const { REF_NAME, PR_NUMBER } = process.env
-            const repo = { owner: context.repo.owner, repo: context.repo.repo }
-            const issue = { ...repo, issue_number: PR_NUMBER }
+            const { REF_NAME, PR_NUMBER: issue_number } = process.env
+            const { runId, repo: { owner, repo } } = context
 
-            const { data: workflow } = await github.rest.actions.getWorkflowRun({ ...repo, run_id: context.runId })
+            const { data: workflow } = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId })
 
             let body = '## Release Manager\n\n'
 
             const comments = await github.paginate(github.rest.issues.listComments, issue)
-            let commentId = comments?.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith(body))?.id
+            let commentId = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith(body))?.id
 
             body += `Release workflow run: ${workflow.html_url}\n\n#### Force CI to Update This Release\n\n`
             body += `This PR will be updated and CI will run for every non-\`chore:\` commit that is pushed to \`main\`. `
@@ -81,9 +80,9 @@ jobs:
             body += `\`\`\`\ngh workflow run release.yml -r ${REF_NAME}\n\`\`\``
 
             if (commentId) {
-              await github.rest.issues.updateComment({ ...repo, comment_id: commentId, body })
+              await github.rest.issues.updateComment({ owner, repo, comment_id: commentId, body })
             } else {
-              const { data: comment } = await github.rest.issues.createComment({ ...issue, body })
+              const { data: comment } = await github.rest.issues.createComment({ owner, repo, issue_number, body })
               commentId = comment?.id
             }
 
@@ -285,9 +284,9 @@ jobs:
         with:
           script: |
             const { PR_NUMBER: issue_number } = process.env
-            const { runId, repo: { owner, repo } } = context.runId
+            const { runId, repo: { owner, repo } } = context
             let body = '## Release Workflow\n\n'
-            body += `- Workflow run: https://github.com/${repo.owner}/${repo.repo}/actions/runs/${runId}`    
+            body += `- Workflow run: https://github.com/${owner}/${repo}/actions/runs/${runId}`    
             await github.rest.issues.createComment({ owner, repo, issue_number, body })
 
   release-integration:
@@ -327,11 +326,9 @@ jobs:
         with:
           script: |
             const { PR_NUMBER: issue_number, RESULT } = process.env
-            const { repo: { owner, repo } } = context.runId
-
+            const { repo: { owner, repo } } = context
             const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
             const updateComment = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.startsWith('## Release Workflow\n\n'))
-
             if (updateComment) {
               const body = `${updateComment.body}\n- Workflow result: ${RESULT}`
               await github.rest.issues.updateComment({ owner, repo, comment_id: updateComment.id, body })

@@ -112,11 +112,6 @@ jobs:
             os: ubuntu-latest
             shell: bash
         node-version:
-          - 14.17.0
-          - 14.x
-          - 16.13.0
-          - 16.x
-          - 18.0.0
           - 18.x
     runs-on: ${{ matrix.platform.os }}
     defaults:
