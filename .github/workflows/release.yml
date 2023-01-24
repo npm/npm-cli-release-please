@@ -336,7 +336,7 @@ jobs:
             fi
           }
 
-          for release in $(echo '${{ toJSON(needs.release.outputs.releases) }}' | jq -r '.[] | @base64'); do
+          for release in $(echo '${{ needs.release.outputs.releases }}' | jq -r '.[] | @base64'); do
             name=$(echo "$release" | base64 --decode | jq -r .pkgName)
             version=$(echo "$release" | base64 --decode | jq -r .version)
             spec="$name@$version"
