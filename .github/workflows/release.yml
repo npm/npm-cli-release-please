@@ -271,7 +271,7 @@ jobs:
   post-release:
     needs: release
     name: Post Release - Release
-    if: github.repository_owner == 'npm' && needs.release.outputs.release
+    if: github.repository_owner == 'npm' && needs.release.outputs.releases
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -280,20 +280,16 @@ jobs:
       - name: Create Release PR Comment
         uses: actions/github-script@v6
         env:
-          PR_NUMBER: ${{ fromJSON(needs.release.outputs.release).prNumber }}
           RELEASES: ${{ needs.release.outputs.releases }}
         with:
           script: |
-            const fs = require('fs/promises')
-
-            const { PR_NUMBER: issue_number, RELEASES } = process.env
+            const releases = JSON.parse(process.env.RELEASES)
             const { runId, repo: { owner, repo } } = context
+            const issue_number = releases[0].prNumber
 
             let body = '## Release Workflow\n\n'
-            for (const { path, version, url } of JSON.parse(RELEASES)) {
-              const pkgPath = path === '.' ? './package.json' : `./${path}/package.json`
-              const { name } = JSON.parse(await fs.readFile(pkgPath, 'utf-8'))
-              body += `- \`${name}@${version}\` ${url}\n`
+            for (const { pkgName, version, url } of releases) {
+              body += `- \`${pkgName}@${version}\` ${url}\n`
             }
 
             const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
