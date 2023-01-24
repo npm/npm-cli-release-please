@@ -311,9 +311,27 @@ jobs:
     needs: release
     name: Release Integration
     if: needs.release.outputs.release
-    uses: ./.github/workflows/release-integration.yml
-    with:
-      npmVersion: ${{ fromJSON(needs.release.outputs.release).version }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: npm
+      - name: Install npm@latest
+        run: npm i --prefer-online --no-fund --no-audit -g npm@latest
+      - name: npm Version
+        run: npm -v
+      - name: View in Registry
+        run: |
+          for row in $(echo '${{ toJSON(needs.release.outputs.releases) }}' | jq -r '.[] | @base64'); do
+            NAME=$(echo "$row" | base64 --decode | jq .pkgName)
+            VERSION=$(echo "$row" | base64 --decode | jq .version)
+            npm $NAME@$VERSION
+          done
 
   post-release-integration:
     needs: [ release, release-integration ]
