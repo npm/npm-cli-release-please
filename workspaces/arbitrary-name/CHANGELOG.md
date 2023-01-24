@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1.1.2...pkg5-v1.1.3) (2023-01-24)
+
+### Bug Fixes
+
+* [`fac1230`](https://github.com/npm/npm-cli-release-please/commit/fac1230d2db7972892139d122968d55c9500f3df) stuff (@lukekarrys)
+
 ## [1.1.2](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1.1.1...pkg5-v1.1.2) (2023-01-23)
 
 ### Bug Fixes
