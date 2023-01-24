@@ -15,8 +15,7 @@
     "lint-all": "npm run lint -ws -iwr --if-present",
     "authors": "bash scripts/authors.sh",
     "deps": "bash scripts/deps.sh",
-    "rp-pull-request": "npm run deps && npm run authors",
-    "rp-release": "node scripts/rp-release.js"
+    "rp-pull-request": "npm run deps && npm run authors"
   },
   "repository": {
     "type": "git",
