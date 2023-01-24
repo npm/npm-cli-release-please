@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.18](https://github.com/npm/npm-cli-release-please/compare/v3.0.17...v3.0.18) (2023-01-24)
+
+### Bug Fixes
+
+* [`72c7de2`](https://github.com/npm/npm-cli-release-please/commit/72c7de27ddebc0573ae38b839fdaa0c5b9677563) capture exit code from npm view (@lukekarrys)
+
 ## [3.0.17](https://github.com/npm/npm-cli-release-please/compare/v3.0.16...v3.0.17) (2023-01-24)
 
 ### Bug Fixes
