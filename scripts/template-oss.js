@@ -6,9 +6,4 @@ module.exports = {
     '/AUTHORS',
   ],
   ciVersions: 'latest',
-  rootRepo: {
-    add: {
-      '.github/workflows/post-pull-request.yml': './post-pull-request.yml',
-    },
-  },
 }
