@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.0.22](https://github.com/npm/npm-cli-release-please/compare/v3.0.21...v3.0.22) (2023-02-07)
+
+### Bug Fixes
+
+* [`07e0d95`](https://github.com/npm/npm-cli-release-please/commit/07e0d9572ccf79702a25e73bf10c040d6b4f44ef) update pkg prop (@lukekarrys)
+* [`bc715bc`](https://github.com/npm/npm-cli-release-please/commit/bc715bc96883e4b4aa607e97f1512325d29d74b7) [#103](https://github.com/npm/npm-cli-release-please/pull/103) all (@lukekarrys)
+* [`6bdeeba`](https://github.com/npm/npm-cli-release-please/commit/6bdeebaf32ec7f2dac4698d59830b96f8bee9e6e) [#102](https://github.com/npm/npm-cli-release-please/pull/102) all (@lukekarrys)
+* [`7f7ee92`](https://github.com/npm/npm-cli-release-please/commit/7f7ee928f8b866ecaa067210c37b3813ccde2487) [#100](https://github.com/npm/npm-cli-release-please/pull/100) all (#100) (@lukekarrys)
+
+### Documentation
+
+* [`fa63f8f`](https://github.com/npm/npm-cli-release-please/commit/fa63f8f7881ba7bbe31be0c1a623e6f510177357) punctuation (@wraithgar)
+* [`a4068c9`](https://github.com/npm/npm-cli-release-please/commit/a4068c99c81586fceead504adac46f4a0a719479) [#104](https://github.com/npm/npm-cli-release-please/pull/104) add readme (#104) (@wraithgar)
+
+### Dependencies
+
+* [`d23e850`](https://github.com/npm/npm-cli-release-please/commit/d23e8508d6f3d2dacdcb7b04cd4dc1d859c14c49) template-oss
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.6): `@npmcli/pkg6@1.2.6`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.6): `pkg1@5.0.6`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.6): `pkg2@4.0.6`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.6): `pkg4@1.1.6`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.6): `pkg5@1.1.6`
+
 ## [3.0.21](https://github.com/npm/npm-cli-release-please/compare/v3.0.20...v3.0.21) (2023-01-24)
 
 ### Bug Fixes

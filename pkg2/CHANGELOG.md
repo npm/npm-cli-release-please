@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.6](https://github.com/npm/npm-cli-release-please/compare/pkg2-v4.0.5...pkg2-v4.0.6) (2023-02-07)
+
+### Bug Fixes
+
+* [`bc715bc`](https://github.com/npm/npm-cli-release-please/commit/bc715bc96883e4b4aa607e97f1512325d29d74b7) [#103](https://github.com/npm/npm-cli-release-please/pull/103) all (@lukekarrys)
+* [`6bdeeba`](https://github.com/npm/npm-cli-release-please/commit/6bdeebaf32ec7f2dac4698d59830b96f8bee9e6e) [#102](https://github.com/npm/npm-cli-release-please/pull/102) all (@lukekarrys)
+* [`7f7ee92`](https://github.com/npm/npm-cli-release-please/commit/7f7ee928f8b866ecaa067210c37b3813ccde2487) [#100](https://github.com/npm/npm-cli-release-please/pull/100) all (#100) (@lukekarrys)
+
+### Dependencies
+
+* [`d23e850`](https://github.com/npm/npm-cli-release-please/commit/d23e8508d6f3d2dacdcb7b04cd4dc1d859c14c49) template-oss
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2.0.6): `@npmcli/pkg3@2.0.6`
+
 ## [4.0.5](https://github.com/npm/npm-cli-release-please/compare/pkg2-v4.0.4...pkg2-v4.0.5) (2023-01-24)
 
 ### Bug Fixes
