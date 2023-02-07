@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.7](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.2.6...pkg6-v1.2.7) (2023-02-07)
+
+### Bug Fixes
+
+* [`844d4a9`](https://github.com/npm/npm-cli-release-please/commit/844d4a972f8d4c791999d10b61d835cf80cd2856) all (@lukekarrys)
+
 ## [1.2.6](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.2.5...pkg6-v1.2.6) (2023-02-07)
 
 ### Bug Fixes
