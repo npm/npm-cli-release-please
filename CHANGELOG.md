@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.24](https://github.com/npm/npm-cli-release-please/compare/v3.0.23...v3.0.24) (2023-02-07)
+
+### Bug Fixes
+
+* [`a1d92e9`](https://github.com/npm/npm-cli-release-please/commit/a1d92e9d77c30887a76dca8c3e17da823b97ed56) template-oss (@lukekarrys)
+* [`43efd44`](https://github.com/npm/npm-cli-release-please/commit/43efd44d1f305f1a74667c8fad79999d5a806614) template-oss (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.8): `@npmcli/pkg6@1.2.8`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.8): `pkg1@5.0.8`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.8): `pkg2@4.0.8`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.8): `pkg4@1.1.8`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.8): `pkg5@1.1.8`
+
 ## [3.0.23](https://github.com/npm/npm-cli-release-please/compare/v3.0.22...v3.0.23) (2023-02-07)
 
 ### Bug Fixes

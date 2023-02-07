@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.8](https://github.com/npm/npm-cli-release-please/compare/pkg4-v1.1.7...pkg4-v1.1.8) (2023-02-07)
+
+### Bug Fixes
+
+* [`43efd44`](https://github.com/npm/npm-cli-release-please/commit/43efd44d1f305f1a74667c8fad79999d5a806614) template-oss (@lukekarrys)
+
 ## [1.1.7](https://github.com/npm/npm-cli-release-please/compare/pkg4-v1.1.6...pkg4-v1.1.7) (2023-02-07)
 
 ### Bug Fixes

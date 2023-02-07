@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.8](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.7...pkg3-v2.0.8) (2023-02-07)
+
+### Bug Fixes
+
+* [`43efd44`](https://github.com/npm/npm-cli-release-please/commit/43efd44d1f305f1a74667c8fad79999d5a806614) template-oss (@lukekarrys)
+
 ## [2.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.6...pkg3-v2.0.7) (2023-02-07)
 
 ### Bug Fixes
