@@ -297,7 +297,7 @@ jobs:
             }
 
             const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
-              .then(cs => cs.map(c => ({ id, c.id, login: c.user.login, body: c.body }))
+              .then(cs => cs.map(c => ({ id: c.id, login: c.user.login, body: c.body })))
             console.log(`Found comments: ${JSON.stringify(comments, null, 2)}`)
             const releaseComments = comments.filter(c => c.login === 'github-actions[bot]' && c.body.includes('Release is at'))
 
@@ -307,7 +307,7 @@ jobs:
             }
 
             const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`
-            await github.rest.issues.createComment({ 
+            await github.rest.issues.createComment({
               owner,
               repo,
               issue_number,
