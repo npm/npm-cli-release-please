@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.0.8](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.7...pkg1-v5.0.8) (2023-02-07)
+
+### Bug Fixes
+
+* [`43efd44`](https://github.com/npm/npm-cli-release-please/commit/43efd44d1f305f1a74667c8fad79999d5a806614) template-oss (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.8): `pkg2@4.0.8`
+
 ## [5.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.6...pkg1-v5.0.7) (2023-02-07)
 
 ### Bug Fixes
