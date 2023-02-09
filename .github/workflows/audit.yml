@@ -11,11 +11,11 @@ on:
 jobs:
   audit:
     name: Audit Dependencies
+    if: github.repository_owner == 'npm'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    if: github.repository_owner == 'npm'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

@@ -10,11 +10,11 @@ permissions:
 jobs:
   template-oss:
     name: template-oss
+    if: github.repository_owner == 'npm' && github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    if: github.repository_owner == 'npm' && github.actor == 'dependabot[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

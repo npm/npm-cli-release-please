@@ -22,11 +22,11 @@ permissions:
 jobs:
   release:
     name: Release
+    if: github.repository_owner == 'npm'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    if: github.repository_owner == 'npm'
     outputs:
       pr: ${{ steps.release.outputs.pr }}
       release: ${{ steps.release.outputs.release }}
@@ -86,7 +86,7 @@ jobs:
           number: ${{ steps.release.outputs.pr-number }}
 
   update:
-    name: Update - Release
+    name: Update Release
     runs-on: ubuntu-latest
     defaults:
       run:

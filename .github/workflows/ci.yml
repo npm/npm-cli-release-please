@@ -38,11 +38,11 @@ on:
 jobs:
   lint:
     name: Lint
+    if: github.repository_owner == 'npm'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    if: github.repository_owner == 'npm'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -76,6 +76,7 @@ jobs:
 
   test:
     name: Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
+    if: github.repository_owner == 'npm'
     strategy:
       fail-fast: false
       matrix:
@@ -89,7 +90,6 @@ jobs:
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
-    if: github.repository_owner == 'npm'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

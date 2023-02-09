@@ -18,11 +18,11 @@ on:
 jobs:
   analyze:
     name: Analyze
+    if: github.repository_owner == 'npm'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    if: github.repository_owner == 'npm'
     permissions:
       actions: read
       contents: read
