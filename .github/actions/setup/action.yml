@@ -27,6 +27,10 @@ inputs:
 
 runs:
   using: composite
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      shell: bash
   steps:
     - name: Setup Git User
       run: |

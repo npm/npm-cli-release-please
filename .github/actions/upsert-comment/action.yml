@@ -32,6 +32,10 @@ outputs:
 
 runs:
   using: composite
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      shell: bash
   steps:
     - name: Create or Update Comment
       uses: actions/github-script@v6

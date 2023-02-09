@@ -12,6 +12,10 @@ inputs:
 
 runs:
   using: composite
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      shell: bash
   steps:
     - name: Install Dependencies
       run: npm "${{ inputs.command }}" "${{ inputs.flags }}"

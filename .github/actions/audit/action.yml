@@ -4,6 +4,10 @@ name: Lint
 
 runs:
   using: composite
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      shell: bash
   steps:
     - name: Run Production Audit
       run: npm audit --omit=dev
