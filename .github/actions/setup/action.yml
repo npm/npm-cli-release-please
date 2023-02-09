@@ -1,0 +1,79 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Setup Repo
+description: Setup a repo with standard tools
+
+inputs:
+  node-version:
+    description: node version to use
+    default: 18.x
+  npm-version:
+    description: npm version to use
+    default: "latest"
+  cache:
+    description: whether to cache npm install or not
+    type: boolean
+    default: true
+  platform:
+    description: platform the setup is on
+  deps-skip:
+    description: whether to skip the deps step
+    type: boolean
+    default: false
+  deps-command:
+    description: command to run for the dependencies step
+  deps-flags:
+    description: extra flags to pass to the dependencies step
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Git User
+      run: |
+        git config --global user.email "npm-cli+bot@github.com"
+        git config --global user.name "npm CLI robot"
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: ${{ (inputs.cache && 'npm') || null }}
+
+    - name: Check Node Version
+      if: inputs.npm-version
+      id: node-version
+      run: |
+        NODE_VERSION=$(node --version)
+        npx semver@7 -r "<=10" "$NODE_VERSION"
+        [[ $? -eq 0 ]] && echo "10-or-lower=true" >> $GITHUB_OUTPUT
+        npx semver@7 -r "<=14" "$NODE_VERSION"
+        [[ $? -eq 0 ]] && echo "14-or-lower=true" >> $GITHUB_OUTPUT
+
+    - name: Update Windows npm
+      # node 12 and 14 ship with npm@6, which is known to fail when updating itself in windows
+      if: inputs.npm-version && inputs.platform == 'windows-latest' && steps.node-version.outputs.14-or-lower
+      run: |
+        curl -sO https://registry.npmjs.org/npm/-/npm-7.5.4.tgz
+        tar xf npm-7.5.4.tgz
+        cd package
+        node lib/npm.js install --no-fund --no-audit -g ..\npm-7.5.4.tgz
+        cd ..
+        rmdir /s /q package
+
+    - name: Install npm@7
+      if: inputs.npm-version && steps.node-version.outputs.10-or-lower
+      run: npm i --prefer-online --no-fund --no-audit -g npm@7
+
+    - name: Install npm@${{ inputs.npm-version }}
+      if: inputs.npm-version && !steps.node-version.outputs.10-or-lower
+      run: npm i --prefer-online --no-fund --no-audit -g npm@${{ inputs.npm-version }}
+
+    - name: npm Version
+      run: npm -v
+
+    - name: Setup Dependencies
+      if: ${{ !inputs.deps-skip }}
+      uses: .github/actions/deps
+      with:
+        command: ${{ inputs.deps-command }}
+        flags: ${{ inputs.deps-flags }}

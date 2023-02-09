@@ -1,7 +1,0 @@
-runs-on: ubuntu-latest
-defaults:
-  run:
-    shell: bash
-steps:
-  - name: View in Registry
-    run: echo "all good"

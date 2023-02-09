@@ -1,0 +1,17 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Dependencies
+
+inputs:
+  command:
+    description: command to run for the dependencies step
+    default: "install --ignore-scripts --no-audit --no-fund"
+  flags:
+    description: extra flags to pass to the dependencies step
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Install Dependencies
+      run: npm "${{ inputs.command }}" "${{ inputs.flags }}"

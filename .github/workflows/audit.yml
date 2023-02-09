@@ -11,30 +11,19 @@ on:
 jobs:
   audit:
     name: Audit Dependencies
-    if: github.repository_owner == 'npm'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
+    if: github.repository_owner == 'npm'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Git User
-        run: |
-          git config --global user.email "npm-cli+bot@github.com"
-          git config --global user.name "npm CLI robot"
-      - name: Setup Node
-        uses: actions/setup-node@v3
+
+      - name: Setup
+        uses: .github/actions/setup
         with:
-          node-version: 18.x
-          cache: npm
-      - name: Install npm@latest
-        run: npm i --prefer-online --no-fund --no-audit -g npm@latest
-      - name: npm Version
-        run: npm -v
-      - name: Install Dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund --package-lock
-      - name: Run Production Audit
-        run: npm audit --omit=dev
-      - name: Run Full Audit
-        run: npm audit --audit-level=none
+          deps-flags: "--package-lock"
+
+      - name: Audit
+        uses: .github/actions/audit

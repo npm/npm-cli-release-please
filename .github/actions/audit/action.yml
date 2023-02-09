@@ -1,0 +1,11 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Lint
+
+runs:
+  using: composite
+  steps:
+    - name: Run Production Audit
+      run: npm audit --omit=dev
+    - name: Run Full Audit
+      run: npm audit --audit-level=none

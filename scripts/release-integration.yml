@@ -1,0 +1,12 @@
+name: Release Integration
+
+on:
+  workflow_call:
+
+jobs:
+  check-registry:
+    {{> job jobName="Check Registry" }}
+    if: {{{ ifOrg }}}
+    steps:
+      - name: View in Registry
+        run: echo "all good"

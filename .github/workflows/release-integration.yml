@@ -1,0 +1,19 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Release Integration
+
+on:
+  workflow_call:
+
+
+jobs:
+  check-registry:
+    name: Check Registry
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    if: github.repository_owner == 'npm'
+    steps:
+      - name: View in Registry
+        run: echo "all good"

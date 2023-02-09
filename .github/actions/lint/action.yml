@@ -1,0 +1,24 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Lint
+
+inputs:
+  all:
+    description: run on all workspaces
+    default: true
+    type: boolean
+
+runs:
+  using: composite
+  steps:
+    - name: Flags
+      id: flags
+      run: |
+        FLAGS="${{ (inputs.all && '-ws -iwr --if-present') || '' }}"
+        echo "result=$FLAGS" >> $GITHUB_OUTPUT
+
+    - name: Lint
+      run: npm run lint --ignore-scripts "${{ steps.flags.outputs.result }}"
+
+    - name: Post Lint
+      run: npm run postlint --ignore-scripts "${{ steps.flags.outputs.result }}"
