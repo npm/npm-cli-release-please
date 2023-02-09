@@ -12,8 +12,7 @@ inputs:
     required: true
   login:
     description: Login name of user to look for comments from
-    required: true
-    default: "github-actions[bot]"
+    default: github-actions[bot]
   body:
     description: Body of the comment, the first line will be used to match to an existing comment
   find:
