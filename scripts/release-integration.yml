@@ -13,11 +13,8 @@ on:
 jobs:
   check-registry:
     name: Check Registry
-    if: {{{ ifOrg }}}
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
+    if: {{> partialsIfOrg }}
+    {{> partialsJobDefaults }}
     steps:
       - name: View in Registry
         run: echo "all good"

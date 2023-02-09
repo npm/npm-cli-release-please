@@ -34,7 +34,7 @@ runs:
         github-token: ${{ inputs.token }}
         script: |
           const { JOB_NAME } = process.env
-          const { owner, repo, runId, serverUrl } = context.repo
+          const { repo: { owner, repo }, runId, serverUrl } = context
 
           const res = await github.paginate(github.rest.actions.listJobsForWorkflowRun({
             owner,
