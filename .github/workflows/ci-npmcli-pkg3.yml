@@ -44,7 +44,7 @@ jobs:
           ref: ${{ inputs.ref }}
 
       - name: Create Check
-        uses: .github/actions/create-check
+        uses: ./.github/actions/create-check
         if: ${{ inputs.check-sha }}
         id: check
         with:
@@ -53,10 +53,10 @@ jobs:
           job-name: Lint
 
       - name: Setup
-        uses: .github/actions/setup
+        uses: ./.github/actions/setup
 
       - name: Lint
-        uses: .github/actions/lint
+        uses: ./.github/actions/lint
         with:
           release: ${{ !!inputs.check-sha }}
 
@@ -91,7 +91,7 @@ jobs:
           ref: ${{ inputs.ref }}
 
       - name: Create Check
-        uses: .github/actions/create-check
+        uses: ./.github/actions/create-check
         if: ${{ inputs.check-sha }}
         id: check
         with:
@@ -100,13 +100,13 @@ jobs:
           job-name: "Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
 
       - name: Setup
-        uses: .github/actions/setup
+        uses: ./.github/actions/setup
         with:
           node-version: ${{ matrix.node-version }}
           platform: ${{ matrix.platform.os }}
 
       - name: Test
-        uses: .github/actions/test
+        uses: ./.github/actions/test
         with:
           release: ${{ !!inputs.check-sha }}
 

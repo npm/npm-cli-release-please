@@ -22,7 +22,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Setup
-        uses: .github/actions/setup
+        uses: ./.github/actions/setup
 
       - name: Fetch Dependabot Metadata
         id: metadata

@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup
-        uses: .github/actions/setup
+        uses: ./.github/actions/setup
 
       - name: Release Please
         id: release
@@ -50,7 +50,7 @@ jobs:
           npx --offline template-oss-release-please "${{ github.ref_name }}" "${{ inputs.release-pr }}"
 
       - name: Create Check
-        uses: .github/actions/create-check
+        uses: ./.github/actions/create-check
         if: ${{ steps.release.outputs.pr-sha }}
         id: check
         with:
@@ -78,7 +78,7 @@ jobs:
 
       - name: Post Pull Request Comment
         if: steps.comment-text.outputs.result
-        uses: .github/actions/upsert-comment
+        uses: ./.github/actions/upsert-comment
         id: pr-comment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -104,7 +104,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup
-        uses: .github/actions/setup
+        uses: ./.github/actions/setup
 
       - name: Run Post Pull Request Actions
         env:
@@ -125,7 +125,7 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       - name: Create Check
-        uses: .github/actions/create-check
+        uses: ./.github/actions/create-check
         if: ${{ steps.commit.outputs.sha }}
         id: check
         with:
@@ -215,7 +215,7 @@ jobs:
 
       - name: Create Release PR Comment
         if: steps.comment-text.outputs.result
-        uses: .github/actions/upsert-comment
+        uses: ./.github/actions/upsert-comment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ steps.comment-text.outputs.result }}
@@ -273,7 +273,7 @@ jobs:
 
       - name: Update Release PR Comment
         if: steps.comment-text.outputs.result
-        uses: .github/actions/upsert-comment
+        uses: ./.github/actions/upsert-comment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: "## Release Workflow"

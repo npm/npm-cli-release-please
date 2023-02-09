@@ -73,7 +73,7 @@ runs:
 
     - name: Setup Dependencies
       if: ${{ !inputs.deps-skip }}
-      uses: .github/actions/deps
+      uses: ./.github/actions/deps
       with:
         command: ${{ inputs.deps-command }}
         flags: ${{ inputs.deps-flags }}
