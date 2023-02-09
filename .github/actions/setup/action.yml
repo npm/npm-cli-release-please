@@ -6,10 +6,10 @@ description: Setup a repo with standard tools
 inputs:
   node-version:
     description: node version to use
-    default: 18.x
+    default: '18.x'
   npm-version:
     description: npm version to use
-    default: "latest"
+    default: 'latest'
   cache:
     description: whether to cache npm install or not
     type: boolean
@@ -17,10 +17,10 @@ inputs:
   shell:
     description: shell to run on
     default: bash
-  deps-skip:
-    description: whether to skip the deps step
+  deps:
+    description: whether to run the deps step
     type: boolean
-    default: false
+    default: true
   deps-command:
     description: command to run for the dependencies step
   deps-flags:
@@ -81,7 +81,7 @@ runs:
       run: npm -v
 
     - name: Setup Dependencies
-      # if: ${{ !inputs.deps-skip }}
+      if: inputs.deps
       uses: ./.github/actions/deps
       with:
         command: ${{ inputs.deps-command }}
