@@ -47,10 +47,12 @@ runs:
       shell: ${{ inputs.shell }}
       run: |
         NODE_VERSION=$(node --version)
-        npx semver@7 -r "<=10" "$NODE_VERSION"
-        [[ $? -eq 0 ]] && echo "ten-or-lower=true" >> $GITHUB_OUTPUT
-        npx semver@7 -r "<=14" "$NODE_VERSION"
-        [[ $? -eq 0 ]] && echo "fourteen-or-lower=true" >> $GITHUB_OUTPUT
+        if npx semver@7 -r "<=10" "$NODE_VERSION"; then
+          echo "ten-or-lower=true" >> $GITHUB_OUTPUT
+        fi
+        if npx semver@7 -r "<=14" "$NODE_VERSION"; then
+          echo "fourteen-or-lower=true" >> $GITHUB_OUTPUT
+        fi
 
     - name: Update Windows npm
       # node 12 and 14 ship with npm@6, which is known to fail when updating itself in windows
