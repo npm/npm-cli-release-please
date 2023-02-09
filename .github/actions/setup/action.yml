@@ -81,7 +81,7 @@ runs:
       run: npm -v
 
     - name: Setup Dependencies
-      if: ${{ !inputs.deps-skip }}
+      # if: ${{ !inputs.deps-skip }}
       uses: ./.github/actions/deps
       with:
         command: ${{ inputs.deps-command }}
