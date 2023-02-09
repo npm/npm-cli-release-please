@@ -9,13 +9,13 @@ inputs:
   flags:
     description: extra flags to pass to the dependencies step
     default: ""
+  shell:
+    description: shell to run on
+    default: bash
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
   steps:
     - name: Install Dependencies
+      shell: ${{ inputs.shell }}
       run: npm "${{ inputs.command }}" "${{ inputs.flags }}"

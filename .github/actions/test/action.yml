@@ -7,18 +7,19 @@ inputs:
     description: run on all workspaces
     default: true
     type: boolean
+  shell:
+    description: shell to run on
+    default: bash
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
   steps:
     - name: Add Problem Matcher
+      shell: ${{ inputs.shell }}
       run: echo "::add-matcher::.github/matchers/tap.json"
 
     - name: Test
+      shell: ${{ inputs.shell }}
       run: |
         FLAGS="${{ (inputs.all && '-ws -iwr --if-present') || '' }}"
         npm test --ignore-scripts "$FLAGS"

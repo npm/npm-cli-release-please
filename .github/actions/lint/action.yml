@@ -7,18 +7,24 @@ inputs:
     description: run on all workspaces
     default: true
     type: boolean
+  shell:
+    description: shell to run on
+    default: bash
 
 runs:
   using: composite
   steps:
     - name: Flags
       id: flags
+      shell: ${{ inputs.shell }}
       run: |
         FLAGS="${{ (inputs.all && '-ws -iwr --if-present') || '' }}"
         echo "result=$FLAGS" >> $GITHUB_OUTPUT
 
     - name: Lint
+      shell: ${{ inputs.shell }}
       run: npm run lint --ignore-scripts "${{ steps.flags.outputs.result }}"
 
     - name: Post Lint
+      shell: ${{ inputs.shell }}
       run: npm run postlint --ignore-scripts "${{ steps.flags.outputs.result }}"

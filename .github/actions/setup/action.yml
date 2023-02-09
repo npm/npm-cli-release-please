@@ -14,8 +14,9 @@ inputs:
     description: whether to cache npm install or not
     type: boolean
     default: true
-  platform:
-    description: platform the setup is on
+  shell:
+    description: shell to run on
+    default: bash
   deps-skip:
     description: whether to skip the deps step
     type: boolean
@@ -27,12 +28,9 @@ inputs:
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
   steps:
     - name: Setup Git User
+      shell: ${{ inputs.shell }}
       run: |
         git config --global user.email "npm-cli+bot@github.com"
         git config --global user.name "npm CLI robot"
@@ -46,6 +44,7 @@ runs:
     - name: Check Node Version
       if: inputs.npm-version
       id: node-version
+      shell: ${{ inputs.shell }}
       run: |
         NODE_VERSION=$(node --version)
         npx semver@7 -r "<=10" "$NODE_VERSION"
@@ -55,7 +54,8 @@ runs:
 
     - name: Update Windows npm
       # node 12 and 14 ship with npm@6, which is known to fail when updating itself in windows
-      if: inputs.npm-version && inputs.platform == 'windows-latest' && steps.node-version.outputs.14-or-lower
+      if: inputs.npm-version && runner.os == 'Windows' && steps.node-version.outputs.14-or-lower
+      shell: ${{ inputs.shell }}
       run: |
         curl -sO https://registry.npmjs.org/npm/-/npm-7.5.4.tgz
         tar xf npm-7.5.4.tgz
@@ -66,13 +66,16 @@ runs:
 
     - name: Install npm@7
       if: inputs.npm-version && steps.node-version.outputs.10-or-lower
+      shell: ${{ inputs.shell }}
       run: npm i --prefer-online --no-fund --no-audit -g npm@7
 
     - name: Install npm@${{ inputs.npm-version }}
       if: inputs.npm-version && !steps.node-version.outputs.10-or-lower
+      shell: ${{ inputs.shell }}
       run: npm i --prefer-online --no-fund --no-audit -g npm@${{ inputs.npm-version }}
 
     - name: npm Version
+      shell: ${{ inputs.shell }}
       run: npm -v
 
     - name: Setup Dependencies

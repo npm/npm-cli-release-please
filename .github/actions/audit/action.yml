@@ -1,15 +1,18 @@
 # This file is automatically added by @npmcli/template-oss. Do not edit.
 
-name: Lint
+name: Audit
+
+inputs:
+  shell:
+    description: shell to run on
+    default: bash
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
   steps:
     - name: Run Production Audit
+      shell: ${{ inputs.shell }}
       run: npm audit --omit=dev
     - name: Run Full Audit
+      shell: ${{ inputs.shell }}
       run: npm audit --audit-level=none

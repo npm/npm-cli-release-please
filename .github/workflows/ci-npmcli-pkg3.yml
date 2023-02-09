@@ -103,12 +103,13 @@ jobs:
         uses: ./.github/actions/setup
         with:
           node-version: ${{ matrix.node-version }}
-          platform: ${{ matrix.platform.os }}
+          shell: ${{ matrix.platform.shell }}
 
       - name: Test
         uses: ./.github/actions/test
         with:
           release: ${{ !!inputs.check-sha }}
+          shell: ${{ matrix.platform.shell }}
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0

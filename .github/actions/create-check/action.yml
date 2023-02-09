@@ -24,10 +24,6 @@ outputs:
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
   steps:
     - name: Get Workflow Job
       uses: actions/github-script@v6

@@ -4,7 +4,13 @@ name: Release Integration
 
 on:
   workflow_call:
-
+    inputs:
+      release:
+        required: true
+        type: string
+      releases:
+        required: true
+        type: string
 
 jobs:
   check-registry:
