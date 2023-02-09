@@ -64,7 +64,7 @@ jobs:
       - name: Lint
         uses: ./.github/actions/lint
         with:
-          release: ${{ !!inputs.check-sha }}
+          all: ${{ !!inputs.check-sha }}
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
@@ -114,7 +114,7 @@ jobs:
       - name: Test
         uses: ./.github/actions/test
         with:
-          release: ${{ !!inputs.check-sha }}
+          all: ${{ !!inputs.check-sha }}
           shell: ${{ matrix.platform.shell }}
 
       - name: Conclude Check
