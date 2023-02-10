@@ -27,35 +27,27 @@ runs:
         script: |
           const { repo: { owner, repo }, eventName, payload, sha } = context
 
-          console.log({ eventName, payload, sha })
+          const res = await github.rest.repos.getCommit({
+            owner,
+            repo,
+            ref: sha,
+          })
+          console.log(JSON.stringify(res.data, null, 2))
 
           if (eventName === 'pull_request' || eventName === 'pull_request_target') {
-            const resFiles = github.rest.pulls.listFiles({
-              owner,
-              repo,
-              pull_number: payload.pull_request.number,
-            })
-
-            console.log(resFiles)
-
             const files = await github.paginate(github.rest.pulls.listFiles, {
               owner,
               repo,
               pull_number: payload.pull_request.number,
-            })
+            }).then(files => files.map(f => f.filename))
 
             console.log(files)
 
             return files
           }
 
-          const res = github.rest.repos.getCommit({
-            owner,
-            repo,
-            ref: sha,
-          })
 
-          console.log(JSON.stringify(res.data, null, 2))
+
 
           return commit
 

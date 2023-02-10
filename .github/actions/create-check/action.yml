@@ -36,7 +36,7 @@ runs:
           const { JOB_NAME } = process.env
           const { repo: { owner, repo }, runId, serverUrl } = context
 
-          const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun({
+          const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
             owner,
             repo,
             run_id: runId,
