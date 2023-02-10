@@ -17,14 +17,10 @@ on:
         required: true
         type: string
   pull_request:
-    paths:
-      - pkg1/**
   push:
     branches:
       - main
       - latest
-    paths:
-      - pkg1/**
   schedule:
     # "At 09:00 UTC (02:00 PT) on Monday" https://crontab.guru/#0_9_*_*_1
     - cron: "0 9 * * 1"

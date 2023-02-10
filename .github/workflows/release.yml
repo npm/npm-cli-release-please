@@ -57,6 +57,7 @@ jobs:
           PR_NUMBER: ${{ steps.release.outputs.pr-number }}
           REF_NAME: ${{ github.ref_name }}
         with:
+          result-encoding: string
           script: |
             const { runId, repo: { owner, repo } } = context
             const { data: workflow } = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId })
@@ -194,6 +195,7 @@ jobs:
         env:
           RELEASES: ${{ needs.release.outputs.releases }}
         with:
+          result-encoding: string
           script: |
             const releases = JSON.parse(process.env.RELEASES)
             const { runId, repo: { owner, repo } } = context
