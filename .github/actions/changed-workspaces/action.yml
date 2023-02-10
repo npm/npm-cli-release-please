@@ -30,7 +30,7 @@ runs:
           console.log({ eventName, payload, sha })
 
           if (eventName === 'pull_request' || eventName === 'pull_request_target') {
-            const files = await github.paginate(github.roctokit.rest.pulls.listFiles({
+            const files = await github.paginate(github.rest.pulls.listFiles({
               owner,
               repo,
               pull_number: payload.pull_request.number,
@@ -41,7 +41,7 @@ runs:
             return files
           }
 
-          const commit = octokit.rest.git.getCommit({
+          const commit = github.rest.git.getCommit({
             owner,
             repo,
             commit_sha: sha,
