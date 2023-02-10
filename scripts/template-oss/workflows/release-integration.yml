@@ -13,7 +13,7 @@ on:
 jobs:
   check-registry:
     name: Check Registry
-    if: {{> partialsIfOrg }}
+    {{> partialsJobIf }}
     {{> partialsJobDefaults }}
     steps:
       - name: View in Registry

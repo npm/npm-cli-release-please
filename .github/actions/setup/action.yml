@@ -48,10 +48,11 @@ runs:
       shell: ${{ inputs.shell }}
       run: |
         NODE_VERSION=$(node --version)
-        if npx semver@7 -r "<=10" "$NODE_VERSION"; then
+        echo $NODE_VERSION
+        if npx semver@7 -r "<=10" "$NODE_VERSION" --yes; then
           echo "ten-or-lower=true" >> $GITHUB_OUTPUT
         fi
-        if npx semver@7 -r "<=14" "$NODE_VERSION"; then
+        if npx semver@7 -r "<=14" "$NODE_VERSION" --yes; then
           echo "fourteen-or-lower=true" >> $GITHUB_OUTPUT
         fi
 
@@ -87,3 +88,8 @@ runs:
       with:
         command: ${{ inputs.deps-command }}
         flags: ${{ inputs.deps-flags }}
+
+    - name: Add Problem Matcher
+      shell: ${{ inputs.shell }}
+      run: |
+        [[ -f ./.github/matchers/tap.json ]] && echo "::add-matcher::.github/matchers/tap.json"

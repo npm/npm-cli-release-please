@@ -41,7 +41,6 @@ runs:
             repo,
             run_id: runId,
           })
-          console.log(jobs)
           const job = jobs.find(j => j.name.endsWith(JOB_NAME))
 
           const shaUrl = `${serverUrl}/${owner}/${repo}/commit/${{ inputs.sha }}`

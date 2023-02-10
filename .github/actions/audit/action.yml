@@ -10,9 +10,8 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Run Production Audit
+    - name: Run Audit
       shell: ${{ inputs.shell }}
-      run: npm audit --omit=dev
-    - name: Run Full Audit
-      shell: ${{ inputs.shell }}
-      run: npm audit --audit-level=none
+      run: |
+        npm audit --omit=dev
+        npm audit --audit-level=none

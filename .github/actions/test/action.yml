@@ -12,10 +12,6 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Add Problem Matcher
-      shell: ${{ inputs.shell }}
-      run: echo "::add-matcher::.github/matchers/tap.json"
-
     - name: Test
       shell: ${{ inputs.shell }}
       run: npm test --ignore-scripts ${{ inputs.flags }}

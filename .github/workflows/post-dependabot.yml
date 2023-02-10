@@ -4,52 +4,50 @@ name: Post Dependabot
 
 on: pull_request
 
-permissions:
-  contents: write
-
 jobs:
   template-oss:
     name: template-oss
+    permissions:
+      contents: write
     if: github.repository_owner == 'npm' && github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
       - name: Fetch Dependabot Metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Dependabot can update multiple directories so we output which directory
-      # it is acting on so we can run the command for the correct root or workspace
-      - name: Get Dependabot Directory
+      - name: Is Dependency
         if: contains(steps.metadata.outputs.dependency-names, '@npmcli/template-oss')
-        id: flags
+        id: dependency
+        run: echo "continue=true" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        if: steps.dependency.outputs.continue
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup
+        if: steps.dependency.outputs.continue
+        uses: ./.github/actions/setup
+
+      - name: Get Workspaces
+        if: steps.dependency.outputs.continue
+        id: workspaces
         run: |
-          dependabot_dir="${{ steps.metadata.outputs.directory }}"
-          if [[ "$dependabot_dir" == "/" ]]; then
-            echo "workspace=-iwr" >> $GITHUB_OUTPUT
-          else
-            # strip leading slash from directory so it works as a
-            # a path to the workspace flag
-            echo "workspace=-w ${dependabot_dir#/}" >> $GITHUB_OUTPUT
-          fi
+          flags=$(npm exec --offline -- template-oss-changed-workspaces '["${{ steps.metadata.outputs.directory }}"]')
+          echo "flags=${flags}" >> $GITHUB_OUTPUT
 
       - name: Apply Changes
-        if: steps.flags.outputs.workspace
+        if: steps.workspaces.outputs.flags
         id: apply
         run: |
-          npm run template-oss-apply ${{ steps.flags.outputs.workspace }}
+          npm run template-oss-apply ${{ steps.workspaces.outputs.flags }}
           if [[ `git status --porcelain` ]]; then
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
@@ -101,7 +99,7 @@ jobs:
       - name: Check Changes
         if: steps.apply.outputs.changes
         run: |
-          npm exec --offline ${{ steps.flags.outputs.workspace }} -- template-oss-check
+          npm exec --offline ${{ steps.workspaces.outputs.flags }} -- template-oss-check
 
       - name: Fail on Breaking Change
         if: steps.apply.outputs.changes && startsWith(steps.apply.outputs.message, 'feat!')

@@ -10,9 +10,10 @@ on:
         type: string
   push:
     branches:
-      - main
-      - latest
-      - release/v*
+      branches:
+        - main
+        - latest
+        - release/v*
 
 permissions:
   contents: write
@@ -262,10 +263,11 @@ jobs:
         id: comment-text
         env:
           PR_NUMBER: ${{ fromJSON(needs.release.outputs.release).prNumber }}
+          REF_NAME: ${{ github.ref_name }}
           RESULT: ${{ steps.needs-result.outputs.result }}
         with:
           script: |
-            const { RESULT } = process.env             
+            const { RESULT, PR_NUMBER, REF_NAME } = process.env             
             const tagCodeowner = RESULT !== 'white_check_mark'
             if (tagCodeowner) {
               let body = ''
@@ -273,6 +275,8 @@ jobs:
               body += ` @npm/cli-team: The post-release workflow failed for this release.`
               body += ` Manual steps may need to be taken after examining the workflow output`
               body += ` from the above workflow run. :rotating_light:`
+              body += `\n\nTo rerun the workflow run the following command:\n\n`
+              body += `\`\`\`\ngh workflow run release.yml -r ${REF_NAME} -R ${owner}/${repo} -f release-pr=${PR_NUMBER}\n\`\`\``
               return body
             }
 
