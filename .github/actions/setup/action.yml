@@ -96,6 +96,7 @@ runs:
     - name: Changed Workspaces
       if: inputs.deps
       id: changed-workspaces
+      shell: ${{ inputs.shell }}
       run: |
         if [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_target" ]]; then
           flags=$(npm exec --offline -- template-oss-changed-workspaces 'origin/${{ github.base_ref }}' ${{ github.event.pull_request.head.sha }})
