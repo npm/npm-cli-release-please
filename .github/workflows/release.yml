@@ -138,12 +138,12 @@ jobs:
           job-name: Release
 
       - name: Conclude Check
-        uses: LouisBrunner/checks-action@v1.5.0
+        uses: ./.github/actions/conclude-check
         if: needs.release.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ job.status }}
-          check_id: ${{ needs.release.outputs.check-id }}
+          check-id: ${{ needs.release.outputs.check-id }}
 
   ci:
     name: Release PR - CI
@@ -176,12 +176,12 @@ jobs:
           echo "result=$result" >> $GITHUB_OUTPUT
 
       - name: Conclude Check
-        uses: LouisBrunner/checks-action@v1.5.0
-        if: needs.release.outputs.check-id && (success() || failure())
+        uses: ./.github/actions/conclude-check
+        if: needs.update.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ steps.needs-result.outputs.result }}
-          check_id: ${{ needs.update.outputs.check-id }}
+          check-id: ${{ needs.update.outputs.check-id }}
 
   post-release:
     name: Post Release

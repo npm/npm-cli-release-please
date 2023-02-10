@@ -74,12 +74,12 @@ jobs:
           flags: ${{ steps.workspaces.outputs.flags }}
 
       - name: Conclude Check
-        uses: LouisBrunner/checks-action@v1.5.0
+        uses: ./.github/actions/conclude-check
         if: steps.check.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ job.status }}
-          check_id: ${{ steps.check.outputs.check-id }}
+          check-id: ${{ steps.check.outputs.check-id }}
 
   test:
     name: Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
@@ -153,9 +153,9 @@ jobs:
           shell: ${{ matrix.platform.shell }}
 
       - name: Conclude Check
-        uses: LouisBrunner/checks-action@v1.5.0
+        uses: ./.github/actions/conclude-check
         if: steps.continue-matrix.outputs.result && steps.check.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ job.status }}
-          check_id: ${{ steps.check.outputs.check-id }}
+          check-id: ${{ steps.check.outputs.check-id }}
