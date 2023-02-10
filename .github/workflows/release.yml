@@ -127,7 +127,7 @@ jobs:
 
       - name: Create Check
         uses: ./.github/actions/create-check
-        if: ${{ steps.commit.outputs.sha }}
+        if: steps.commit.outputs.sha
         id: check
         with:
           sha: ${{ steps.release.outputs.pr-sha }}
@@ -136,7 +136,7 @@ jobs:
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
-        if: ${{ needs.release.outputs.check-id }} && always()
+        if: needs.release.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ job.status }}
@@ -158,7 +158,7 @@ jobs:
       run:
         shell: bash
     needs: [ release, update, ci ]
-    if: needs.release.outputs.pr && always()
+    if: needs.release.outputs.pr && (success() || failure())
     steps:
       - name: Get Needs Result
         id: needs-result
@@ -174,7 +174,7 @@ jobs:
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
-        if: ${{ needs.release.outputs.check-id }} && always()
+        if: needs.release.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ steps.needs-result.outputs.result }}
@@ -240,7 +240,7 @@ jobs:
       run:
         shell: bash
     needs: [ release, release-integration ]
-    if: needs.release.outputs.release && always()
+    if: needs.release.outputs.release && (success() || failure())
     steps:
       - name: Get Needs Result
         id: needs-result
@@ -280,7 +280,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: "## Release Workflow"
           find: "Workflow run: :[a-z_]+:"
-          replace: ${{ steps.needs-result.outputs.result }}
+          replace: "Workflow run :${{ steps.needs-result.outputs.result }}:"
           append: ${{ steps.comment-text.outputs.result }}
           number: ${{ fromJson(needs.release.outputs.release).prNumber }}
           includes: ${{ github.run_id }}

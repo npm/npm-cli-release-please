@@ -5,7 +5,6 @@ module.exports = {
   allowPaths: [
     '/AUTHORS',
   ],
-  ciVersions: 'latest',
   rootRepo: {
     add: {
       '.github/workflows/release-integration.yml': 'release-integration.yml',

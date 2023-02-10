@@ -3,10 +3,8 @@
 name: Test
 
 inputs:
-  all:
-    description: run on all workspaces
-    default: false
-    type: boolean
+  flags:
+    description: flags to pass to the commands
   shell:
     description: shell to run on
     default: bash
@@ -20,6 +18,4 @@ runs:
 
     - name: Test
       shell: ${{ inputs.shell }}
-      run: |
-        FLAGS="${{ (inputs.all && '-ws -iwr --if-present') || '' }}"
-        npm test --ignore-scripts "$FLAGS"
+      run: npm test --ignore-scripts ${{ inputs.flags }}

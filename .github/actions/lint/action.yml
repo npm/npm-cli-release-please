@@ -3,10 +3,8 @@
 name: Lint
 
 inputs:
-  all:
-    description: run on all workspaces
-    default: false
-    type: boolean
+  flags:
+    description: flags to pass to the commands
   shell:
     description: shell to run on
     default: bash
@@ -14,17 +12,10 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Flags
-      id: flags
-      shell: ${{ inputs.shell }}
-      run: |
-        FLAGS="${{ (inputs.all && '-ws -iwr --if-present') || '' }}"
-        echo "result=$FLAGS" >> $GITHUB_OUTPUT
-
     - name: Lint
       shell: ${{ inputs.shell }}
-      run: npm run lint --ignore-scripts "${{ steps.flags.outputs.result }}"
+      run: npm run lint --ignore-scripts ${{ inputs.flags }}
 
     - name: Post Lint
       shell: ${{ inputs.shell }}
-      run: npm run postlint --ignore-scripts "${{ steps.flags.outputs.result }}"
+      run: npm run postlint --ignore-scripts ${{ inputs.flags }}

@@ -1,0 +1,55 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Get Changed Workspaces
+
+inputs:
+  token:
+    description: GitHub token to use
+    required: true
+  shell:
+    description: shell to run on
+    default: bash
+  all:
+    default: false
+    type: boolean
+
+outputs:
+  files:
+    value: ${{ steps.files.outputs.result }}
+  flags:
+    value: ${{ steps.workspaces.outputs.flags }}
+
+runs:
+  using: composite
+  steps:
+    - name: Get Changed Files
+      uses: actions/github-script@v6
+      if: ${{ !inputs.all }}
+      id: files
+      with:
+        github-token: ${{ inputs.token }}
+        script: |
+          const { repo: { owner, repo }, eventName, payload, sha } = context
+          let files
+          if (eventName === 'pull_request' || eventName === 'pull_request_target') {
+            files = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number: payload.pull_request.number,
+            })
+          } else {
+            const { data: commit } = await github.rest.repos.getCommit({
+              owner,
+              repo,
+              ref: sha,
+            })
+            files = commit.files
+          }
+          return files.map(f => f.filename)
+
+    - name: Get Workspaces
+      shell: ${{ inputs.shell }}
+      id: workspaces
+      run: |
+        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ (inputs.all && '--all') || steps.files.outputs.result }}')
+        echo "flags=${flags}" >> $GITHUB_OUTPUT
