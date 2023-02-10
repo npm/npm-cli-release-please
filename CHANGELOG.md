@@ -1,5 +1,40 @@
 # Changelog
 
+## [3.0.29](https://github.com/npm/npm-cli-release-please/compare/v3.0.28...v3.0.29) (2023-02-10)
+
+### Bug Fixes
+
+* [`9f96adf`](https://github.com/npm/npm-cli-release-please/commit/9f96adf4ea129d7cd3dbab90fe5fd04c195055c9) 19284 (@lukekarrys)
+* [`10b668b`](https://github.com/npm/npm-cli-release-please/commit/10b668b82732ac9cfcf7bbe75922340f7cf005ff) 30922 (@lukekarrys)
+* [`38eca3b`](https://github.com/npm/npm-cli-release-please/commit/38eca3b9f9ce02a1c87423bf0f252b95381b0b1d) 28827 (@lukekarrys)
+* [`8dfed26`](https://github.com/npm/npm-cli-release-please/commit/8dfed260a5b2c6fa6400d54ba5657b64638d3da5) 7369 (@lukekarrys)
+* [`d656334`](https://github.com/npm/npm-cli-release-please/commit/d6563341a14892623b58336a7828ddc479c20144) 30907 (@lukekarrys)
+* [`c662b2c`](https://github.com/npm/npm-cli-release-please/commit/c662b2c52d11d6cb24bfb92cfc90ffe07f44489d) 20206 (@lukekarrys)
+* [`db0da6f`](https://github.com/npm/npm-cli-release-please/commit/db0da6f8e89a619fab14a8ae3963af565e92a137) 19647 (@lukekarrys)
+* [`99742fe`](https://github.com/npm/npm-cli-release-please/commit/99742fef51d566c838f4545f497002fbba7beecb) 13937 (@lukekarrys)
+* [`1691c22`](https://github.com/npm/npm-cli-release-please/commit/1691c22b6880dcc20a033bfb7eeadf47451dde00) 10326 (@lukekarrys)
+* [`c7ed97a`](https://github.com/npm/npm-cli-release-please/commit/c7ed97a733d8355a8bed54df9450b091698a2923) 538 (@lukekarrys)
+* [`cce2d0e`](https://github.com/npm/npm-cli-release-please/commit/cce2d0e47412e98612859bd370f55f541790f613) 9420 (@lukekarrys)
+* [`2a3d8c3`](https://github.com/npm/npm-cli-release-please/commit/2a3d8c37f77df5298ab36657206dd4ecfc03eab6) 17576 (@lukekarrys)
+* [`1f05c0e`](https://github.com/npm/npm-cli-release-please/commit/1f05c0ef2ac943d7b257529e78708d0497b6e3c6) all ws flag (@lukekarrys)
+* [`ce4665a`](https://github.com/npm/npm-cli-release-please/commit/ce4665a799462ad6e69a61ad5f518b5851931a3f) all ws flag (@lukekarrys)
+* [`6f9c7d3`](https://github.com/npm/npm-cli-release-please/commit/6f9c7d33008927d6a3eda44c7961d7cb921ac14b) semver (@lukekarrys)
+* [`c1a629d`](https://github.com/npm/npm-cli-release-please/commit/c1a629de823189ddffe5ea9e64d984ef65532c01) no numbers (@lukekarrys)
+* [`6f216af`](https://github.com/npm/npm-cli-release-please/commit/6f216af8a1281af1be6ae59f351dbef622153a6c) shell: (@lukekarrys)
+* [`1f77174`](https://github.com/npm/npm-cli-release-please/commit/1f771745d4f7da523112502190974166ee7b65a8) template-oss (@lukekarrys)
+* [`cf09c25`](https://github.com/npm/npm-cli-release-please/commit/cf09c253118662b883bc395b3c291024e9312764) template-oss (@lukekarrys)
+* [`1263144`](https://github.com/npm/npm-cli-release-please/commit/12631447ece585c57b9704fc9674d6a1d6403068) paths (@lukekarrys)
+* [`2d49e7c`](https://github.com/npm/npm-cli-release-please/commit/2d49e7c76498f24cc146e0ff8073e63f57ed9690) all (@lukekarrys)
+* [`efe6764`](https://github.com/npm/npm-cli-release-please/commit/efe676488f367e4eda382c5a8c9febb7efc99ac8) this wont work (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.9): `@npmcli/pkg6@1.2.9`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.9): `pkg1@5.0.9`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.9): `pkg2@4.0.9`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.9): `pkg4@1.1.9`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.9): `pkg5@1.1.9`
+
 ## [3.0.28](https://github.com/npm/npm-cli-release-please/compare/v3.0.27...v3.0.28) (2023-02-07)
 
 ### Bug Fixes
