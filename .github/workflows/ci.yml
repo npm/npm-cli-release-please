@@ -106,7 +106,7 @@ jobs:
       - name: Continue Matrix Run
         id: continue-matrix
         run: |
-          if [[ "${{ matrix.node-version }}" == "14.17.0" ]]; then
+          if [[ "${{ matrix.node-version }}" == "14.17.0" || "${{ inputs.all }}" == "true" ]]; then
             echo "result=true" >> $GITHUB_OUTPUT 
           fi
 
