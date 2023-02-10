@@ -42,7 +42,8 @@ runs:
             repo,
             run_id: runId,
           }))
-          const job = res.data.jobs.find(j => j.name.endsWith(JOB_NAME))
+          console.log(res.data)
+          const job = res.data.find(j => j.name.endsWith(JOB_NAME))
 
           const shaUrl = `${serverUrl}/${owner}/${repo}/commit/${{ inputs.sha }}`
           const summary = `This check is assosciated with ${shaUrl}\n\n`
