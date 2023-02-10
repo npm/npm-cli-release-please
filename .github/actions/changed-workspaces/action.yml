@@ -42,7 +42,7 @@ runs:
               owner,
               repo,
               pull_number: payload.pull_request.number,
-            }))
+            })
 
             console.log(files)
 
