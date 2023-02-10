@@ -49,6 +49,7 @@ jobs:
           job-name: Lint
 
       - name: Setup
+        id: setup
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         uses: ./.github/actions/setup
 
@@ -56,7 +57,7 @@ jobs:
         uses: ./.github/actions/lint
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
-          all: ${{ !!inputs.check-sha }}
+          flags: ${{ steps.setup.outputs.workspace-flags }}
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
@@ -99,6 +100,7 @@ jobs:
 
       - name: Setup
         uses: ./.github/actions/setup
+        id: setup
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
           node-version: ${{ matrix.node-version }}
@@ -108,7 +110,7 @@ jobs:
         uses: ./.github/actions/test
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
-          all: ${{ !!inputs.check-sha }}
+          flags: ${{ steps.setup.outputs.workspace-flags }}
           shell: ${{ matrix.platform.shell }}
 
       - name: Conclude Check

@@ -27,6 +27,11 @@ inputs:
   deps-flags:
     description: extra flags to pass to the dependencies step
 
+outputs:
+  workspace-flags:
+    description: Flags of the changed workspaces including the root
+    value: ${{ steps.changed-workspaces.outputs.flags }}
+
 runs:
   using: composite
   steps:
@@ -87,3 +92,14 @@ runs:
       with:
         command: ${{ inputs.deps-command }}
         flags: ${{ inputs.deps-flags }}
+
+    - name: Changed Workspaces
+      if: inputs.deps
+      id: changed-workspaces
+      run: |
+        if [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_target" ]]; then
+          flags=$(npm exec --offline -- template-oss-changed-workspaces 'origin/${{ github.base_ref }}' ${{ github.event.pull_request.head.sha }})
+        else
+          flags=$(npm exec --offline -- template-oss-changed-workspaces ${{ github.sha }})
+        fi
+        echo "flags=${flags}" >> $GITHUB_OUTPUT
