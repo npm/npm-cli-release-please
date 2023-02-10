@@ -40,7 +40,7 @@ runs:
             owner,
             repo,
             run_id: runId,
-          }))
+          })
           console.log(jobs)
           const job = jobs.find(j => j.name.endsWith(JOB_NAME))
 

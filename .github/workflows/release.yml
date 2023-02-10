@@ -31,7 +31,7 @@ jobs:
       pr: ${{ steps.release.outputs.pr }}
       release: ${{ steps.release.outputs.release }}
       releases: ${{ steps.release.outputs.releases }}
-      branch: ${{ steps.release.outputs.pr-branch }}
+      pr-branch: ${{ steps.release.outputs.pr-branch }}
       pr-number: ${{ steps.release.outputs.pr-number }}
       comment-id: ${{ steps.pr-comment.outputs.result }}
       check-id: ${{ steps.check.outputs.check-id }}
@@ -48,6 +48,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx --offline template-oss-release-please "${{ github.ref_name }}" "${{ inputs.release-pr }}"
+
+      # If we have opened a release PR, then immediately create an "in_progress"
+      # check for it so the GitHub UI doesn't report that its mergeable.
+      # This check will be swapped out for real CI checks once those are started.
+      - name: Create Check
+        uses: ./.github/actions/create-check
+        if: steps.release.outputs.pr-sha
+        id: check
+        with:
+          sha: ${{ steps.release.outputs.pr-sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          job-name: Release
 
       - name: Comment Text
         uses: actions/github-script@v6
@@ -77,17 +89,8 @@ jobs:
           body: ${{ steps.comment-text.outputs.result }}
           number: ${{ steps.release.outputs.pr-number }}
 
-      - name: Create Check
-        uses: ./.github/actions/create-check
-        if: steps.release.outputs.pr-sha
-        id: check
-        with:
-          sha: ${{ steps.release.outputs.pr-sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          job-name: Release
-
   update:
-    name: Update Release
+    name: Release PR - Update
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -101,7 +104,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ needs.release.outputs.branch }}
+          ref: ${{ needs.release.outputs.pr-branch }}
           fetch-depth: 0
 
       - name: Setup
@@ -130,7 +133,7 @@ jobs:
         if: steps.commit.outputs.sha
         id: check
         with:
-          sha: ${{ steps.release.outputs.pr-sha }}
+          sha: ${{ steps.vommit.outputs.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           job-name: Release
 
@@ -143,16 +146,16 @@ jobs:
           check_id: ${{ needs.release.outputs.check-id }}
 
   ci:
-    name: CI - Release
+    name: Release PR - CI
     needs: [ release, update ]
     if: needs.release.outputs.pr
     uses: ./.github/workflows/ci.yml
     with:
-      ref: ${{ needs.release.outputs.branch }}
+      ref: ${{ needs.release.outputs.pr-branch }}
       check-sha: ${{ needs.update.outputs.sha }}
 
   post-ci:
-    name: Post CI - Release
+    name: Relase PR - Post CI
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -181,7 +184,7 @@ jobs:
           check_id: ${{ needs.update.outputs.check-id }}
 
   post-release:
-    name: Post Release - Release
+    name: Post Release
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -225,7 +228,7 @@ jobs:
           includes: ${{ github.run_id }}
 
   release-integration:
-    name: Release Integration
+    name: Post Release - Integration
     needs: release
     if: needs.release.outputs.release
     uses: ./.github/workflows/release-integration.yml
@@ -234,7 +237,7 @@ jobs:
       releases: needs.release.outputs.releases
 
   post-release-integration:
-    name: Post Release Integration - Release
+    name: Post Release - Post Integration
     runs-on: ubuntu-latest
     defaults:
       run:
