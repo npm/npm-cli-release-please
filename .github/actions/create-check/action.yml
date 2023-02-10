@@ -15,7 +15,7 @@ inputs:
     required: true
   job-status:
     description: Status of the check being created
-    default: in-progress
+    default: in_progress
 
 outputs:
   check-id:
