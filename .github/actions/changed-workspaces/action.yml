@@ -1,0 +1,59 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Get Changed Workspaces
+
+inputs:
+  token:
+    description: GitHub token to use
+    required: true
+  shell:
+    description: shell to run on
+    default: bash
+
+outputs:
+  files:
+    value: ${{ steps.files.outputs.result }}
+  flags:
+    value: ${{ steps.workspaces.outputs.flags }}
+
+runs:
+  using: composite
+  steps:
+    - name: Get Changed Files
+      uses: actions/github-script@v6
+      id: files
+      with:
+        github-token: ${{ inputs.token }}
+        script: |
+          const { repo: { owner, repo }, eventName, payload, sha } = context
+
+          console.log({ eventName, payload, sha })
+
+          if (eventName === 'pull_request' || eventName === 'pull_request_target') {
+            const files = await github.paginate(github.roctokit.rest.pulls.listFiles({
+              owner,
+              repo,
+              pull_number: payload.pull_request.number,
+            }))
+
+            console.log(JSON.stringify(files, null, 2))
+
+            return files
+          }
+
+          const commit = octokit.rest.git.getCommit({
+            owner,
+            repo,
+            commit_sha: sha,
+          })
+
+          console.log(JSON.stringify(commit, null, 2))
+
+          return commit
+
+    - name: Get Workspaces
+      shell: ${{ inputs.shell }}
+      id: workspaces
+      run: |
+        flags=$(npm exec --offline -- template-oss-changed-workspaces "${{ steps.files.outputs.result }}"
+        echo "flags=${flags}" >> $GITHUB_OUTPUT

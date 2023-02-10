@@ -53,11 +53,18 @@ jobs:
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         uses: ./.github/actions/setup
 
+      - name: Get Changed Workspaces
+        id: workspaces
+        continue-on-error: ${{ !!steps.check.outputs.check-id }}
+        uses: ./.github/actions/changed-workspaces
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Lint
         uses: ./.github/actions/lint
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
-          flags: ${{ steps.setup.outputs.workspace-flags }}
+          flags: ${{ steps.workspaces.outputs.flags }}
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
@@ -106,11 +113,19 @@ jobs:
           node-version: ${{ matrix.node-version }}
           shell: ${{ matrix.platform.shell }}
 
+      - name: Get Changed Workspaces
+        id: workspaces
+        continue-on-error: ${{ !!steps.check.outputs.check-id }}
+        uses: ./.github/actions/changed-workspaces
+        with:
+          shell: ${{ matrix.platform.shell }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Test
         uses: ./.github/actions/test
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
-          flags: ${{ steps.setup.outputs.workspace-flags }}
+          flags: ${{ steps.workspaces.outputs.flags }}
           shell: ${{ matrix.platform.shell }}
 
       - name: Conclude Check
