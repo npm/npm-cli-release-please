@@ -49,15 +49,6 @@ jobs:
         run: |
           npx --offline template-oss-release-please "${{ github.ref_name }}" "${{ inputs.release-pr }}"
 
-      - name: Create Check
-        uses: ./.github/actions/create-check
-        if: ${{ steps.release.outputs.pr-sha }}
-        id: check
-        with:
-          sha: ${{ steps.release.outputs.pr-sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          job-name: Release
-
       - name: Comment Text
         uses: actions/github-script@v6
         if: steps.release.outputs.pr-number
@@ -84,6 +75,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ steps.comment-text.outputs.result }}
           number: ${{ steps.release.outputs.pr-number }}
+
+      - name: Create Check
+        uses: ./.github/actions/create-check
+        if: steps.release.outputs.pr-sha
+        id: check
+        with:
+          sha: ${{ steps.release.outputs.pr-sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          job-name: Release
 
   update:
     name: Update Release

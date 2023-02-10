@@ -34,7 +34,6 @@ runs:
         github-token: ${{ inputs.token }}
         script: |
           const { JOB_NAME } = process.env
-          console.log(context)
           const { repo: { owner, repo }, runId, serverUrl } = context
 
           const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun({
