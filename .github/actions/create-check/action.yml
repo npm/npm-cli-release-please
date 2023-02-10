@@ -37,13 +37,13 @@ runs:
           console.log(context)
           const { repo: { owner, repo }, runId, serverUrl } = context
 
-          const res = await github.paginate(github.rest.actions.listJobsForWorkflowRun({
+          const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun({
             owner,
             repo,
             run_id: runId,
           }))
-          console.log(res.data)
-          const job = res.data.find(j => j.name.endsWith(JOB_NAME))
+          console.log(jobs)
+          const job = jobs.find(j => j.name.endsWith(JOB_NAME))
 
           const shaUrl = `${serverUrl}/${owner}/${repo}/commit/${{ inputs.sha }}`
           const summary = `This check is assosciated with ${shaUrl}\n\n`
