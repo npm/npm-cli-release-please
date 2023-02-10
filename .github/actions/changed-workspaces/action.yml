@@ -9,6 +9,9 @@ inputs:
   shell:
     description: shell to run on
     default: bash
+  all:
+    default: false
+    type: boolean
 
 outputs:
   files:
@@ -21,6 +24,7 @@ runs:
   steps:
     - name: Get Changed Files
       uses: actions/github-script@v6
+      if: ${{ !inputs.all }}
       id: files
       with:
         github-token: ${{ inputs.token }}
@@ -47,5 +51,5 @@ runs:
       shell: ${{ inputs.shell }}
       id: workspaces
       run: |
-        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ steps.files.outputs.result }}')
+        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ (inputs.all && '--all') || steps.files.outputs.result }}')
         echo "flags=${flags}" >> $GITHUB_OUTPUT

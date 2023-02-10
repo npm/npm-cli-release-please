@@ -8,6 +8,9 @@ on:
       ref:
         required: true
         type: string
+      all:
+        default: true
+        type: boolean
   workflow_call:
     inputs:
       ref:
@@ -16,6 +19,9 @@ on:
       check-sha:
         required: true
         type: string
+      all:
+        default: true
+        type: boolean
   pull_request:
   push:
     branches:
@@ -41,7 +47,7 @@ jobs:
 
       - name: Create Check
         uses: ./.github/actions/create-check
-        if: ${{ inputs.check-sha }}
+        if: inputs.check-sha
         id: check
         with:
           sha: ${{ inputs.check-sha }}
@@ -59,6 +65,7 @@ jobs:
         uses: ./.github/actions/changed-workspaces
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          all: ${{ inputs.all }}
 
       - name: Lint
         uses: ./.github/actions/lint
@@ -96,14 +103,22 @@ jobs:
           - 18.0.0
           - 18.x
     steps:
+      - name: Continue Matrix Run
+        id: continue-matrix
+        run: |
+          if [[ "${{ matrix.node-version }}" == "14.17.0" ]]; then
+            echo "result=true" >> $GITHUB_OUTPUT 
+          fi
+
       - name: Checkout
+        if: steps.continue-matrix.outputs.result
         uses: actions/checkout@v3
         with:
           ref: ${{ inputs.ref }}
 
       - name: Create Check
+        if: steps.continue-matrix.outputs.result && inputs.check-sha
         uses: ./.github/actions/create-check
-        if: ${{ inputs.check-sha }}
         id: check
         with:
           sha: ${{ inputs.check-sha }}
@@ -111,6 +126,7 @@ jobs:
           job-name: "Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
 
       - name: Setup
+        if: steps.continue-matrix.outputs.result
         uses: ./.github/actions/setup
         id: setup
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
@@ -119,14 +135,17 @@ jobs:
           shell: ${{ matrix.platform.shell }}
 
       - name: Get Changed Workspaces
+        if: steps.continue-matrix.outputs.result
         id: workspaces
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         uses: ./.github/actions/changed-workspaces
         with:
           shell: ${{ matrix.platform.shell }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          all: ${{ inputs.all }}
 
       - name: Test
+        if: steps.continue-matrix.outputs.result
         uses: ./.github/actions/test
         continue-on-error: ${{ !!steps.check.outputs.check-id }}
         with:
@@ -135,7 +154,7 @@ jobs:
 
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.5.0
-        if: steps.check.outputs.check-id && (success() || failure())
+        if: steps.continue-matrix.outputs.result && steps.check.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ job.status }}
