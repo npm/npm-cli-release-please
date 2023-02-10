@@ -33,7 +33,7 @@ jobs:
       releases: ${{ steps.release.outputs.releases }}
       pr-branch: ${{ steps.release.outputs.pr-branch }}
       pr-number: ${{ steps.release.outputs.pr-number }}
-      comment-id: ${{ steps.pr-comment.outputs.result }}
+      comment-id: ${{ steps.pr-comment.outputs.comment-id }}
       check-id: ${{ steps.check.outputs.check-id }}
     steps:
       - name: Checkout

@@ -55,6 +55,7 @@ runs:
           const commentData = comments.map(c => ({ id: c.id, login: c.user.login, body: c.body }))
 
           console.log(`Found comments: ${JSON.stringify(commentData, null, 2)}`)
+          console.log(`Looking for comment with: ${JSON.stringify({ LOGIN, TITLE, INCLUDES }, null, 2)}`)
 
           const comment = comments.find(c =>
             c.login === LOGIN &&
@@ -76,6 +77,8 @@ runs:
             console.log('Could not find a comment to use find/replace or append to')
             return
           }
+
+          console.log('Creating new comment')
 
           const res = await github.rest.issues.createComment({ owner, repo, issue_number, body: BODY })
           return res.data.id
