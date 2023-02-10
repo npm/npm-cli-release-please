@@ -47,5 +47,5 @@ runs:
       shell: ${{ inputs.shell }}
       id: workspaces
       run: |
-        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ steps.files.outputs.result }}'
+        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ steps.files.outputs.result }}')
         echo "flags=${flags}" >> $GITHUB_OUTPUT
