@@ -12,6 +12,9 @@ inputs:
   all:
     default: false
     type: boolean
+  files:
+    description: json stringified array of file names
+    type: string
 
 outputs:
   flags:
@@ -22,12 +25,12 @@ runs:
   steps:
     - name: Get Changed Files
       uses: ./.github/actions/changed-files
-      if: ${{ !inputs.all }}
+      if: ${{ !inputs.all && !inputs.files }}
       id: files
 
     - name: Get Workspaces
       shell: ${{ inputs.shell }}
       id: workspaces
       run: |
-        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ (inputs.all && '--all') || steps.files.outputs.result }}')
+        flags=$(npm exec --offline -- template-oss-changed-workspaces '${{ (inputs.all && '--all') || (inputs.files || steps.files.outputs.result) }}')
         echo "flags=${flags}" >> $GITHUB_OUTPUT

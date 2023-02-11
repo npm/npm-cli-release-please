@@ -38,10 +38,11 @@ jobs:
 
       - name: Get Workspaces
         if: steps.dependency.outputs.continue
+        uses: ./.github/actions/changed-workspaces
         id: workspaces
-        run: |
-          flags=$(npm exec --offline -- template-oss-changed-workspaces '["${{ steps.metadata.outputs.directory }}"]')
-          echo "flags=${flags}" >> $GITHUB_OUTPUT
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: '["${{ steps.metadata.outputs.directory }}"]'
 
       - name: Apply Changes
         if: steps.workspaces.outputs.flags
