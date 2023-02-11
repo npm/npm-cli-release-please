@@ -5,7 +5,6 @@ name: Get Changed Workspaces
 inputs:
   token:
     description: GitHub token to use
-    required: true
   shell:
     description: shell to run on
     default: bash
@@ -27,6 +26,8 @@ runs:
       uses: ./.github/actions/changed-files
       if: ${{ !inputs.all && !inputs.files }}
       id: files
+      with:
+        token: ${{ inputs.token }}
 
     - name: Get Workspaces
       shell: ${{ inputs.shell }}
