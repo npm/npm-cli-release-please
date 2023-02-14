@@ -1,9 +1,9 @@
 {
-  ".": "3.0.29",
-  "pkg1": "5.0.9",
-  "pkg2": "4.0.9",
-  "pkg3": "2.0.9",
-  "workspaces/arbitrary-name": "1.1.9",
-  "workspaces/not-the-name": "1.1.9",
-  "workspaces/pkg6": "1.2.9"
+  ".": "3.0.30",
+  "pkg1": "5.0.10",
+  "pkg2": "4.0.10",
+  "pkg3": "2.0.10",
+  "workspaces/arbitrary-name": "1.1.10",
+  "workspaces/not-the-name": "1.1.10",
+  "workspaces/pkg6": "1.2.10"
 }

@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.0.30](https://github.com/npm/npm-cli-release-please/compare/v3.0.29...v3.0.30) (2023-02-14)
+
+### Bug Fixes
+
+* [`8179003`](https://github.com/npm/npm-cli-release-please/commit/817900343d1335beaa975113a1dcaba4d15fd8e6) template-oss (@lukekarrys)
+* [`934ac64`](https://github.com/npm/npm-cli-release-please/commit/934ac6467934317c3ae0123ad5c70bd83d36066f) template-oss (@lukekarrys)
+* [`da02fdd`](https://github.com/npm/npm-cli-release-please/commit/da02fdd4658de4a200825083865ad9b6e13f087c) template-oss (@lukekarrys)
+* [`4282cc4`](https://github.com/npm/npm-cli-release-please/commit/4282cc48bfc6c96cccc4e94110c7047e3efa2fb5) 19592 (@lukekarrys)
+* [`9ca235d`](https://github.com/npm/npm-cli-release-please/commit/9ca235d14c36b3a46061c3617bd931db53661d58) 7220 (@lukekarrys)
+* [`1a69125`](https://github.com/npm/npm-cli-release-please/commit/1a691257539e60d3456d5d1a0cccc6fbcffb6285) 7069 (@lukekarrys)
+* [`cff8820`](https://github.com/npm/npm-cli-release-please/commit/cff882001e56fe08b8a88d1d6c79f62f8927cae9) 5252 (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1.2.10): `@npmcli/pkg6@1.2.10`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.10): `pkg1@5.0.10`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.10): `pkg2@4.0.10`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1.1.10): `pkg4@1.1.10`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1.1.10): `pkg5@1.1.10`
+
 ## [3.0.29](https://github.com/npm/npm-cli-release-please/compare/v3.0.28...v3.0.29) (2023-02-10)
 
 ### Bug Fixes
