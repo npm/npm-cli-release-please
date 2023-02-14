@@ -196,6 +196,9 @@ jobs:
     needs: release
     if: needs.release.outputs.releases
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Comment Text
         uses: actions/github-script@v6
         id: comment-text
@@ -249,6 +252,9 @@ jobs:
     needs: [ release, release-integration ]
     if: needs.release.outputs.release && (success() || failure())
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Get Needs Result
         id: needs-result
         run: |
