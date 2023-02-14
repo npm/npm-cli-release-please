@@ -211,8 +211,17 @@ jobs:
             const { runId, repo: { owner, repo } } = context
             const issue_number = releases[0].prNumber
 
-            const releasePleaseComments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
-              .then((comments) => comments.filter(c => c.login === 'github-actions[bot]' && c.body.includes('Release is at')))
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number })
+              .then(comments => comments.map(c => ({ id: c.id, login: c.user.login, body: c.body })))
+
+            console.log(`comments: ${JSON.stringify(comments, null, 2)}`)
+
+            const releasePleaseComments = comments.filter(c =>
+              c.login === 'github-actions[bot]' &&
+              c.body.startsWith(':robot: Release is at ')
+            )
+
+            console.log(`release please comments: ${JSON.stringify(releasePleaseComments, null, 2)}`)
 
             for (const comment of releasePleaseComments) {
               await github.rest.issues.deleteComment({ owner, repo, comment_id: comment.id })
@@ -290,7 +299,6 @@ jobs:
             }
 
       - name: Update Release PR Comment
-        if: steps.comment-text.outputs.result
         uses: ./.github/actions/upsert-comment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
