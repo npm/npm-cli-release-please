@@ -155,14 +155,19 @@ jobs:
       check-sha: ${{ needs.update.outputs.sha }}
 
   post-ci:
-    name: Relase PR - Post CI
+    name: Release PR - Post CI
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
     needs: [ release, update, ci ]
-    if: needs.release.outputs.pr && (success() || failure())
+    if: needs.update.outputs.check-id && (success() || failure())
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.release.outputs.pr-branch }}
+
       - name: Get Needs Result
         id: needs-result
         run: |
@@ -177,7 +182,6 @@ jobs:
 
       - name: Conclude Check
         uses: ./.github/actions/conclude-check
-        if: needs.update.outputs.check-id && (success() || failure())
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           conclusion: ${{ steps.needs-result.outputs.result }}
