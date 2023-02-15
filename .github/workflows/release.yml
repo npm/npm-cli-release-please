@@ -285,7 +285,7 @@ jobs:
           RESULT: ${{ steps.needs-result.outputs.result }}
         with:
           script: |
-            const { RESULT, PR_NUMBER, REF_NAME } = process.env             
+            const { RESULT, PR_NUMBER, REF_NAME } = process.env
             const tagCodeowner = RESULT !== 'white_check_mark'
             if (tagCodeowner) {
               let body = ''

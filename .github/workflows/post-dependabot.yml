@@ -6,8 +6,6 @@ on:
   # workflow dispatch is only for testing
   workflow_dispatch:
     inputs:
-      ref:
-        description: ref to test
       directory:
         description: package directory to test
       update-type:
@@ -21,10 +19,9 @@ jobs:
     permissions:
       contents: write
     outputs:
-      sha: ${{ steps.push-on-error.outputs.sha || steps.push.outputs.sha }}
+      sha: ${{ steps.sha.outputs.sha }}
       changes: ${{ steps.apply.outputs.changes }}
-      message: ${{ steps.apply.outputs.message }}
-    if: github.repository_owner == 'npm' && github.actor == 'dependabot[bot]'
+    if: github.repository_owner == 'npm' && (github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,7 +29,7 @@ jobs:
     steps:
       - name: Fetch Dependabot Metadata
         id: metadata
-        if: github.event_name != 'workflow_dispatch'
+        if: github.event_name == 'pull_request'
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +43,7 @@ jobs:
         if: steps.dependency.outputs.continue
         uses: actions/checkout@v3
         with:
-          ref: ${{ inputs.ref || github.event.pull_request.head.ref }}
+          ref: ${{ (github.event_name == 'pull_request' && github.event.pull_request.head.ref) || '' }}
 
       - name: Setup
         if: steps.dependency.outputs.continue
@@ -90,7 +87,6 @@ jobs:
         run: |
           git commit -am "${{ steps.apply.outputs.message }}"
           git push
-          echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       # If the previous step failed, then reset the commit and remove any workflow changes
       # and attempt to commit and push again. This is helpful because we will have a commit
@@ -98,6 +94,7 @@ jobs:
       - name: Push All Changes Except Workflows
         if: steps.apply.outputs.changes && steps.push.outcome == 'failure'
         id: push-on-error
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -106,30 +103,30 @@ jobs:
           git clean -fd .github/workflows/
           git commit -am "${{ steps.apply.outputs.message }}"
           git push
-          echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
+      - name: Get SHA
+        if: steps.apply.outputs.changes
+        id: sha
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+      # If template-oss is applying breaking changes, then we fail this PR with a message saying what to do. There's no need
+      # to run CI in this case because the PR will need to be fixed manually so CI will run on those commits.
+      - name: Fail on Breaking Change
+        if: steps.apply.outputs.changes && startsWith(steps.apply.outputs.message, 'feat!') && (success() || failure())
+        run: |
+          TITLE="Breaking Changes"
+          MESSAGE="This PR has a breaking change. Run 'npx -p @npmcli/stafftools gh template-oss-fix'"
+          MESSAGE="$MESSAGE for more information on how to fix this with a BREAKING CHANGE footer."
+          echo "::error title=$TITLE::$MESSAGE"
+          exit 1
+
+  # If everything succeeded so far then we run our normal CI workflow since GitHub actions wont rerun after a bot
+  # pushes a new commit to a PR. We rerun all of CI because template-oss could affect any code in the repo including
+  # lint settings and test settings.
   ci:
     name: Dependency - CI
     needs: [ dependency ]
-    continue-on-error: true
-    if: needs.dependency.outputs.changes
+    if: needs.dependency.outputs.sha
     uses: ./.github/workflows/ci.yml
     with:
-      ref: ${{ inputs.ref || github.base_ref }}
       check-sha: ${{ needs.dependency.outputs.sha }}
-
-  post-ci:
-    name: Dependency - Post CI
-    needs: [ ci, dependency ]
-    if: needs.dependency.outputs.changes
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-      - name: Fail on Breaking Change
-        if: needs.dependency.outputs.changes && startsWith(needs.dependency.outputs.message, 'feat!')
-        run: |
-          echo "This PR has a breaking change. Run 'npx -p @npmcli/stafftools gh template-oss-fix'"
-          echo "for more information on how to fix this with a BREAKING CHANGE footer."
-          exit 1

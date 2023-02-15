@@ -17,4 +17,4 @@ jobs:
     {{> partialsJobDefaults }}
     steps:
       - name: View in Registry
-        run: echo "all good"
+        run: echo "all good!"

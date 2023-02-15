@@ -6,24 +6,21 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        required: true
         type: string
       check-sha:
         type: string
       all:
-        default: true
         type: boolean
+        default: true
   workflow_call:
     inputs:
       ref:
-        required: true
         type: string
       check-sha:
-        required: true
         type: string
       all:
-        default: true
         type: boolean
+        default: true
   pull_request:
   push:
     branches:
@@ -36,7 +33,7 @@ on:
 jobs:
   lint:
     name: Lint
-    if: github.repository_owner == 'npm'
+    if: github.repository_owner == 'npm' && !(github.event_name == 'pull_request' && startsWith(github.head_ref, 'dependabot/') && contains(github.head_ref, '/npm-cli/template-oss'))
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -85,7 +82,7 @@ jobs:
 
   test:
     name: Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}
-    if: github.repository_owner == 'npm'
+    if: github.repository_owner == 'npm' && !(github.event_name == 'pull_request' && startsWith(github.head_ref, 'dependabot/') && contains(github.head_ref, '/npm-cli/template-oss'))
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
@@ -110,7 +107,7 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ matrix.node-version }}" == "14.17.0" || "${{ inputs.all }}" == "true" ]]; then
-            echo "result=true" >> $GITHUB_OUTPUT 
+            echo "result=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Checkout

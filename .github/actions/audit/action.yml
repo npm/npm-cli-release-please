@@ -5,7 +5,7 @@ name: Audit
 inputs:
   shell:
     description: shell to run on
-    default: bash
+    default: 'bash'
 
 runs:
   using: composite

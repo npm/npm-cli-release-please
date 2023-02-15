@@ -5,6 +5,7 @@ name: Get Changed Workspaces
 inputs:
   token:
     description: GitHub token to use
+    required: true
   files:
     description: json stringified array of file names or --all
 
