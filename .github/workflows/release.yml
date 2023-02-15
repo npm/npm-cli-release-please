@@ -153,6 +153,7 @@ jobs:
     with:
       ref: ${{ needs.release.outputs.pr-branch }}
       check-sha: ${{ needs.update.outputs.sha }}
+      all: true
 
   post-ci:
     name: Release PR - Post CI
@@ -285,7 +286,7 @@ jobs:
           RESULT: ${{ steps.needs-result.outputs.result }}
         with:
           script: |
-            const { RESULT, PR_NUMBER, REF_NAME } = process.env             
+            const { RESULT, PR_NUMBER, REF_NAME } = process.env
             const tagCodeowner = RESULT !== 'white_check_mark'
             if (tagCodeowner) {
               let body = ''

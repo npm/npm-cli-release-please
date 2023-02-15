@@ -4,5 +4,6 @@ module.exports = {
   macCI: false,
   allowPaths: [
     '/AUTHORS',
+    '/ALLOWED',
   ],
 }

@@ -12,6 +12,7 @@
 !/.gitignore
 !/.npmrc
 !/.release-please-manifest.json
+!/ALLOWED
 !/AUTHORS
 !/bin/
 !/CHANGELOG*
