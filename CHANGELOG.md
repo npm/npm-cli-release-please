@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.32](https://github.com/npm/npm-cli-release-please/compare/v3.0.31...v3.0.32) (2023-02-15)
+
+### Bug Fixes
+
+* [`d20df36`](https://github.com/npm/npm-cli-release-please/commit/d20df365f68ad6ef814d442401e6daacd876293d) template-oss (@lukekarrys)
+
 ## [3.0.31](https://github.com/npm/npm-cli-release-please/compare/v3.0.30...v3.0.31) (2023-02-14)
 
 ### Bug Fixes
