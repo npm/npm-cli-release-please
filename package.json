@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "3.0.32",
+  "version": "3.0.33",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -52,13 +52,13 @@
     "content": "./scripts/template-oss"
   },
   "dependencies": {
-    "@npmcli/pkg6": "^1.2.10",
+    "@npmcli/pkg6": "^1.2.11",
     "abbrev": "^2.0.0",
     "http-cache-semantics": "4.1.0",
-    "pkg1": "^5.0.10",
-    "pkg2": "^4.0.10",
-    "pkg4": "^1.1.10",
-    "pkg5": "^1.1.10"
+    "pkg1": "^5.0.11",
+    "pkg2": "^4.0.11",
+    "pkg4": "^1.1.11",
+    "pkg5": "^1.1.11"
   },
   "date": "1",
   "tap": {
