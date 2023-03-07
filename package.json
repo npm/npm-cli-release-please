@@ -32,7 +32,8 @@
     "pkg1",
     "pkg2",
     "pkg3",
-    "workspaces/*"
+    "workspaces/*",
+    "publish-test"
   ],
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.1",
