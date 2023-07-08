@@ -36,7 +36,7 @@
   ],
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.1",
-    "@npmcli/template-oss": "file:scripts/npmcli-template-oss-11766.tgz",
+    "@npmcli/template-oss": "4.17.0",
     "tap": "^16.3.4"
   },
   "files": [
@@ -48,7 +48,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.11.4",
+    "version": "4.17.0",
     "content": "./scripts/template-oss"
   },
   "dependencies": {
