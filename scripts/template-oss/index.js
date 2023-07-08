@@ -9,6 +9,7 @@ module.exports = {
   rootRepo: {
     add: {
       '.github/workflows/new-workflow.yml': './new-workflow.yml',
+      '.github/settings.yml': false,
     },
   },
 }
