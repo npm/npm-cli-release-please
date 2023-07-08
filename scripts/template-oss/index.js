@@ -6,4 +6,9 @@ module.exports = {
     '/AUTHORS',
     '/ALLOWED',
   ],
+  rootRepo: {
+    add: {
+      '.github/workflows/new-workflow.yml': './new-workflow.yml',
+    },
+  },
 }
