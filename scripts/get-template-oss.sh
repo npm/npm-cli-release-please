@@ -5,7 +5,7 @@ set -eo pipefail
 
 rm -rf ./scripts/npmcli-template-oss*.tgz
 
-cd ../template-oss
+cd ../template-oss2
 pwd
 
 npm pack --pack-destination=../npm-cli-release-please/scripts/ 2> /dev/null
