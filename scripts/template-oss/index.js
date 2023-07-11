@@ -2,6 +2,7 @@ module.exports = {
   lockfile: true,
   windowsCI: false,
   macCI: false,
+  ciVersions: 'latest',
   allowPaths: [
     '/AUTHORS',
     '/ALLOWED',
