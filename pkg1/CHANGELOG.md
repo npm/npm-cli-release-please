@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.12](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.11...pkg1-v5.0.12) (2023-07-11)
+
+### Bug Fixes
+
+* [`62f067b`](https://github.com/npm/npm-cli-release-please/commit/62f067bc6cdcfc959d880ab79e1a7e21e24b9c80) do less ci (@lukekarrys)
+* [`8bfbc1c`](https://github.com/npm/npm-cli-release-please/commit/8bfbc1c093cf35e84fd8b13e036c73f368af5507) update everything (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v4.0.12): `pkg2@4.0.12`
+
 ## [5.0.11](https://github.com/npm/npm-cli-release-please/compare/pkg1-v5.0.10...pkg1-v5.0.11) (2023-02-16)
 
 ### Bug Fixes
