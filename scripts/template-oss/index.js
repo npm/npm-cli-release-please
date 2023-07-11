@@ -9,11 +9,13 @@ module.exports = {
   rootRepo: {
     add: {
       '.github/settings.yml': false,
+      '.github/workflows/release.yml': false,
     },
   },
   workspaceRepo: {
     add: {
       '.github/settings.yml': false,
+      '.github/workflows/release.yml': false,
     },
   },
 }
