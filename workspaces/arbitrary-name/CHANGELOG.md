@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.13](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1.1.12...pkg5-v1.1.13) (2023-07-12)
+
+### Bug Fixes
+
+* [`dab5794`](https://github.com/npm/npm-cli-release-please/commit/dab5794a407dbb53a9d9c64f6e3b397b795dcdac) update all packages (@lukekarrys)
+
 ## [1.1.12](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1.1.11...pkg5-v1.1.12) (2023-07-12)
 
 ### Bug Fixes
