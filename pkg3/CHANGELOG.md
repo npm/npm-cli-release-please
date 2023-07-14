@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.14](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.13...pkg3-v2.0.14) (2023-07-14)
+
+### Bug Fixes
+
+* [`fa438c7`](https://github.com/npm/npm-cli-release-please/commit/fa438c70f9ad1d87dc64b775a71649ac1d20c470) release all packages (@lukekarrys)
+
 ## [2.0.13](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2.0.12...pkg3-v2.0.13) (2023-07-12)
 
 ### Bug Fixes
