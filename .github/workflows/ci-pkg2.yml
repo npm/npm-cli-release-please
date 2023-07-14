@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - main
+      - template-oss-mock-testing-branch-do-not-delete
     paths:
       - pkg2/**
   schedule:

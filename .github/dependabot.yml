@@ -16,3 +16,16 @@ updates:
       prefix-development: chore
     labels:
       - "Dependencies"
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    target-branch: "template-oss-mock-testing-branch-do-not-delete"
+    allow:
+      - dependency-type: direct
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: deps
+      prefix-development: chore
+    labels:
+      - "Dependencies"
