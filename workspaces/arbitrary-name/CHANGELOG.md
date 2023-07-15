@@ -1,5 +1,11 @@
 # Changelog
 
+## [1005.2.3](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1005.2.2...pkg5-v1005.2.3) (2023-07-15)
+
+### Bug Fixes
+
+* [`db3d82e`](https://github.com/npm/npm-cli-release-please/commit/db3d82e6bd7ee238d126d60aa2460449fba18be4) release all packages (@lukekarrys)
+
 ## [1005.2.2](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1005.2.1...pkg5-v1005.2.2) (2023-07-15)
 
 ### Bug Fixes

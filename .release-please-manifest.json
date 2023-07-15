@@ -1,9 +1,9 @@
 {
-  ".": "1001.0.2",
-  "pkg1": "1002.0.2",
-  "pkg2": "1003.0.2",
-  "pkg3": "1004.0.2",
-  "workspaces/arbitrary-name": "1005.2.2",
-  "workspaces/not-the-name": "1004.2.2",
-  "workspaces/pkg6": "1006.3.2"
+  ".": "1001.0.3",
+  "pkg1": "1002.0.3",
+  "pkg2": "1003.0.3",
+  "pkg3": "1004.0.3",
+  "workspaces/arbitrary-name": "1005.2.3",
+  "workspaces/not-the-name": "1004.2.3",
+  "workspaces/pkg6": "1006.3.3"
 }
