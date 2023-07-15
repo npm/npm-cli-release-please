@@ -1,5 +1,42 @@
 # Changelog
 
+## [1006.3.0](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1006.2.15...pkg6-v1006.3.0) (2023-07-14)
+
+### Features
+
+* [`ab9d91a`](https://github.com/npm/npm-cli-release-please/commit/ab9d91af187e4f2d5dabb5f6b50d1bdc851ddfd8) this is only a commit to a workspace (@lukekarrys)
+* [`c0af46c`](https://github.com/npm/npm-cli-release-please/commit/c0af46c633dba1d9864029e5ea36b67ec41e5f21) add new workspaces (@lukekarrys)
+
+### Bug Fixes
+
+* [`ebd503a`](https://github.com/npm/npm-cli-release-please/commit/ebd503aab0587a520496ec9a0ef8ace4c5f2e845) release all packages (@lukekarrys)
+* [`6595e27`](https://github.com/npm/npm-cli-release-please/commit/6595e270dad55115280efd40f1f7902da6ea12c5) release all packages (@lukekarrys)
+* [`ff845af`](https://github.com/npm/npm-cli-release-please/commit/ff845afa895bc2e52889768462d2d376a23e482f) release all packages (@lukekarrys)
+* [`dab5794`](https://github.com/npm/npm-cli-release-please/commit/dab5794a407dbb53a9d9c64f6e3b397b795dcdac) update all packages (@lukekarrys)
+* [`62f067b`](https://github.com/npm/npm-cli-release-please/commit/62f067bc6cdcfc959d880ab79e1a7e21e24b9c80) do less ci (@lukekarrys)
+* [`8bfbc1c`](https://github.com/npm/npm-cli-release-please/commit/8bfbc1c093cf35e84fd8b13e036c73f368af5507) update everything (@lukekarrys)
+* [`6fd0d71`](https://github.com/npm/npm-cli-release-please/commit/6fd0d71ffdf87ae9946b04f71a0c8ef0adf85fac) template-oss (@lukekarrys)
+* [`cb9f4c7`](https://github.com/npm/npm-cli-release-please/commit/cb9f4c79bccb196161b3ab7a6a502876807b2553) [#120](https://github.com/npm/npm-cli-release-please/pull/120) a bug (@lukekarrys)
+* [`1a69125`](https://github.com/npm/npm-cli-release-please/commit/1a691257539e60d3456d5d1a0cccc6fbcffb6285) 7069 (@lukekarrys)
+* [`675e161`](https://github.com/npm/npm-cli-release-please/commit/675e161f7ce75bf5ea6ebb6b2722c5147fd58a67) [#114](https://github.com/npm/npm-cli-release-please/pull/114) all (#114) (@lukekarrys)
+* [`2d49e7c`](https://github.com/npm/npm-cli-release-please/commit/2d49e7c76498f24cc146e0ff8073e63f57ed9690) all (@lukekarrys)
+* [`efe6764`](https://github.com/npm/npm-cli-release-please/commit/efe676488f367e4eda382c5a8c9febb7efc99ac8) this wont work (@lukekarrys)
+* [`43efd44`](https://github.com/npm/npm-cli-release-please/commit/43efd44d1f305f1a74667c8fad79999d5a806614) template-oss (@lukekarrys)
+* [`844d4a9`](https://github.com/npm/npm-cli-release-please/commit/844d4a972f8d4c791999d10b61d835cf80cd2856) all (@lukekarrys)
+* [`bc715bc`](https://github.com/npm/npm-cli-release-please/commit/bc715bc96883e4b4aa607e97f1512325d29d74b7) [#103](https://github.com/npm/npm-cli-release-please/pull/103) all (@lukekarrys)
+* [`6bdeeba`](https://github.com/npm/npm-cli-release-please/commit/6bdeebaf32ec7f2dac4698d59830b96f8bee9e6e) [#102](https://github.com/npm/npm-cli-release-please/pull/102) all (@lukekarrys)
+* [`7f7ee92`](https://github.com/npm/npm-cli-release-please/commit/7f7ee928f8b866ecaa067210c37b3813ccde2487) [#100](https://github.com/npm/npm-cli-release-please/pull/100) all (#100) (@lukekarrys)
+* [`2bc3145`](https://github.com/npm/npm-cli-release-please/commit/2bc3145daf2da6b14a89a8266bd981aeaa3d1931) touch all (@lukekarrys)
+* [`efc6b4c`](https://github.com/npm/npm-cli-release-please/commit/efc6b4caa0447de004da658202a125345aa66b66) all (@lukekarrys)
+* [`fac1230`](https://github.com/npm/npm-cli-release-please/commit/fac1230d2db7972892139d122968d55c9500f3df) stuff (@lukekarrys)
+* [`c6cb403`](https://github.com/npm/npm-cli-release-please/commit/c6cb403fda42412a00e91c95616c1ebfdfb94daa) release integration test (@lukekarrys)
+* [`3c1e1a5`](https://github.com/npm/npm-cli-release-please/commit/3c1e1a5868ba673763afc44c6a4685ce24bfecd7) test my ssh commit verification (@lukekarrys)
+* [`af563f1`](https://github.com/npm/npm-cli-release-please/commit/af563f1f6297f9c52bc9b878c57d516bb3682377) ready for release (@lukekarrys)
+
+### Dependencies
+
+* [`d23e850`](https://github.com/npm/npm-cli-release-please/commit/d23e8508d6f3d2dacdcb7b04cd4dc1d859c14c49) template-oss
+
 ## [1006.2.14](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1006.2.13...pkg6-v1006.2.14) (2023-07-14)
 
 ### Bug Fixes
