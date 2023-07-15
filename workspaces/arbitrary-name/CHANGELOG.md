@@ -1,5 +1,11 @@
 # Changelog
 
+## [1005.2.4](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1005.2.3...pkg5-v1005.2.4) (2023-07-15)
+
+### Bug Fixes
+
+* [`e931d15`](https://github.com/npm/npm-cli-release-please/commit/e931d154f28f57e2308a88de2aeb925779418a84) [#[object Object]](https://github.com/npm/npm-cli-release-please/pull/[object Object]) release all packages (@lukekarrys)
+
 ## [1005.2.3](https://github.com/npm/npm-cli-release-please/compare/pkg5-v1005.2.2...pkg5-v1005.2.3) (2023-07-15)
 
 ### Bug Fixes
