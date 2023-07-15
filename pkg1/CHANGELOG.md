@@ -1,5 +1,15 @@
 # Changelog
 
+## [1001.0.15](https://github.com/npm/npm-cli-release-please/compare/pkg1-v1001.0.14...pkg1-v1001.0.15) (2023-07-14)
+
+### Bug Fixes
+
+* [`eab5a48`](https://github.com/npm/npm-cli-release-please/commit/eab5a4876d0c1d7f2e455d46df522916a347e91d) release all packages (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v1002.0.15): `pkg2@1002.0.15`
+
 ## [1001.0.14](https://github.com/npm/npm-cli-release-please/compare/pkg1-v1001.0.13...pkg1-v1001.0.14) (2023-07-14)
 
 ### Bug Fixes
