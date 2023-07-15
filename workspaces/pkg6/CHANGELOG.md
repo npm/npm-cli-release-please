@@ -1,5 +1,11 @@
 # Changelog
 
+## [1006.2.14](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1006.2.13...pkg6-v1006.2.14) (2023-07-14)
+
+### Bug Fixes
+
+* [`820bbe8`](https://github.com/npm/npm-cli-release-please/commit/820bbe8fb0c495d0d054e8b4dcc4a19a580e215f) [#141](https://github.com/npm/npm-cli-release-please/pull/141) release all packages (@lukekarrys)
+
 ## [1.2.14](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1.2.13...pkg6-v1.2.14) (2023-07-14)
 
 ### Bug Fixes

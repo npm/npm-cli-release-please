@@ -1,5 +1,19 @@
 # Changelog
 
+## [1000.0.36](https://github.com/npm/npm-cli-release-please/compare/v1000.0.35...v1000.0.36) (2023-07-14)
+
+### Bug Fixes
+
+* [`820bbe8`](https://github.com/npm/npm-cli-release-please/commit/820bbe8fb0c495d0d054e8b4dcc4a19a580e215f) [#141](https://github.com/npm/npm-cli-release-please/pull/141) release all packages (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v1006.2.14): `@npmcli/pkg6@1006.2.14`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v1001.0.14): `pkg1@1001.0.14`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v1002.0.14): `pkg2@1002.0.14`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v1004.1.14): `pkg4@1004.1.14`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v1005.1.14): `pkg5@1005.1.14`
+
 ## [3.0.36](https://github.com/npm/npm-cli-release-please/compare/v3.0.35...v3.0.36) (2023-07-14)
 
 ### Bug Fixes
