@@ -40,7 +40,7 @@
     "@npmcli/eslint-config": "^4.0.1",
     "@npmcli/template-oss": "file:../scripts/npmcli-template-oss-7174.tgz",
     "pkg2": "^4.0.13",
-    "tap": "^16.3.4"
+    "tap": "^18.4.5"
   },
   "tap": {
     "nyc-arg": [
