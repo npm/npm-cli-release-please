@@ -1,5 +1,11 @@
 # Changelog
 
+## [1004.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1004.0.6...pkg3-v1004.0.7) (2023-11-10)
+
+### Bug Fixes
+
+* [`8c22e83`](https://github.com/npm/npm-cli-release-please/commit/8c22e831ddc9ac2322e2115d284b48871cb610c6) release all packages (@lukekarrys)
+
 ## [1004.0.6](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1004.0.5...pkg3-v1004.0.6) (2023-07-16)
 
 ### Bug Fixes
