@@ -42,5 +42,6 @@
   "exclude-packages-from-root": true,
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
-  "prerelease": false
+  "prerelease": false,
+  "last-release-sha": "ced7a078147e2b0fe3100514777ba1fb1e4b2b32"
 }
