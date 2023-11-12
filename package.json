@@ -52,12 +52,12 @@
     "content": "./scripts/template-oss"
   },
   "dependencies": {
-    "@npmcli/pkg6": "^1006.3.6",
+    "@npmcli/pkg6": "^1007.0.0",
     "abbrev": "^2.0.0",
-    "pkg1": "^1002.0.6",
-    "pkg2": "^1003.0.6",
-    "pkg4": "^1004.2.6",
-    "pkg5": "^1005.2.6"
+    "pkg1": "^1007.0.0",
+    "pkg2": "^1007.0.0",
+    "pkg4": "^1007.0.0",
+    "pkg5": "^1007.0.0"
   },
   "tap": {
     "test-ignore": "^(pkg1|pkg2|pkg3|workspaces)/",
