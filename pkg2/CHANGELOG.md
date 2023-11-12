@@ -1,5 +1,15 @@
 # Changelog
 
+## [1010.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1010.0.0...pkg2-v1010.0.1) (2023-11-12)
+
+### Bug Fixes
+
+* [`09aab22`](https://github.com/npm/npm-cli-release-please/commit/09aab22959798d136118bacd6fe7a55710d2011b) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v1010.0.1): `@npmcli/pkg3@1010.0.1`
+
 ## [1010.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1007.0.2...pkg2-v1010.0.0) (2023-11-12)
 
 ### Bug Fixes
