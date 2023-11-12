@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "1007.0.1",
+  "version": "1008.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
