@@ -1,5 +1,11 @@
 # Changelog
 
+## [1009.0.0](https://github.com/npm/npm-cli-release-please/compare/v1008.0.1...v1009.0.0) (2023-11-12)
+
+### Bug Fixes
+
+* [`1434d84`](https://github.com/npm/npm-cli-release-please/commit/1434d84da8951ddb495daf544eea0969d8c1e987) set release-as and last-release-sha (@lukekarrys)
+
 ## [1008.0.1](https://github.com/npm/npm-cli-release-please/compare/v1008.0.0...v1008.0.1) (2023-11-12)
 
 ### Bug Fixes
