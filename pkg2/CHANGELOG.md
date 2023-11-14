@@ -1,5 +1,11 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg3 bumped from ^1011.0.1 to ^1012.0.0
+
 ## 1011.0.1 (2023-11-14)
 
 ### Bug Fixes

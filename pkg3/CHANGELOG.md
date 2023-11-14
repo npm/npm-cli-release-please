@@ -1,5 +1,15 @@
 # Changelog
 
+## 1012.0.0 (2023-11-14)
+
+### ⚠️ BREAKING CHANGES
+
+* breaking change
+
+### Features
+
+* [`71abb7b`](https://github.com/npm/npm-cli-release-please/commit/71abb7bcf70c761f7d5a1952debc2f65afc27903) breaking change (@lukekarrys)
+
 ## 1011.0.1 (2023-11-14)
 
 ### Bug Fixes
