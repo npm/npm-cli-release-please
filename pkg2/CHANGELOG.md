@@ -1,5 +1,18 @@
 # Changelog
 
+## 1011.0.0 (2023-11-14)
+
+### Bug Fixes
+
+* [`33dd3fc`](https://github.com/npm/npm-cli-release-please/commit/33dd3fcfa4344872d88ed0d8aa600716cc2fc865) set release-as and last-release-sha (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg3 bumped from ^1011.0.0-pre.1 to ^1011.0.0
+
 ## [1010.0.2-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1010.0.2-pre.0...pkg2-v1010.0.2-pre.1) (2023-11-14)
 
 ### Dependencies
