@@ -1,5 +1,11 @@
 # Changelog
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * pkg2 bumped from ^1011.0.1 to ^1011.0.2
+
 ## 1011.0.1 (2023-11-14)
 
 ### Bug Fixes
