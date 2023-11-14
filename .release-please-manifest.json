@@ -1,8 +1,8 @@
 {
-  ".": "1010.0.2-pre.0",
-  "pkg1": "1010.0.2-pre.0",
-  "pkg2": "1010.0.2-pre.0",
-  "pkg3": "1011.0.0-pre.0",
+  ".": "1010.0.2-pre.1",
+  "pkg1": "1010.0.2-pre.1",
+  "pkg2": "1010.0.2-pre.1",
+  "pkg3": "1011.0.0-pre.1",
   "workspaces/arbitrary-name": "1010.0.1",
   "workspaces/not-the-name": "1010.0.1",
   "workspaces/pkg6": "1010.0.1"

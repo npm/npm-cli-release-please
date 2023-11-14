@@ -1,5 +1,11 @@
 # Changelog
 
+## [1010.0.2-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1010.0.2-pre.0...pkg2-v1010.0.2-pre.1) (2023-11-14)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v1011.0.0-pre.1): `@npmcli/pkg3@1011.0.0-pre.1`
+
 ## [1010.0.2-pre.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1010.0.1...pkg2-v1010.0.2-pre.0) (2023-11-14)
 
 ### Dependencies
