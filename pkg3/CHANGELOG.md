@@ -1,5 +1,11 @@
 # Changelog
 
+## 1011.0.1 (2023-11-14)
+
+### Bug Fixes
+
+* [`ff0f71a`](https://github.com/npm/npm-cli-release-please/commit/ff0f71a73c61d911731018f5144b3da716177ca4) update all packages (@lukekarrys)
+
 ## 1011.0.0 (2023-11-14)
 
 ### Bug Fixes
