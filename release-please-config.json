@@ -27,7 +27,13 @@
   ],
   "packages": {
     ".": {
-      "package-name": ""
+      "package-name": "",
+      "exclude-paths": [
+        "pkg1",
+        "pkg2",
+        "pkg3",
+        "workspaces"
+      ]
     },
     "pkg1": {},
     "pkg2": {},
@@ -37,7 +43,8 @@
     "workspaces/pkg6": {}
   },
   "plugins": [
-    "node-workspace"
+    "node-workspace",
+    "node-workspace-deps"
   ],
   "prerelease-type": "pre",
   "group-pull-request-title-pattern": "chore: release ${version}",
