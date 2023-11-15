@@ -1,5 +1,21 @@
 # Changelog
 
+## [1015.0.0-pre.2](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre.1...pkg3-v1015.0.0-pre.2) (2023-11-15)
+
+### ⚠️ BREAKING CHANGES
+
+* major all packages
+* major all packages
+
+### Features
+
+* [`f9523e6`](https://github.com/npm/npm-cli-release-please/commit/f9523e68170e8d90b0787b9747a70b2b25134651) major all packages (@lukekarrys)
+* [`6de8cdd`](https://github.com/npm/npm-cli-release-please/commit/6de8cdd08f5073be9890b064cf7537c0b952e6fb) [#195](https://github.com/npm/npm-cli-release-please/pull/195) major all packages (@lukekarrys)
+
+
+
+Last commit processed: 6de8cdd08f5073be9890b064cf7537c0b952e6fb
+
 ## [1015.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre...pkg3-v1015.0.0-pre.1) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES

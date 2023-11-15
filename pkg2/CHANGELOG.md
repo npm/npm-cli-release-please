@@ -24,6 +24,29 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
 
+## [1012.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1012.0.0-pre...pkg2-v1012.0.0-pre.1) (2023-11-15)
+
+### ⚠️ BREAKING CHANGES
+
+* major all packages
+* major all packages
+
+### Features
+
+* [`f9523e6`](https://github.com/npm/npm-cli-release-please/commit/f9523e68170e8d90b0787b9747a70b2b25134651) major all packages (@lukekarrys)
+* [`6de8cdd`](https://github.com/npm/npm-cli-release-please/commit/6de8cdd08f5073be9890b064cf7537c0b952e6fb) [#195](https://github.com/npm/npm-cli-release-please/pull/195) major all packages (@lukekarrys)
+
+
+
+Last commit processed: 6de8cdd08f5073be9890b064cf7537c0b952e6fb
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg3 bumped from ^1015.0.0-pre.1 to ^1015.0.0-pre.2
+
 ## [1012.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1011.0.5...pkg2-v1012.0.0-pre) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES
