@@ -18,6 +18,12 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1013.0.0 to ^1014.0.0
 
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
+
 ## 1011.0.1 (2023-11-14)
 
 ### Bug Fixes
