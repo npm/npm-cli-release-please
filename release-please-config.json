@@ -42,5 +42,6 @@
   "prerelease-type": "pre",
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
-  "prerelease": true
+  "prerelease": true,
+  "versioning-strategy": "rerelease"
 }
