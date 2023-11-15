@@ -1,5 +1,15 @@
 # Changelog
 
+## [1012.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg6-v1011.0.1...pkg6-v1012.0.0-pre) (2023-11-15)
+
+### ⚠️ BREAKING CHANGES
+
+* major all packages
+
+### Features
+
+* [`0c63436`](https://github.com/npm/npm-cli-release-please/commit/0c6343650a9881d8b74e97f87e3ac869ece83bf0) major all packages (@lukekarrys)
+
 ## 1011.0.1 (2023-11-14)
 
 ### Bug Fixes

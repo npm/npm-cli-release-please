@@ -1,5 +1,26 @@
 # Changelog
 
+## [1015.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre...v1015.0.0-pre.1) (2023-11-15)
+
+### ⚠️ BREAKING CHANGES
+
+* major all packages
+
+### Features
+
+* [`0c63436`](https://github.com/npm/npm-cli-release-please/commit/0c6343650a9881d8b74e97f87e3ac869ece83bf0) major all packages (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @npmcli/pkg6 bumped from ^1011.0.1 to ^1012.0.0-pre
+    * pkg1 bumped from ^1011.0.5 to ^1012.0.0-pre
+    * pkg2 bumped from ^1011.0.5 to ^1012.0.0-pre
+    * pkg4 bumped from ^1011.0.1 to ^1012.0.0-pre
+    * pkg5 bumped from ^1011.0.1 to ^1012.0.0-pre
+
 ## [1015.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/v1014.0.0...v1015.0.0-pre) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES
