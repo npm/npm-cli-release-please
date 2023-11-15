@@ -1,5 +1,31 @@
 # Changelog
 
+## [1013.0.0](https://github.com/npm/npm-cli-release-please/compare/v1012.0.0...v1013.0.0) (2023-11-15)
+
+### ⚠️ BREAKING CHANGES
+
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+
+### Features
+
+* [`0285076`](https://github.com/npm/npm-cli-release-please/commit/0285076f32c546bca6c305fba0189b357e5232ed) breaking change (@lukekarrys)
+* [`0a8b6d5`](https://github.com/npm/npm-cli-release-please/commit/0a8b6d546b29de6a2d41cee932c7c81fdf1ed42e) breaking change (@lukekarrys)
+* [`b7b129c`](https://github.com/npm/npm-cli-release-please/commit/b7b129cfd0c4de0c99b2598f6e8c989bf7129842) breaking change (@lukekarrys)
+* [`353ceda`](https://github.com/npm/npm-cli-release-please/commit/353ceda763503613b9edba32e16c94cd21aa8c43) breaking change (@lukekarrys)
+* [`b4b905b`](https://github.com/npm/npm-cli-release-please/commit/b4b905b175ba90e6d477fd21167d78d1d1e6160d) [#191](https://github.com/npm/npm-cli-release-please/pull/191) breaking change (@lukekarrys)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * pkg1 bumped from ^1011.0.2 to ^1011.0.3
+    * pkg2 bumped from ^1011.0.2 to ^1011.0.3
+
 ## 1012.0.0 (2023-11-14)
 
 ### ⚠️ BREAKING CHANGES
