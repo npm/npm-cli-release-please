@@ -44,7 +44,7 @@
   },
   "plugins": [
     "node-workspace",
-    "node-workspace-deps"
+    "node-workspace-format"
   ],
   "prerelease-type": "pre",
   "group-pull-request-title-pattern": "chore: release ${version}",
