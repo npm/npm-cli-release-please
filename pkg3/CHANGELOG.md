@@ -1,5 +1,15 @@
 # Changelog
 
+## [1015.0.0-pre.7](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre.6...pkg3-v1015.0.0-pre.7) (2023-11-16)
+
+### ⚠️ BREAKING CHANGES
+
+* breaking change
+
+### Features
+
+* [`b7a2f85`](https://github.com/npm/npm-cli-release-please/commit/b7a2f853583674dd99c5b56c878c39dd3474d7fa) breaking change (@lukekarrys)
+
 ## [1015.0.0-pre.6](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre.5...pkg3-v1015.0.0-pre.6) (2023-11-16)
 
 ### ⚠️ BREAKING CHANGES
