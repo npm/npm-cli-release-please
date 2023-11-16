@@ -1,5 +1,28 @@
 # Changelog
 
+## [1015.0.0-pre.5](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.4...v1015.0.0-pre.5) (2023-11-16)
+
+### Dependencies
+
+* workspace: `pkg1@1012.0.0-pre.4`
+* workspace: `pkg2@1012.0.0-pre.4`
+## [1015.0.0-pre.5](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.4...v1015.0.0-pre.5) (2023-11-16)
+
+### Dependencies
+
+* workspace: `pkg1@1012.0.0-pre.4`
+* workspace: `pkg2@1012.0.0-pre.4`
+
+### undefined
+
+* [`4194e14`](https://github.com/npm/npm-cli-release-please/commit/4194e143ee8f5d8fb9d24828dad4445be99208fc) prerelease=true (@lukekarrys)
+* [`2d14fdc`](https://github.com/npm/npm-cli-release-please/commit/2d14fdcbbcf338454374ab9935b705151cc19c87) reset release please config (@lukekarrys)
+
+### undefined
+
+* [`4194e14`](https://github.com/npm/npm-cli-release-please/commit/4194e143ee8f5d8fb9d24828dad4445be99208fc) prerelease=true (@lukekarrys)
+* [`2d14fdc`](https://github.com/npm/npm-cli-release-please/commit/2d14fdcbbcf338454374ab9935b705151cc19c87) reset release please config (@lukekarrys)
+
 ## [1015.0.0-pre.4](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.3...v1015.0.0-pre.4) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES

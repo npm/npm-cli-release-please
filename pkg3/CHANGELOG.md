@@ -1,5 +1,51 @@
 # Changelog
 
+## [1015.0.0-pre.5](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre.4...pkg3-v1015.0.0-pre.5) (2023-11-16)
+
+### ⚠️ BREAKING CHANGES
+
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+* breaking change
+
+### Features
+
+* [`d671a8f`](https://github.com/npm/npm-cli-release-please/commit/d671a8fc2d23bd0680dada4064d558809ce05f27) breaking change (@lukekarrys)
+* [`40df5e5`](https://github.com/npm/npm-cli-release-please/commit/40df5e5c101389b6094a82bd57e8e7b8c119c7a7) breaking change (@lukekarrys)
+* [`26e22ec`](https://github.com/npm/npm-cli-release-please/commit/26e22ec7b5e0cafc302e1067fc4f612db3554598) breaking change (@lukekarrys)
+* [`875b773`](https://github.com/npm/npm-cli-release-please/commit/875b7731ca228117d98e63dd6c0a1bd1ed6b598d) breaking change (@lukekarrys)
+* [`dc7d56e`](https://github.com/npm/npm-cli-release-please/commit/dc7d56ea68d070d8ba0ee4eb07ce317765cb7e13) breaking change (@lukekarrys)
+* [`a67b206`](https://github.com/npm/npm-cli-release-please/commit/a67b206d52def1a15a02010fbfd0ef5f5130026f) breaking change (@lukekarrys)
+* [`a2b4311`](https://github.com/npm/npm-cli-release-please/commit/a2b43110e1a84f5f5b1c9e1fde8a88d04b94d3bc) breaking change (@lukekarrys)
+* [`c5976e3`](https://github.com/npm/npm-cli-release-please/commit/c5976e3d0f21b71c91b77e78f978fa1b756ef18a) breaking change (@lukekarrys)
+* [`839829d`](https://github.com/npm/npm-cli-release-please/commit/839829d7267a84b8bc0a528c7954aad65b7fa433) breaking change (@lukekarrys)
+* [`deceecb`](https://github.com/npm/npm-cli-release-please/commit/deceecb112612aa6982f826bfad6cf4c4480e349) breaking change (@lukekarrys)
+* [`885c5ef`](https://github.com/npm/npm-cli-release-please/commit/885c5efba955338a82c6bd3760825cd5937f7eb3) breaking change (@lukekarrys)
+* [`43875cd`](https://github.com/npm/npm-cli-release-please/commit/43875cd0b39dc9f688642ddaf5bee32a3166ef1f) breaking change (@lukekarrys)
+* [`a4daf93`](https://github.com/npm/npm-cli-release-please/commit/a4daf9372882f298b01aa52117df8fb145a234fd) breaking change (@lukekarrys)
+* [`52f6af2`](https://github.com/npm/npm-cli-release-please/commit/52f6af2bf704964e11a372223d434d6c1e1221f1) breaking change (@lukekarrys)
+* [`a66cc2e`](https://github.com/npm/npm-cli-release-please/commit/a66cc2eb1c14f99f45172ede9936496b0520722c) breaking change (@lukekarrys)
+* [`4e3d561`](https://github.com/npm/npm-cli-release-please/commit/4e3d5611bde231ab01e477fd4aa45b3a459f421a) breaking change (@lukekarrys)
+* [`860697d`](https://github.com/npm/npm-cli-release-please/commit/860697d641760bb39f73eb691a7a1fcfecf260f7) breaking change (@lukekarrys)
+* [`af86123`](https://github.com/npm/npm-cli-release-please/commit/af86123a03b022706e88751c88f978a703903122) breaking change (@lukekarrys)
+* [`817a2f7`](https://github.com/npm/npm-cli-release-please/commit/817a2f770aef0d72d5568dc2517679d6fb7eaa1e) breaking change (@lukekarrys)
+
 ## [1015.0.0-pre.4](https://github.com/npm/npm-cli-release-please/compare/pkg3-v1015.0.0-pre.3...pkg3-v1015.0.0-pre.4) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES
