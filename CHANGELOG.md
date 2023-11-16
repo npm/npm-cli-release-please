@@ -1,5 +1,12 @@
 # Changelog
 
+## [1015.0.0-pre.7](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.6...v1015.0.0-pre.7) (2023-11-16)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v1012.0.0-pre.6): `pkg1@1012.0.0-pre.6`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v1012.0.0-pre.6): `pkg2@1012.0.0-pre.6`
+
 ## [1015.0.0-pre.6](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.5...v1015.0.0-pre.6) (2023-11-16)
 
 ### Dependencies

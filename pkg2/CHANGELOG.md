@@ -24,6 +24,12 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
 
+## [1012.0.0-pre.6](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1012.0.0-pre.5...pkg2-v1012.0.0-pre.6) (2023-11-16)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v1015.0.0-pre.7): `@npmcli/pkg3@1015.0.0-pre.7`
+
 ## [1012.0.0-pre.5](https://github.com/npm/npm-cli-release-please/compare/pkg2-v1012.0.0-pre.4...pkg2-v1012.0.0-pre.5) (2023-11-16)
 
 ### Dependencies

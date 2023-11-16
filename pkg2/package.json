@@ -1,6 +1,6 @@
 {
   "name": "pkg2",
-  "version": "1012.0.0-pre.5",
+  "version": "1012.0.0-pre.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "tap": "^16.3.4"
   },
   "dependencies": {
-    "@npmcli/pkg3": "^1015.0.0-pre.6"
+    "@npmcli/pkg3": "^1015.0.0-pre.7"
   },
   "tap": {
     "nyc-arg": [
