@@ -6,15 +6,13 @@ inputs:
   node:
     description: 'Current Node version'
     required: true
-  platform:
-    description: 'Current platform'
 runs:
   using: "composite"
   steps:
     # node 10/12/14 ship with npm@6, which is known to fail when updating itself in windows
     - name: Update Windows npm
       if: |
-        inputs.platform == 'windows-latest' && (
+        runner.os == 'Windows' && (
           startsWith(inputs.node, 'v10.') ||
           startsWith(inputs.node, 'v12.') ||
           startsWith(inputs.node, 'v14.')
@@ -55,4 +53,5 @@ runs:
 
         npm i --prefer-online --no-fund --no-audit -g npm@$MATCH
     - name: npm Version
+      shell: bash
       run: npm -v
