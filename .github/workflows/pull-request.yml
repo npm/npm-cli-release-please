@@ -35,7 +35,7 @@ jobs:
           check-latest: contains('20.x', '.x')
           cache: npm
       - name: Install Latest npm
-        uses: ./.github/actions/install-latest-npm.yml
+        uses: ./.github/actions/install-latest-npm
         with:
           node: ${{ steps.node.outputs.node-version }}
       - name: Install Dependencies

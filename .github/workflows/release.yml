@@ -43,7 +43,7 @@ jobs:
           check-latest: contains('20.x', '.x')
           cache: npm
       - name: Install Latest npm
-        uses: ./.github/actions/install-latest-npm.yml
+        uses: ./.github/actions/install-latest-npm
         with:
           node: ${{ steps.node.outputs.node-version }}
       - name: Install Dependencies
@@ -88,7 +88,7 @@ jobs:
           body: ${{ steps.comment-text.outputs.result }}
           edit-mode: 'replace'
       - name: Create Check
-        uses: ./.github/actions/create-check.yml
+        uses: ./.github/actions/create-check
         if: steps.release.outputs.pr-sha
         with:
           sha: ${{ steps.release.outputs.pr-sha }}
@@ -123,7 +123,7 @@ jobs:
           check-latest: contains('20.x', '.x')
           cache: npm
       - name: Install Latest npm
-        uses: ./.github/actions/install-latest-npm.yml
+        uses: ./.github/actions/install-latest-npm
         with:
           node: ${{ steps.node.outputs.node-version }}
       - name: Install Dependencies
@@ -153,7 +153,7 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
       - name: Create Check
         id: create-check
-        uses: ./.github/actions/create-check.yml
+        uses: ./.github/actions/create-check
         with:
           name: "Release"
           sha: ${{ steps.commit.outputs.sha }}
