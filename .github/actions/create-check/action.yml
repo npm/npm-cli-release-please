@@ -14,6 +14,9 @@ outputs:
   check-id: steps.create-check.outputs.check_id
 runs:
   using: "composite"
+  defaults:
+    run:
+      shell: bash
   steps:
     - name: Get Workflow Job
       uses: actions/github-script@v6
