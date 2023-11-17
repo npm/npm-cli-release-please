@@ -1,0 +1,64 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: 'Upsert Comment'
+description: 'Create or update a GitHub comment'
+inputs:
+  number:
+    description: 'number of the issue or PR to update'
+    required: true
+  title:
+    description: 'title of the comment to match against'
+    required: true
+  body:
+    description: 'body of the comment to post'
+    required: true
+  login:
+    description: 'login of the commenting user to match against'
+    required: true
+outputs:
+  comment-id:
+    description: "ID of the created or updated comment"
+    value: ${{ steps.comment.outputs.result }}
+runs:
+  using: "composite"
+  steps:
+    - name: Create of Update Comment
+      uses: actions/github-script@v6
+      id: comment
+      env:
+        NUMBER: ${{ inputs.number }}
+        TITLE: ${{ inputs.title }}
+        BODY: ${{ inputs.body }}
+        LOGIN: ${{ inputs.login }}
+      with:
+        result-encoding: string
+        script: |
+          const { owner, repo } = context.repo
+          const { NUMBER, TITLE, BODY, LOGIN } = process.env
+
+          const comments = await github.paginate(github.rest.issues.listComments, {
+            owner,
+            repo,
+            issue_number: NUMBER,
+          })
+
+          const matchedComment = comments.find(c => c.user.login === LOGIN && c.body.startsWith(TITLE))
+
+          if (matchedComment) {
+            await github.rest.issues.updateComment({
+              owner,
+              repo,
+              comment_id: matchedComment.id,
+              body: BODY,
+            })
+            return matchedComment.id
+          }
+
+          const createdComment = await github.rest.issues.createComment({
+            owner,
+            repo,
+            issue_number: NUMBER,
+            body: BODY,
+          })
+
+          return createdComment.data.id

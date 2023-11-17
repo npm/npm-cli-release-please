@@ -1,0 +1,52 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: 'Upsert Comment'
+description: 'Create or update a GitHub comment'
+inputs:
+  id:
+    description: 'comment id to append to'
+    required: true
+  title:
+    description: 'title of the comment to match against'
+    required: true
+  body:
+    description: 'body of the comment to post'
+    required: true
+outputs:
+  comment-id:
+    description: "ID of the appended comment"
+    value: ${{ steps.comment.outputs.result }}
+runs:
+  using: "composite"
+  steps:
+    - name: Create of Update Comment
+      uses: actions/github-script@v6
+      id: comment
+      env:
+        ID: ${{ inputs.id }}
+        TITLE: ${{ inputs.title }}
+        BODY: ${{ inputs.body }}
+      with:
+        result-encoding: string
+        script: |
+          const { owner, repo } = context.repo
+          const { ID, TITLE, BODY } = process.env
+
+          const { data: comment } = await github.rest.issues.getComment({
+            owner,
+            repo,
+            comment_id: ID,
+          })
+
+          const prefix = comment.body.includes(TITLE)
+            ? comment.body.split(TITLE)[0]
+            : comment.body
+
+          await github.rest.issues.updateComment({
+            owner,
+            repo,
+            comment_id: ID,
+            body: [prefix, TITLE, BODY].join('\n\n').trim(),
+          })
+
+          return ID

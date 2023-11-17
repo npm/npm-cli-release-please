@@ -2,32 +2,34 @@
   "changelog-sections": [
     {
       "type": "feat",
-      "section": "Features",
-      "hidden": false
+      "section": "Features"
     },
     {
       "type": "fix",
-      "section": "Bug Fixes",
-      "hidden": false
+      "section": "Bug Fixes"
     },
     {
       "type": "docs",
-      "section": "Documentation",
-      "hidden": false
+      "section": "Documentation"
     },
     {
       "type": "deps",
-      "section": "Dependencies",
-      "hidden": false
+      "section": "Dependencies"
     },
     {
       "type": "chore",
-      "hidden": true
+      "section": "Chore"
     }
   ],
   "packages": {
     ".": {
-      "package-name": ""
+      "package-name": "",
+      "exclude-paths": [
+        "pkg1",
+        "pkg2",
+        "pkg3",
+        "workspaces"
+      ]
     },
     "pkg1": {},
     "pkg2": {},
@@ -39,7 +41,9 @@
   "plugins": [
     "node-workspace"
   ],
-  "exclude-packages-from-root": true,
   "group-pull-request-title-pattern": "chore: release ${version}",
-  "pull-request-title-pattern": "chore: release${component} ${version}"
+  "pull-request-title-pattern": "chore: release${component} ${version}",
+  "prerelease-type": "pre",
+  "pull-request-header": "",
+  "pull-request-footer": ""
 }
