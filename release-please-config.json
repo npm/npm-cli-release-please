@@ -2,23 +2,28 @@
   "changelog-sections": [
     {
       "type": "feat",
-      "section": "Features"
+      "section": "Features",
+      "hidden": false
     },
     {
       "type": "fix",
-      "section": "Bug Fixes"
+      "section": "Bug Fixes",
+      "hidden": false
     },
     {
       "type": "docs",
-      "section": "Documentation"
+      "section": "Documentation",
+      "hidden": false
     },
     {
       "type": "deps",
-      "section": "Dependencies"
+      "section": "Dependencies",
+      "hidden": false
     },
     {
       "type": "chore",
-      "section": "Chore"
+      "section": "Chores",
+      "hidden": false
     }
   ],
   "packages": {
@@ -43,7 +48,5 @@
   ],
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
-  "prerelease-type": "pre",
-  "pull-request-header": "",
-  "pull-request-footer": ""
+  "exclude-packages-from-root": true
 }

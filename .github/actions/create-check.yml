@@ -1,0 +1,53 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: 'Create Check'
+inputs:
+  sha:
+    required: true
+  find-name:
+    required: true
+  name:
+    default: ''
+  status:
+    default: 'in_progress'
+outputs:
+  check-id: steps.create-check.outputs.check_id
+runs:
+  using: "composite"
+  steps:
+    - name: Get Workflow Job
+      uses: actions/github-script@v6
+      id: workflow
+      env:
+        FIND_NAME: "${{ inputs.find-name }}"
+        SHA: "${{ inputs.sha }}"
+      with:
+        result-encoding: string
+        script: |
+          const { repo: { owner, repo}, runId, serverUrl } = context          
+          const { FIND_NAME, SHA } = process.env
+
+          const job = await github.rest.actions.listJobsForWorkflowRun({
+            owner,
+            repo,
+            run_id: runId,
+            per_page: 100
+          }).then(r => r.data.jobs.find(j => j.name.endsWith(FIND_NAME)))
+
+          const output = [
+            `This check is assosciated with ${serverUrl}/${owner}/${repo}/commit/${SHA}.`,
+            job?.html_url
+              ? `For run logs, click here: ${job.html_url}`
+              : `Run logs could not be found for a job endingw tih: "${FIND_NAME}"`
+          ].join(' ')
+
+          return output
+    - name: Create Check
+      uses: LouisBrunner/checks-action@v1.6.0
+      id: check
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        sha: ${{ inputs.sha }}
+        status: ${{ inputs.status }}
+        name: ${{ inputs.name || inputs.find-name }}
+        output: ${{ steps.workflow.outputs.result }}
