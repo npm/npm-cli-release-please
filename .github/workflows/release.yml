@@ -52,8 +52,7 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx --offline template-oss-release-please "${{ github.ref_name }}"
+        run: npx --offline template-oss-release-please --branch="${{ github.ref_name }}" --backport="" --defaultTag="latest"
       - name: Create Release Manager Comment Text
         if: steps.release.outputs.pr-number
         uses: actions/github-script@v6
@@ -132,7 +131,7 @@ jobs:
         id: comment-text
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm exec --offline -- template-oss-release-manager --pr=${{ needs.release.outputs.pr-number }} --lockfile=true --publish=false
+        run: npm exec --offline -- template-oss-release-manager --pr="${{ needs.release.outputs.pr-number }}" --backport="" --defaultTag="latest" --lockfile
       - name: Append Release Manager Comment
         uses: peter-evans/create-or-update-comment@v3
         with:
@@ -142,7 +141,7 @@ jobs:
       - name: Run Post Pull Request Actions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run rp-pull-request --ignore-scripts -ws -iwr --if-present -- --pr=${{ needs.release.outputs.pr-number }} --comment=${{ needs.release.outputs.comment-id }}
+        run: npm run rp-pull-request --ignore-scripts -ws -iwr --if-present -- --pr="${{ needs.release.outputs.pr-number }}" --commentId="${{ needs.release.outputs.comment-id }}"
       - name: Commit
         id: commit
         env:
@@ -183,8 +182,8 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Get Needs Result
-        id: needs-result
+      - name: Get CI Conclusion
+        id: conclusion
         run: |
           result=""
           if [[ "${{ contains(needs.*.result, 'failure') }}" == "true" ]]; then
@@ -199,7 +198,7 @@ jobs:
         uses: LouisBrunner/checks-action@v1.6.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          conclusion: ${{ steps.needs-result.outputs.result }}
+          conclusion: ${{ steps.conclusion.outputs.result }}
           check_id: ${{ needs.update.outputs.check-id }}
 
   post-release:
@@ -255,8 +254,8 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Get Needs Result
-        id: needs-result
+      - name: Get Post Release Conclusion
+        id: conclusion
         run: |
           if [[ "${{ contains(needs.*.result, 'failure') }}" == "true" ]]; then
             result="x"
@@ -278,7 +277,7 @@ jobs:
         if: steps.found-comment.outputs.comment-id
         uses: actions/github-script@v6
         env:
-          RESULT: ${{ steps.needs-result.outputs.result }}
+          RESULT: ${{ steps.conclusion.outputs.result }}
           BODY: ${{ steps.found-comment.outputs.comment-body }}
         with:
           result-encoding: string

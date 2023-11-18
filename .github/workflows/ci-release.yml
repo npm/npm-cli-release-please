@@ -29,6 +29,7 @@ jobs:
     steps:
       - name: Create Check
         id: create-check
+        if: inputs.check-sha
         uses: ./.github/actions/create-check
         with:
           name: Lint All
@@ -85,6 +86,7 @@ jobs:
     steps:
       - name: Create Check
         id: create-check
+        if: inputs.check-sha
         uses: ./.github/actions/create-check
         with:
           name: Test All
