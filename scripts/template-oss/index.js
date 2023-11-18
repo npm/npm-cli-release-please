@@ -6,6 +6,7 @@ module.exports = {
   allowPaths: [
     '/AUTHORS',
   ],
+  codeowner: '@lukekarrys',
   rootRepo: {
     add: {
       '.github/settings.yml': false,
