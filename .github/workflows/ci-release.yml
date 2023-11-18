@@ -27,14 +27,6 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Create Check
-        id: create-check
-        if: inputs.check-sha
-        uses: ./.github/actions/create-check
-        with:
-          name: "Lint All"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sha: inputs.check-sha
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -43,6 +35,14 @@ jobs:
         run: |
           git config --global user.email "npm-cli+bot@github.com"
           git config --global user.name "npm CLI robot"
+      - name: Create Check
+        id: create-check
+        if: inputs.check-sha
+        uses: ./.github/actions/create-check
+        with:
+          name: "Lint All"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sha: inputs.check-sha
       - name: Setup Node
         uses: actions/setup-node@v3
         id: node
@@ -85,14 +85,6 @@ jobs:
       run:
         shell: ${{ matrix.platform.shell }}
     steps:
-      - name: Create Check
-        id: create-check
-        if: inputs.check-sha
-        uses: ./.github/actions/create-check
-        with:
-          name: "Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sha: inputs.check-sha
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -101,6 +93,14 @@ jobs:
         run: |
           git config --global user.email "npm-cli+bot@github.com"
           git config --global user.name "npm CLI robot"
+      - name: Create Check
+        id: create-check
+        if: inputs.check-sha
+        uses: ./.github/actions/create-check
+        with:
+          name: "Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sha: inputs.check-sha
       - name: Setup Node
         uses: actions/setup-node@v3
         id: node
