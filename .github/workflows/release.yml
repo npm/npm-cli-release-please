@@ -87,6 +87,7 @@ jobs:
           body: ${{ steps.comment-text.outputs.result }}
           edit-mode: 'replace'
       - name: Create Check
+        id: create-check
         uses: ./.github/actions/create-check
         if: steps.release.outputs.pr-sha
         with:

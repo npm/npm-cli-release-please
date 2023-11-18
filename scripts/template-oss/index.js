@@ -5,7 +5,6 @@ module.exports = {
   ciVersions: 'latest',
   allowPaths: [
     '/AUTHORS',
-    '/ALLOWED',
   ],
   rootRepo: {
     add: {

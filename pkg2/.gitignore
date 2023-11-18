@@ -10,7 +10,6 @@ tap-testdir*/
 !/.eslintrc.js
 !/.eslintrc.local.*
 !/.gitignore
-!/ALLOWED
 !/AUTHORS
 !/bin/
 !/CHANGELOG*

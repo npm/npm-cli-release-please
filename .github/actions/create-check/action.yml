@@ -44,7 +44,7 @@ runs:
           return output
     - name: Create Check
       uses: LouisBrunner/checks-action@v1.6.0
-      id: check
+      id: create-check
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         sha: ${{ inputs.sha }}
