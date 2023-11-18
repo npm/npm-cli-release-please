@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.1",
-    "@npmcli/template-oss": "file:../scripts/npmcli-template-oss-19230.tgz",
+    "@npmcli/template-oss": "file:../scripts/npmcli-template-oss-31058.tgz",
     "pkg2": "^5.0.0",
     "tap": "^16.3.4"
   },
