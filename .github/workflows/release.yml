@@ -229,9 +229,9 @@ jobs:
             const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`
 
             return [
-              '## Release Workflow\n'
+              '## Release Workflow\n',
               ...releases.map(r => `- \`${r.pkgName}@${r.version}\` ${r.url}`),
-              `- Workflow run: :arrows_counterclockwise: ${runUrl}`
+              `- Workflow run: :arrows_counterclockwise: ${runUrl}`,
             ].join('\n')
       - name: Create Release PR Comment
         id: create-comment
@@ -286,14 +286,16 @@ jobs:
           result-encoding: string
           script: |
             const { RESULT, BODY } = process.env
-            let body = BODY.replace(/Workflow run: :[a-z_]+:/, `Workflow run: :${RESULT}:`)
+            const body = BODY.replace(/(Workflow run: :)[a-z_]+(:)/, `$1${RESULT}$2`)
+            const append = []
             if (RESULT !== 'white_check_mark') {
-              body += `\n\n:rotating_light:`
-              body += ` @npm/cli-team: The post-release workflow failed for this release.`
-              body += ` Manual steps may need to be taken after examining the workflow output`
-              body += ` from the above workflow run. :rotating_light:`
+              append.push(':rotating_light:')
+              append.push('@npm/cli-team:')
+              append.push('The post-release workflow failed for this release.')
+              append.push('Manual steps may need to be taken after examining the workflow output from the above workflow run.')
+              append.push(':rotating_light:')
             }
-            return body
+            return [body, append.join(' ')].join('\n\n').trim()
       - name: Update Release PR Comment
         if: steps.comment-text.outputs.result
         uses: peter-evans/create-or-update-comment@v3
