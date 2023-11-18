@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.0.1](https://github.com/npm/npm-cli-release-please/compare/v4.0.0...v4.0.1) (2023-11-18)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v3.0.0): `@npmcli/pkg6@3.0.0`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.0.1): `pkg1@6.0.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.1): `pkg2@5.0.1`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v3.0.0): `pkg4@3.0.0`
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v3.0.0): `pkg5@3.0.0`
+
+### Chores
+
+* [`12269a7`](https://github.com/npm/npm-cli-release-please/commit/12269a7f28f18a6999f143dab438637d55c003a6) update template-oss (@lukekarrys)
+* [`5b28914`](https://github.com/npm/npm-cli-release-please/commit/5b289141c14df2e5c6a68c203a1d0a24597ba708) update template-oss (@lukekarrys)
+
 ## [4.0.0](https://github.com/npm/npm-cli-release-please/compare/v3.0.36...v4.0.0) (2023-11-18)
 
 ### ⚠️ BREAKING CHANGES
