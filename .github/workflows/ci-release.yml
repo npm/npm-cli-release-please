@@ -37,12 +37,12 @@ jobs:
           git config --global user.name "npm CLI robot"
       - name: Create Check
         id: create-check
-        if: inputs.check-sha
+        if: ${{ inputs.check-sha }}
         uses: ./.github/actions/create-check
         with:
           name: "Lint All"
           token: ${{ secrets.GITHUB_TOKEN }}
-          sha: inputs.check-sha
+          sha: ${{ inputs.check-sha }}
       - name: Setup Node
         uses: actions/setup-node@v3
         id: node
@@ -95,12 +95,12 @@ jobs:
           git config --global user.name "npm CLI robot"
       - name: Create Check
         id: create-check
-        if: inputs.check-sha
+        if: ${{ inputs.check-sha }}
         uses: ./.github/actions/create-check
         with:
           name: "Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          sha: inputs.check-sha
+          sha: ${{ inputs.check-sha }}
       - name: Setup Node
         uses: actions/setup-node@v3
         id: node
