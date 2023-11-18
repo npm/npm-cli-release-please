@@ -48,4 +48,5 @@ runs:
         sha: ${{ inputs.sha }}
         status: in_progress
         name: ${{ inputs.check-name || inputs.name }}
-        output: ${{ steps.workflow.outputs.result }}
+        output: |
+          {"summary":"${{ steps.workflow.outputs.result }}"}
