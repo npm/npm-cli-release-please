@@ -6,6 +6,7 @@ module.exports = {
   allowPaths: [
     '/AUTHORS',
   ],
+  backport: 20,
   codeowner: '@lukekarrys',
   rootRepo: {
     add: {
