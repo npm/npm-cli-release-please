@@ -11,7 +11,8 @@ inputs:
   check-name:
     default: ''
 outputs:
-  check-id: ${{ steps.create-check.outputs.check_id }}
+  check-id:
+    value: ${{ steps.create-check.outputs.check_id }}
 runs:
   using: "composite"
   steps:
