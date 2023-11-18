@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg4-v3.0.0...pkg4-v3.0.1) (2023-11-18)
+
+### Chores
+
+* [`8ff0318`](https://github.com/npm/npm-cli-release-please/commit/8ff031886b982f4fc7631b2e2ac904ecbff024f2) update template-oss (@lukekarrys)
+
 ## [3.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2.0.0...pkg4-v3.0.0) (2023-11-18)
 
 ### ⚠️ BREAKING CHANGES
