@@ -91,8 +91,9 @@ jobs:
         uses: ./.github/actions/create-check
         if: steps.release.outputs.pr-sha
         with:
+          name: "Release"
+          token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ steps.release.outputs.pr-sha }}
-          job-name: "Release"
 
   update:
     needs: release
@@ -155,9 +156,10 @@ jobs:
         id: create-check
         uses: ./.github/actions/create-check
         with:
-          name: "Release"
+          name: "Update - Release"
+          check-name: "Release"
+          token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ steps.commit.outputs.sha }}
-          find-name: "Update - Release"
       - name: Conclude Check
         uses: LouisBrunner/checks-action@v1.6.0
         with:

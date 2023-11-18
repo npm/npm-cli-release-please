@@ -32,7 +32,8 @@ jobs:
         if: inputs.check-sha
         uses: ./.github/actions/create-check
         with:
-          name: Lint All
+          name: "Lint All"
+          token: ${{ secrets.GITHUB_TOKEN }}
           sha: inputs.check-sha
       - name: Checkout
         uses: actions/checkout@v3
@@ -89,7 +90,8 @@ jobs:
         if: inputs.check-sha
         uses: ./.github/actions/create-check
         with:
-          name: Test All
+          name: "Test All - ${{ matrix.platform.name }} - ${{ matrix.node-version }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
           sha: inputs.check-sha
       - name: Checkout
         uses: actions/checkout@v3
