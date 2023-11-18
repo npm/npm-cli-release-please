@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.2...pkg2-v5.0.3) (2023-11-18)
+
+### Dependencies
+
+* [Workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v4.0.2): `@npmcli/pkg3@4.0.2`
+
+### Chores
+
+* [`a6483a8`](https://github.com/npm/npm-cli-release-please/commit/a6483a8bdc17ae076902db8cffe40f64fe02a39d) update template-oss (@lukekarrys)
+
 ## [5.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.1...pkg2-v5.0.2) (2023-11-18)
 
 ### Dependencies
