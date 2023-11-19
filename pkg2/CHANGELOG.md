@@ -1,5 +1,40 @@
 # Changelog
 
+## [5.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.3...pkg2-v5.0.4) (2023-11-19)
+
+### Bug Fixes
+
+* [`c5adcf0`](https://github.com/npm/npm-cli-release-please/commit/c5adcf019e10036cf652c5bb5538a4b17dcb4c2b) do a backport (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v4.0.3): `@npmcli/pkg3@4.0.3`
+## [5.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.3...pkg2-v5.0.4) (2023-11-19)
+
+### Bug Fixes
+
+* [`c5adcf0`](https://github.com/npm/npm-cli-release-please/commit/c5adcf019e10036cf652c5bb5538a4b17dcb4c2b) do a backport (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v4.0.3): `@npmcli/pkg3@4.0.3`
+
+### Chores
+
+* [`0d2f5fb`](https://github.com/npm/npm-cli-release-please/commit/0d2f5fbbd0313dd037aecf131ec884a15751e409) update template-oss (@lukekarrys)
+* [`75013c4`](https://github.com/npm/npm-cli-release-please/commit/75013c4ed8b803ed04e57b980b73680d3e52ca05) update template-oss (@lukekarrys)
+* [`c5b1c7f`](https://github.com/npm/npm-cli-release-please/commit/c5b1c7fae74eb53735702a21f1843051ed26d927) update template-oss (@lukekarrys)
+* [`d628f4d`](https://github.com/npm/npm-cli-release-please/commit/d628f4d111bb3e4acea0eb2f87944847052e8c73) update template-oss (@lukekarrys)
+* [`e3161de`](https://github.com/npm/npm-cli-release-please/commit/e3161debba3a81510e5d7605be78e81ffe236e7b) update template-oss (@lukekarrys)
+
+### Chores
+
+* [`0d2f5fb`](https://github.com/npm/npm-cli-release-please/commit/0d2f5fbbd0313dd037aecf131ec884a15751e409) update template-oss (@lukekarrys)
+* [`75013c4`](https://github.com/npm/npm-cli-release-please/commit/75013c4ed8b803ed04e57b980b73680d3e52ca05) update template-oss (@lukekarrys)
+* [`c5b1c7f`](https://github.com/npm/npm-cli-release-please/commit/c5b1c7fae74eb53735702a21f1843051ed26d927) update template-oss (@lukekarrys)
+* [`d628f4d`](https://github.com/npm/npm-cli-release-please/commit/d628f4d111bb3e4acea0eb2f87944847052e8c73) update template-oss (@lukekarrys)
+* [`e3161de`](https://github.com/npm/npm-cli-release-please/commit/e3161debba3a81510e5d7605be78e81ffe236e7b) update template-oss (@lukekarrys)
+
 ## [5.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.2...pkg2-v5.0.3) (2023-11-18)
 
 ### Dependencies
