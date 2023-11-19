@@ -44,9 +44,12 @@
     "workspaces/pkg6": {}
   },
   "plugins": [
-    "node-workspace"
+    "node-workspace",
+    "node-workspace-format"
   ],
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
-  "exclude-packages-from-root": true
+  "prerelease-type": "pre",
+  "pull-request-header": "",
+  "pull-request-footer": ""
 }
