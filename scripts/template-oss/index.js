@@ -6,8 +6,8 @@ module.exports = {
   branches: ['template-oss-mock-testing-branch-do-not-delete'],
   allowPaths: [
     '/AUTHORS',
-    '/ALLOWED',
   ],
+  codeowner: '@lukekarrys',
   rootRepo: {
     add: {
       '.github/settings.yml': false,

@@ -291,7 +291,7 @@ jobs:
             if (RESULT !== 'white_check_mark') {
               body.push(':rotating_light::rotating_light::rotating_light:')
               body.push([
-                '@npm/cli-team: The post-release workflow failed for this release.',
+                '@lukekarrys: The post-release workflow failed for this release.',
                 'Manual steps may need to be taken after examining the workflow output.'
               ].join(' '))
               body.push(':rotating_light::rotating_light::rotating_light:')
