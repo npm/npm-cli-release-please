@@ -1,5 +1,19 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.7...v5.0.0) (2023-11-19)
+
+### Bug Fixes
+
+* [`99ef2d9`](https://github.com/npm/npm-cli-release-please/commit/99ef2d9f9361cb7ea5de430e3ee3c0a11eee406b) set release-as and last-release-sha (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v5.0.0): `@npmcli/pkg6@5.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v5.0.0): `pkg1@5.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.0): `pkg2@5.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v5.0.0): `pkg4@5.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v5.0.0): `pkg5@5.0.0`
+
 ## [1015.0.0-pre.7](https://github.com/npm/npm-cli-release-please/compare/v1015.0.0-pre.6...v1015.0.0-pre.7) (2023-11-16)
 
 ### Dependencies
