@@ -12,12 +12,14 @@ module.exports = {
     add: {
       '.github/settings.yml': false,
       '.github/dependabot.yml': false,
+      '.github/workflows/release.yml': false,
     },
   },
   workspaceRepo: {
     add: {
       '.github/settings.yml': false,
       '.github/dependabot.yml': false,
+      '.github/workflows/release.yml': false,
     },
   },
 }
