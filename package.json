@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tap",
-    "lint": "eslint \"**/*.js\"",
+    "lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
     "postlint": "template-oss-check",
     "template-oss-apply": "template-oss-apply --force",
     "lintfix": "npm run lint -- --fix",
@@ -36,7 +36,7 @@
   ],
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.1",
-    "@npmcli/template-oss": "4.19.0",
+    "@npmcli/template-oss": "file:scripts/npmcli-template-oss-15817.tgz",
     "tap": "^16.3.4"
   },
   "files": [
@@ -48,7 +48,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.19.0",
+    "version": "4.20.0",
     "content": "./scripts/template-oss"
   },
   "dependencies": {
