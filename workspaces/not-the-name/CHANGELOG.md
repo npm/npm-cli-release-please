@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg4-v1012.0.0-pre.3...pkg4-v5.0.0) (2023-11-19)
+
+### Bug Fixes
+
+* [`99ef2d9`](https://github.com/npm/npm-cli-release-please/commit/99ef2d9f9361cb7ea5de430e3ee3c0a11eee406b) set release-as and last-release-sha (@lukekarrys)
+
 ## [1012.0.0-pre.3](https://github.com/npm/npm-cli-release-please/compare/pkg4-v1012.0.0-pre.2...pkg4-v1012.0.0-pre.3) (2023-11-15)
 
 ### ⚠️ BREAKING CHANGES
