@@ -51,7 +51,5 @@
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
   "pull-request-header": "",
-  "pull-request-footer": "",
-  "last-release-sha": "7ca6d2a882c4d5219a712c6af3c01da6eee1d47e",
-  "release-as": "2001.0.0"
+  "pull-request-footer": ""
 }
