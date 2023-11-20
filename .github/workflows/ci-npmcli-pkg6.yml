@@ -10,9 +10,7 @@ on:
   push:
     branches:
       - main
-      - latest
       - template-oss-mock-testing-branch-do-not-delete
-      - release/v*
     paths:
       - workspaces/pkg6/**
   schedule:

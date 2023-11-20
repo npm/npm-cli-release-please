@@ -13,9 +13,7 @@ on:
   push:
     branches:
       - main
-      - latest
       - template-oss-mock-testing-branch-do-not-delete
-      - release/v*
     paths-ignore:
       - pkg1/**
       - pkg2/**
