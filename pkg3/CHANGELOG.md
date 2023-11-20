@@ -1,5 +1,11 @@
 # Changelog
 
+## [2001.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2000.0.0...pkg3-v2001.0.0) (2023-11-19)
+
+### Bug Fixes
+
+* [`92e4dcb`](https://github.com/npm/npm-cli-release-please/commit/92e4dcb1a9daf254822a0e6cce51d5eb60e8e102) set release-as and last-release-sha (@lukekarrys)
+
 ## [2000.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v5.0.0...pkg3-v2000.0.0) (2023-11-19)
 
 ### Bug Fixes

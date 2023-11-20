@@ -1,5 +1,19 @@
 # Changelog
 
+## [2001.0.0](https://github.com/npm/npm-cli-release-please/compare/v2000.0.1...v2001.0.0) (2023-11-19)
+
+### Bug Fixes
+
+* [`92e4dcb`](https://github.com/npm/npm-cli-release-please/commit/92e4dcb1a9daf254822a0e6cce51d5eb60e8e102) set release-as and last-release-sha (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2001.0.0): `@npmcli/pkg6@2001.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2001.0.0): `pkg1@2001.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2001.0.0): `pkg2@2001.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2001.0.0): `pkg4@2001.0.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2001.0.0): `pkg5@2001.0.0`
+
 ## [2000.0.1](https://github.com/npm/npm-cli-release-please/compare/v2000.0.0...v2000.0.1) (2023-11-20)
 
 ### Chores
