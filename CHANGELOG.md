@@ -1,5 +1,11 @@
 # Changelog
 
+## [2000.0.1](https://github.com/npm/npm-cli-release-please/compare/v2000.0.0...v2000.0.1) (2023-11-20)
+
+### Chores
+
+* [`de150f6`](https://github.com/npm/npm-cli-release-please/commit/de150f6ab676e6106f91a69abd26a126a9867cd7) reset release please config (@lukekarrys)
+
 ## [2000.0.0](https://github.com/npm/npm-cli-release-please/compare/v5.0.0...v2000.0.0) (2023-11-19)
 
 ### Bug Fixes
