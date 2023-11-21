@@ -1,6 +1,6 @@
 {
   "name": "pkg1",
-  "version": "2001.0.6",
+  "version": "2001.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.1",
     "@npmcli/template-oss": "file:../scripts/npmcli-template-oss-14468.tgz",
-    "pkg2": "^2001.0.6",
+    "pkg2": "^2001.0.7",
     "tap": "^16.3.4"
   },
   "tap": {
