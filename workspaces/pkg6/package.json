@@ -1,6 +1,6 @@
 {
   "name": "@npmcli/pkg6",
-  "version": "2001.0.3",
+  "version": "2001.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
