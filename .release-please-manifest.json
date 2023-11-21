@@ -1,9 +1,9 @@
 {
-  ".": "2001.0.2",
-  "pkg1": "2001.0.2",
-  "pkg2": "2001.0.2",
-  "pkg3": "2001.0.2",
-  "workspaces/arbitrary-name": "2001.0.2",
-  "workspaces/not-the-name": "2001.0.2",
-  "workspaces/pkg6": "2001.0.2"
+  ".": "2001.0.3",
+  "pkg1": "2001.0.3",
+  "pkg2": "2001.0.3",
+  "pkg3": "2001.0.3",
+  "workspaces/arbitrary-name": "2001.0.3",
+  "workspaces/not-the-name": "2001.0.3",
+  "workspaces/pkg6": "2001.0.3"
 }
