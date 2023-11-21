@@ -1,5 +1,11 @@
 # Changelog
 
+## [2001.0.8](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2001.0.7...pkg6-v2001.0.8) (2023-11-21)
+
+### Bug Fixes
+
+* [`ab3222c`](https://github.com/npm/npm-cli-release-please/commit/ab3222c29edffeffabddbaf7c394b1a709c7e864) update all packages (@lukekarrys)
+
 ## [2001.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2001.0.6...pkg6-v2001.0.7) (2023-11-21)
 
 ### Bug Fixes
