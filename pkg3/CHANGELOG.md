@@ -1,5 +1,14 @@
 # Changelog
 
+## [2001.0.6](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2001.0.5...pkg3-v2001.0.6) (2023-11-21)
+
+### Bug Fixes
+
+* [`a55b2c1`](https://github.com/npm/npm-cli-release-please/commit/a55b2c14e9dd78c5ca94bd961c586adec625767b) update all packages (@lukekarrys)
+* [`ca6f3da`](https://github.com/npm/npm-cli-release-please/commit/ca6f3da04234511e20ad702c922107494b24e1db) update all packages (@lukekarrys)
+* [`074b9a1`](https://github.com/npm/npm-cli-release-please/commit/074b9a1af27a6183328b3a80776e125713880b38) update all packages (@lukekarrys)
+* [`b0f4d48`](https://github.com/npm/npm-cli-release-please/commit/b0f4d482482249ae2a327999ae0d2ce10abfe751) update all packages (@lukekarrys)
+
 ## [2001.0.5](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2001.0.4...pkg3-v2001.0.5) (2023-11-21)
 
 ### Bug Fixes
