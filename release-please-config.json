@@ -52,6 +52,6 @@
   "pull-request-title-pattern": "chore: release${component} ${version}",
   "pull-request-header": "",
   "pull-request-footer": "",
-  "last-release-sha": "f0cae9ee6fe7746568c42474b75f98ca4f617465",
-  "release-as": ".0.0"
+  "last-release-sha": "22c3787590d7810ff26653e40f5eb99c97945ccb",
+  "release-as": "2002.0.0"
 }
