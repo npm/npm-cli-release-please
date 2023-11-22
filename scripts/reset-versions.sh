@@ -70,8 +70,8 @@ update_pkg -ws -iwr
 update_release_please_config --arg a "$(git rev-parse HEAD)" '."last-release-sha"=$a'
 update_release_please_config --arg a "$MAJOR.0.0" '."release-as"=$a'
 git_add_and_commit "fix: set release-as and last-release-sha"
+git_push
 
-# git_push
 # run create PR
 
 # gh pr merge $(get_pr) --rebase
