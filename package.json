@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "2001.0.9",
+  "version": "2002.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -52,12 +52,12 @@
     "content": "./scripts/template-oss"
   },
   "dependencies": {
-    "@npmcli/pkg6": "^2001.0.9",
+    "@npmcli/pkg6": "^2002.0.0",
     "abbrev": "^2.0.0",
-    "pkg1": "^2001.0.9",
-    "pkg2": "^2001.0.9",
-    "pkg4": "^2001.0.9",
-    "pkg5": "^2001.0.9"
+    "pkg1": "^2002.0.0",
+    "pkg2": "^2002.0.0",
+    "pkg4": "^2002.0.0",
+    "pkg5": "^2002.0.0"
   },
   "tap": {
     "test-ignore": "^(pkg1|pkg2|pkg3|workspaces)/",
