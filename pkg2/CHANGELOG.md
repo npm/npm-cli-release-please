@@ -24,6 +24,16 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
 
+## [2003.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2003.0.6...pkg2-v2003.0.7) (2023-11-23)
+
+### Bug Fixes
+
+* [`71de3e6`](https://github.com/npm/npm-cli-release-please/commit/71de3e69ea94c2cdb264ff91bd800c915a86f298) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2003.0.7): `@npmcli/pkg3@2003.0.7`
+
 ## [2003.0.6](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2003.0.5...pkg2-v2003.0.6) (2023-11-23)
 
 ### Bug Fixes
