@@ -50,8 +50,6 @@
   "prerelease-type": "pre",
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
-  "pull-request-header": "",
-  "pull-request-footer": "",
-  "last-release-sha": "dc9c2668ec09a91b9e1a59f75d1915ae19f6cf87",
-  "release-as": "2003.0.0"
+  "pull-request-header": " ",
+  "pull-request-footer": " "
 }
