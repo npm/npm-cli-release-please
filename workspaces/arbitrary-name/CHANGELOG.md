@@ -1,5 +1,11 @@
 # Changelog
 
+## [2003.0.8](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2003.0.7...pkg5-v2003.0.8) (2023-11-23)
+
+### Bug Fixes
+
+* [`d5b93a6`](https://github.com/npm/npm-cli-release-please/commit/d5b93a6f433c071c57723ba050d905d61d3abd90) update all packages (@lukekarrys)
+
 ## [2003.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2003.0.6...pkg5-v2003.0.7) (2023-11-23)
 
 ### Bug Fixes
