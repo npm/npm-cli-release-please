@@ -1,6 +1,6 @@
 {
   "name": "pkg2",
-  "version": "2003.0.4",
+  "version": "2003.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "tap": "^16.3.4"
   },
   "dependencies": {
-    "@npmcli/pkg3": "^2003.0.4"
+    "@npmcli/pkg3": "^2003.0.5"
   },
   "tap": {
     "nyc-arg": [
