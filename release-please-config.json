@@ -52,8 +52,8 @@
   "pull-request-title-pattern": "chore: release${component} ${version}",
   "pull-request-header": " ",
   "pull-request-footer": " ",
-  "last-release-sha": "18d3b47d839d573f636d61720791d150a3ff2ce4",
-  "release-search-depth": 10,
-  "commit-search-depth": 10,
+  "last-release-sha": "1859062354b913321a0ff4d65d7789a35676b3cd",
+  "release-search-depth": 1,
+  "commit-search-depth": 1,
   "sequential-calls": true
 }
