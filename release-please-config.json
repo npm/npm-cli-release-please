@@ -55,6 +55,5 @@
   "last-release-sha": "8039094abc25c623ffb58120109f694dc1fae632",
   "release-search-depth": 7,
   "commit-search-depth": 1,
-  "sequential-calls": true,
-  "release-as": "2009.0.0"
+  "sequential-calls": true
 }
