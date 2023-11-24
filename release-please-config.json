@@ -52,8 +52,9 @@
   "pull-request-title-pattern": "chore: release${component} ${version}",
   "pull-request-header": " ",
   "pull-request-footer": " ",
-  "last-release-sha": "a4d2a2109cb6a2f771c8f6345996baced7d00d38",
+  "last-release-sha": "499e0ca49d9454a6f201f54c92b7963b6337c64b",
   "release-search-depth": 7,
   "commit-search-depth": 1,
-  "sequential-calls": true
+  "sequential-calls": true,
+  "release-as": "2009.0.0"
 }
