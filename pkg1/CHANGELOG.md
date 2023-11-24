@@ -24,6 +24,16 @@
   * devDependencies
     * pkg2 bumped from ^1011.0.4 to ^1011.0.5
 
+## [2003.0.8](https://github.com/npm/npm-cli-release-please/compare/pkg1-v2003.0.7...pkg1-v2003.0.8) (2023-11-23)
+
+### Bug Fixes
+
+* [`9afa38b`](https://github.com/npm/npm-cli-release-please/commit/9afa38b96dedb8a4a947f22267cdef4131d588df) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2003.0.8): `pkg2@2003.0.8`
+
 ## [2003.0.7](https://github.com/npm/npm-cli-release-please/compare/pkg1-v2003.0.6...pkg1-v2003.0.7) (2023-11-23)
 
 ### Bug Fixes
