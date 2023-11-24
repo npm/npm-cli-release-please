@@ -1,5 +1,11 @@
 # Changelog
 
+## [2009.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2009.0.1...pkg3-v2009.0.2) (2023-11-23)
+
+### Bug Fixes
+
+* [`8774569`](https://github.com/npm/npm-cli-release-please/commit/8774569b101d80cbfd373eb69ae6418baf3ec2b2) update pkg (@lukekarrys)
+
 ## [2009.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2009.0.0...pkg3-v2009.0.1) (2023-11-23)
 
 ### Bug Fixes
