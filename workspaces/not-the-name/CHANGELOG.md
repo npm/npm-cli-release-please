@@ -1,5 +1,11 @@
 # Changelog
 
+## [2010.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2009.0.2...pkg4-v2010.0.0) (2023-11-23)
+
+### Bug Fixes
+
+* [`e4a9944`](https://github.com/npm/npm-cli-release-please/commit/e4a9944fe285a0784225092da610bd6f46052dac) set release-as and last-release-sha (@lukekarrys)
+
 ## [2009.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2009.0.1...pkg4-v2009.0.2) (2023-11-23)
 
 ### Bug Fixes
