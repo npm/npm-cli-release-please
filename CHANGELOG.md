@@ -1,5 +1,19 @@
 # Changelog
 
+## [2009.0.3](https://github.com/npm/npm-cli-release-please/compare/v2009.0.2...v2009.0.3) (2023-11-23)
+
+### Bug Fixes
+
+* [`cdf3079`](https://github.com/npm/npm-cli-release-please/commit/cdf307992947b7425568eb3191d135ba5185752f) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2009.0.2): `@npmcli/pkg6@2009.0.2`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2009.0.3): `pkg1@2009.0.3`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2009.0.3): `pkg2@2009.0.3`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2009.0.2): `pkg4@2009.0.2`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2009.0.2): `pkg5@2009.0.2`
+
 ## [2009.0.2](https://github.com/npm/npm-cli-release-please/compare/v2009.0.1...v2009.0.2) (2023-11-23)
 
 ### Bug Fixes
