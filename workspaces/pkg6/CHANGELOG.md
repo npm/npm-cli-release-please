@@ -1,5 +1,11 @@
 # Changelog
 
+## [2011.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2011.0.0...pkg6-v2011.0.1) (2023-11-24)
+
+### Bug Fixes
+
+* [`7d0b4c4`](https://github.com/npm/npm-cli-release-please/commit/7d0b4c488e175882f5d1ad47c1b0e79d75bc0247) update all packages (@lukekarrys)
+
 ## [2011.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2010.0.1...pkg6-v2011.0.0) (2023-11-24)
 
 ### Bug Fixes
