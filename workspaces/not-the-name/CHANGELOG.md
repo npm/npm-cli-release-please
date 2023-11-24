@@ -1,5 +1,11 @@
 # Changelog
 
+## [2009.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2009.0.0...pkg4-v2009.0.1) (2023-11-23)
+
+### Bug Fixes
+
+* [`d1cf390`](https://github.com/npm/npm-cli-release-please/commit/d1cf390d5b08a49bb8361beff0c8dda7afb4bb77) update all packages (@lukekarrys)
+
 ## [2009.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2009.0.0...pkg4-v2009.0.0) (2023-11-23)
 
 ### Bug Fixes
