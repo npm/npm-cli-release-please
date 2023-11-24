@@ -1,5 +1,40 @@
 # Changelog
 
+## [2010.0.1](https://github.com/npm/npm-cli-release-please/compare/v2010.0.0...v2010.0.1) (2023-11-23)
+
+### Bug Fixes
+
+* [`be5ddc7`](https://github.com/npm/npm-cli-release-please/commit/be5ddc7dfd155dad3ebb7d830d6e23bcf51d149b) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2010.0.1): `@npmcli/pkg6@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2010.0.1): `pkg1@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2010.0.1): `pkg2@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2010.0.1): `pkg4@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2010.0.1): `pkg5@2010.0.1`
+## [2010.0.1](https://github.com/npm/npm-cli-release-please/compare/v2010.0.0...v2010.0.1) (2023-11-23)
+
+### Bug Fixes
+
+* [`be5ddc7`](https://github.com/npm/npm-cli-release-please/commit/be5ddc7dfd155dad3ebb7d830d6e23bcf51d149b) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2010.0.1): `@npmcli/pkg6@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2010.0.1): `pkg1@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2010.0.1): `pkg2@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2010.0.1): `pkg4@2010.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2010.0.1): `pkg5@2010.0.1`
+
+### Chores
+
+* [`85ae823`](https://github.com/npm/npm-cli-release-please/commit/85ae8231ea597b67cb6384271bd77e183bc42892) update config (@lukekarrys)
+
+### Chores
+
+* [`85ae823`](https://github.com/npm/npm-cli-release-please/commit/85ae8231ea597b67cb6384271bd77e183bc42892) update config (@lukekarrys)
+
 ## [2010.0.0](https://github.com/npm/npm-cli-release-please/compare/v2009.0.4...v2010.0.0) (2023-11-23)
 
 ### Bug Fixes
