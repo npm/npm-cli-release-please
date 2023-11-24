@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "2010.0.1",
+  "version": "2010.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -54,8 +54,8 @@
   "dependencies": {
     "@npmcli/pkg6": "^2010.0.1",
     "abbrev": "^2.0.0",
-    "pkg1": "^2010.0.1",
-    "pkg2": "^2010.0.1",
+    "pkg1": "^2010.0.2",
+    "pkg2": "^2010.0.2",
     "pkg4": "^2010.0.1",
     "pkg5": "^2010.0.1"
   },

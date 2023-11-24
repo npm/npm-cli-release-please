@@ -1,5 +1,16 @@
 # Changelog
 
+## [2010.0.2](https://github.com/npm/npm-cli-release-please/compare/v2010.0.1...v2010.0.2) (2023-11-23)
+
+### Bug Fixes
+
+* [`9b966ff`](https://github.com/npm/npm-cli-release-please/commit/9b966ff6ffb8e4bbbc6abf01cac4b525de30f38a) update pkg3 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2010.0.2): `pkg1@2010.0.2`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2010.0.2): `pkg2@2010.0.2`
+
 ## [2010.0.1](https://github.com/npm/npm-cli-release-please/compare/v2010.0.0...v2010.0.1) (2023-11-23)
 
 ### Bug Fixes
