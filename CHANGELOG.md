@@ -1,5 +1,40 @@
 # Changelog
 
+## [4.1.0](https://github.com/npm/npm-cli-release-please/compare/v4.0.4...v4.1.0) (2023-11-25)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v3.0.4): `@npmcli/pkg6@3.0.4`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.1.0): `pkg1@6.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.5): `pkg2@5.0.5`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v3.0.4): `pkg4@3.0.4`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v3.0.4): `pkg5@3.0.4`
+## [4.1.0](https://github.com/npm/npm-cli-release-please/compare/v4.0.4...v4.1.0) (2023-11-25)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v3.0.4): `@npmcli/pkg6@3.0.4`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.1.0): `pkg1@6.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.5): `pkg2@5.0.5`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v3.0.4): `pkg4@3.0.4`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v3.0.4): `pkg5@3.0.4`
+
+### Chores
+
+* [`01ca77e`](https://github.com/npm/npm-cli-release-please/commit/01ca77ea45e1a175d889abb047bc9c6d17606629) update template-oss (@lukekarrys)
+
+### Chores
+
+* [`01ca77e`](https://github.com/npm/npm-cli-release-please/commit/01ca77ea45e1a175d889abb047bc9c6d17606629) update template-oss (@lukekarrys)
+
 ## [4.0.4](https://github.com/npm/npm-cli-release-please/compare/v4.0.3...v4.0.4) (2023-11-19)
 
 ### Bug Fixes

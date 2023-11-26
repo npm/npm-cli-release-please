@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg3-v4.0.3...pkg3-v4.0.4) (2023-11-25)
+
+### Bug Fixes
+
+* [`af6c839`](https://github.com/npm/npm-cli-release-please/commit/af6c839ba28c69e56838721fb9ce5c71814a1286) pkg3 commit (@lukekarrys)
+
+### Chores
+
+* [`01ca77e`](https://github.com/npm/npm-cli-release-please/commit/01ca77ea45e1a175d889abb047bc9c6d17606629) update template-oss (@lukekarrys)
+
 ## [4.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg3-v4.0.2...pkg3-v4.0.3) (2023-11-19)
 
 ### Bug Fixes

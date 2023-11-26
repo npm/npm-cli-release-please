@@ -1,5 +1,40 @@
 # Changelog
 
+## [6.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg1-v6.0.4...pkg1-v6.1.0) (2023-11-25)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Bug Fixes
+
+* [`7b11a09`](https://github.com/npm/npm-cli-release-please/commit/7b11a0974193340810bf6feea0ed4d8b060e1097) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch pkg1 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.5): `pkg2@5.0.5`
+## [6.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg1-v6.0.4...pkg1-v6.1.0) (2023-11-25)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Bug Fixes
+
+* [`7b11a09`](https://github.com/npm/npm-cli-release-please/commit/7b11a0974193340810bf6feea0ed4d8b060e1097) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch pkg1 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.5): `pkg2@5.0.5`
+
+### Chores
+
+* [`01ca77e`](https://github.com/npm/npm-cli-release-please/commit/01ca77ea45e1a175d889abb047bc9c6d17606629) update template-oss (@lukekarrys)
+
+### Chores
+
+* [`01ca77e`](https://github.com/npm/npm-cli-release-please/commit/01ca77ea45e1a175d889abb047bc9c6d17606629) update template-oss (@lukekarrys)
+
 ## [6.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg1-v6.0.3...pkg1-v6.0.4) (2023-11-19)
 
 ### Bug Fixes
