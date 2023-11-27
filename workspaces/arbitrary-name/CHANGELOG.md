@@ -1,5 +1,11 @@
 # Changelog
 
+## [2012.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2011.0.1...pkg5-v2012.0.0) (2023-11-27)
+
+### Bug Fixes
+
+* [`76820c1`](https://github.com/npm/npm-cli-release-please/commit/76820c1065b6a58987595112fc50108254f64245) set release-as and last-release-sha (@lukekarrys)
+
 ## [2011.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2011.0.0...pkg5-v2011.0.1) (2023-11-24)
 
 ### Bug Fixes
