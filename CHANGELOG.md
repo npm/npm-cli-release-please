@@ -1,5 +1,32 @@
 # Changelog
 
+## [4.1.0](https://github.com/npm/npm-cli-release-please/compare/v4.0.4...v4.1.0) (2023-11-26)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.1.0): `pkg1@6.1.0`
+## [4.1.0](https://github.com/npm/npm-cli-release-please/compare/v4.0.4...v4.1.0) (2023-11-26)
+
+### Features
+
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.1.0): `pkg1@6.1.0`
+
+### Chores
+
+* [`9b856b0`](https://github.com/npm/npm-cli-release-please/commit/9b856b00c1570669647abdf8f8def76f50c6a09b) update config (@lukekarrys)
+
+### Chores
+
+* [`9b856b0`](https://github.com/npm/npm-cli-release-please/commit/9b856b00c1570669647abdf8f8def76f50c6a09b) update config (@lukekarrys)
+
 ## [4.0.4](https://github.com/npm/npm-cli-release-please/compare/v4.0.3...v4.0.4) (2023-11-19)
 
 ### Bug Fixes
