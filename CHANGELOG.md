@@ -1,5 +1,16 @@
 # Changelog
 
+## [2012.0.2](https://github.com/npm/npm-cli-release-please/compare/v2012.0.1...v2012.0.2) (2023-11-27)
+
+### Bug Fixes
+
+* [`ca0c379`](https://github.com/npm/npm-cli-release-please/commit/ca0c379aac384693441cf7dfe74ead9e46510c33) update pkg3 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2012.0.2): `pkg1@2012.0.2`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2012.0.2): `pkg2@2012.0.2`
+
 ## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/v2012.0.0...v2012.0.1) (2023-11-27)
 
 ### Bug Fixes
