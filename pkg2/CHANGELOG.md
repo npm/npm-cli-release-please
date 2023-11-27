@@ -24,6 +24,33 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
 
+## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2012.0.0...pkg2-v2012.0.1) (2023-11-27)
+
+### Bug Fixes
+
+* [`e0d5e80`](https://github.com/npm/npm-cli-release-please/commit/e0d5e80e46bdde046cd8540ba085b0e48892b4a5) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2012.0.1): `@npmcli/pkg3@2012.0.1`
+## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2012.0.0...pkg2-v2012.0.1) (2023-11-27)
+
+### Bug Fixes
+
+* [`e0d5e80`](https://github.com/npm/npm-cli-release-please/commit/e0d5e80e46bdde046cd8540ba085b0e48892b4a5) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2012.0.1): `@npmcli/pkg3@2012.0.1`
+
+### Chores
+
+* [`347b280`](https://github.com/npm/npm-cli-release-please/commit/347b2801f793bf1658fa6ca0559c0dc22ad870d0) update template-oss (@lukekarrys)
+
+### Chores
+
+* [`347b280`](https://github.com/npm/npm-cli-release-please/commit/347b2801f793bf1658fa6ca0559c0dc22ad870d0) update template-oss (@lukekarrys)
+
 ## [2012.0.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2011.0.2...pkg2-v2012.0.0) (2023-11-27)
 
 ### Bug Fixes
