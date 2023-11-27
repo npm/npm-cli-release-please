@@ -1,5 +1,40 @@
 # Changelog
 
+## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/v2012.0.0...v2012.0.1) (2023-11-27)
+
+### Bug Fixes
+
+* [`e0d5e80`](https://github.com/npm/npm-cli-release-please/commit/e0d5e80e46bdde046cd8540ba085b0e48892b4a5) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2012.0.1): `@npmcli/pkg6@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2012.0.1): `pkg1@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2012.0.1): `pkg2@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2012.0.1): `pkg4@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2012.0.1): `pkg5@2012.0.1`
+## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/v2012.0.0...v2012.0.1) (2023-11-27)
+
+### Bug Fixes
+
+* [`e0d5e80`](https://github.com/npm/npm-cli-release-please/commit/e0d5e80e46bdde046cd8540ba085b0e48892b4a5) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2012.0.1): `@npmcli/pkg6@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2012.0.1): `pkg1@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2012.0.1): `pkg2@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2012.0.1): `pkg4@2012.0.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2012.0.1): `pkg5@2012.0.1`
+
+### Chores
+
+* [`347b280`](https://github.com/npm/npm-cli-release-please/commit/347b2801f793bf1658fa6ca0559c0dc22ad870d0) update template-oss (@lukekarrys)
+
+### Chores
+
+* [`347b280`](https://github.com/npm/npm-cli-release-please/commit/347b2801f793bf1658fa6ca0559c0dc22ad870d0) update template-oss (@lukekarrys)
+
 ## [2012.0.0](https://github.com/npm/npm-cli-release-please/compare/v2011.0.2...v2012.0.0) (2023-11-27)
 
 ### Bug Fixes
