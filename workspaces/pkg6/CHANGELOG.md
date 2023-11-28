@@ -1,5 +1,15 @@
 # Changelog
 
+## [2013.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2012.0.2...pkg6-v2013.0.0-pre) (2023-11-28)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`517625d`](https://github.com/npm/npm-cli-release-please/commit/517625ddf26e01b72c1351e4fae1da831ff3d271) update all packages (@lukekarrys)
+
 ## [2012.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2012.0.1...pkg6-v2012.0.2) (2023-11-28)
 
 ### Bug Fixes
