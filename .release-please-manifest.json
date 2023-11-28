@@ -1,9 +1,9 @@
 {
-  ".": "2012.0.4",
-  "pkg1": "2012.0.4",
-  "pkg2": "2012.0.4",
-  "pkg3": "2012.0.4",
-  "workspaces/arbitrary-name": "2012.0.2",
-  "workspaces/not-the-name": "2012.0.2",
-  "workspaces/pkg6": "2012.0.2"
+  ".": "2013.0.0-pre",
+  "pkg1": "2013.0.0-pre",
+  "pkg2": "2013.0.0-pre",
+  "pkg3": "2013.0.0-pre",
+  "workspaces/arbitrary-name": "2013.0.0-pre",
+  "workspaces/not-the-name": "2013.0.0-pre",
+  "workspaces/pkg6": "2013.0.0-pre"
 }
