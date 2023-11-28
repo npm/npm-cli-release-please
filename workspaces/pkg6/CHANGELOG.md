@@ -1,5 +1,15 @@
 # Changelog
 
+## [2012.0.2](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2012.0.1...pkg6-v2012.0.2) (2023-11-28)
+
+### Bug Fixes
+
+* [`70c69e6`](https://github.com/npm/npm-cli-release-please/commit/70c69e660943e807aa93b7dd3a319e821a4d2446) update all packages (@lukekarrys)
+
+### Chores
+
+* [`100fd16`](https://github.com/npm/npm-cli-release-please/commit/100fd16ad4b096374ceebc0e0debec72502170d3) update template-oss (@lukekarrys)
+
 ## [2012.0.1](https://github.com/npm/npm-cli-release-please/compare/pkg6-v2012.0.0...pkg6-v2012.0.1) (2023-11-27)
 
 ### Bug Fixes
