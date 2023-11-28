@@ -24,6 +24,12 @@
   * devDependencies
     * pkg2 bumped from ^1011.0.4 to ^1011.0.5
 
+## [2012.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg1-v2012.0.3...pkg1-v2012.0.4) (2023-11-28)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2012.0.4): `pkg2@2012.0.4`
+
 ## [2012.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg1-v2012.0.2...pkg1-v2012.0.3) (2023-11-28)
 
 ### Bug Fixes
