@@ -1,5 +1,15 @@
 # Changelog
 
+## [2014.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2013.0.1-pre...pkg5-v2014.0.0-pre) (2023-12-01)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`9aa93b4`](https://github.com/npm/npm-cli-release-please/commit/9aa93b4ed3976694b2afb189724674cdae43d7e9) update all packages (@lukekarrys)
+
 ## [2013.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg5-v2013.0.0-pre...pkg5-v2013.0.1-pre) (2023-12-01)
 
 ### Bug Fixes
