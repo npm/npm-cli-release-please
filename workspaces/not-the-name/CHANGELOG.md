@@ -1,5 +1,11 @@
 # Changelog
 
+## [2013.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2013.0.0-pre...pkg4-v2013.0.1-pre) (2023-12-01)
+
+### Bug Fixes
+
+* [`ba700af`](https://github.com/npm/npm-cli-release-please/commit/ba700afaad8f7c0b03172514eb94408923ffaedc) update all packages (@lukekarrys)
+
 ## [2013.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2012.0.2...pkg4-v2013.0.0-pre) (2023-11-28)
 
 ### ⚠️ BREAKING CHANGES
