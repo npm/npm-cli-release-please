@@ -1,5 +1,11 @@
 # Changelog
 
+## [2013.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2013.0.1-pre...pkg3-v2013.0.2-pre) (2023-12-01)
+
+### Bug Fixes
+
+* [`99ddeec`](https://github.com/npm/npm-cli-release-please/commit/99ddeecd1d548f17901e6547d12921b829d4b509) update pkg3 (@lukekarrys)
+
 ## [2013.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2013.0.0-pre...pkg3-v2013.0.1-pre) (2023-12-01)
 
 ### Bug Fixes
