@@ -1,5 +1,56 @@
 # Changelog
 
+## [2017.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/v2016.0.2-pre...v2017.0.0-pre) (2023-12-04)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`8918852`](https://github.com/npm/npm-cli-release-please/commit/89188529a63c75fc863383008cddcfbb75d69097) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2016.0.0-pre.1): `@npmcli/pkg6@2016.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2017.0.0-pre): `pkg1@2017.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2017.0.0-pre): `pkg2@2017.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2016.0.0-pre.1): `pkg4@2016.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2016.0.0-pre.1): `pkg5@2016.0.0-pre.1`
+## [2017.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/v2016.0.2-pre...v2017.0.0-pre) (2023-12-04)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`8918852`](https://github.com/npm/npm-cli-release-please/commit/89188529a63c75fc863383008cddcfbb75d69097) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2016.0.0-pre.1): `@npmcli/pkg6@2016.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2017.0.0-pre): `pkg1@2017.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2017.0.0-pre): `pkg2@2017.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2016.0.0-pre.1): `pkg4@2016.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2016.0.0-pre.1): `pkg5@2016.0.0-pre.1`
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`9b93982`](https://github.com/npm/npm-cli-release-please/commit/9b93982d5e02c11efcba36813c5aac35dfe1b407) update template-oss (@lukekarrys)
+
+</details>
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`9b93982`](https://github.com/npm/npm-cli-release-please/commit/9b93982d5e02c11efcba36813c5aac35dfe1b407) update template-oss (@lukekarrys)
+
+</details>
+
 ## [2016.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2016.0.1-pre...v2016.0.2-pre) (2023-12-04)
 
 ### Chores
