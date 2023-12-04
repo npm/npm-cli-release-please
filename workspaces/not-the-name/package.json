@@ -1,6 +1,6 @@
 {
   "name": "pkg4",
-  "version": "2014.0.0-pre",
+  "version": "2014.0.1-pre",
   "description": "",
   "main": "index.js",
   "scripts": {
