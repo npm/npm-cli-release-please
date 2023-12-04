@@ -1,9 +1,9 @@
 {
-  ".": "2015.0.0-pre",
-  "pkg1": "2015.0.0-pre",
-  "pkg2": "2015.0.0-pre",
-  "pkg3": "2015.0.0-pre",
-  "workspaces/arbitrary-name": "2015.0.0-pre",
-  "workspaces/not-the-name": "2015.0.0-pre",
-  "workspaces/pkg6": "2015.0.0-pre"
+  ".": "2015.0.1-pre",
+  "pkg1": "2015.0.1-pre",
+  "pkg2": "2015.0.1-pre",
+  "pkg3": "2015.0.1-pre",
+  "workspaces/arbitrary-name": "2015.0.1-pre",
+  "workspaces/not-the-name": "2015.0.1-pre",
+  "workspaces/pkg6": "2015.0.1-pre"
 }
