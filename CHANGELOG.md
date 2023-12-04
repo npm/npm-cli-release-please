@@ -1,5 +1,19 @@
 # Changelog
 
+## [2015.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/v2015.0.0-pre...v2015.0.1-pre) (2023-12-04)
+
+### Bug Fixes
+
+* [`807aabd`](https://github.com/npm/npm-cli-release-please/commit/807aabd80bb96a2771c0c07ab29734e5509dd03f) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2015.0.1-pre): `@npmcli/pkg6@2015.0.1-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2015.0.1-pre): `pkg1@2015.0.1-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2015.0.1-pre): `pkg2@2015.0.1-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2015.0.1-pre): `pkg4@2015.0.1-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2015.0.1-pre): `pkg5@2015.0.1-pre`
+
 ## [2015.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/v2014.0.2-pre...v2015.0.0-pre) (2023-12-04)
 
 ### ⚠️ BREAKING CHANGES
