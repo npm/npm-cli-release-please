@@ -1,6 +1,6 @@
 {
   "name": "@npmcli/pkg3",
-  "version": "2016.0.0-pre",
+  "version": "2016.0.1-pre",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -47,5 +47,5 @@
       "tap-snapshots/**"
     ]
   },
-  "touch1": "28731"
+  "touch1": "9437"
 }
