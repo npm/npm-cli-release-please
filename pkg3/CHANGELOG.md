@@ -1,5 +1,11 @@
 # Changelog
 
+## [2016.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2016.0.0-pre...pkg3-v2016.0.1-pre) (2023-12-04)
+
+### Bug Fixes
+
+* [`7e91b91`](https://github.com/npm/npm-cli-release-please/commit/7e91b91c370ccd64ec8af6d16cb9601a7df1e793) update pkg3 (@lukekarrys)
+
 ## [2016.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2015.0.2-pre...pkg3-v2016.0.0-pre) (2023-12-04)
 
 ### ⚠️ BREAKING CHANGES

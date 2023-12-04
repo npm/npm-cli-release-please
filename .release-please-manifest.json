@@ -1,8 +1,8 @@
 {
-  ".": "2016.0.0-pre",
-  "pkg1": "2016.0.0-pre",
-  "pkg2": "2016.0.0-pre",
-  "pkg3": "2016.0.0-pre",
+  ".": "2016.0.1-pre",
+  "pkg1": "2016.0.1-pre",
+  "pkg2": "2016.0.1-pre",
+  "pkg3": "2016.0.1-pre",
   "workspaces/arbitrary-name": "2016.0.0-pre",
   "workspaces/not-the-name": "2016.0.0-pre",
   "workspaces/pkg6": "2016.0.0-pre"
