@@ -1,5 +1,11 @@
 # Changelog
 
+## [2015.0.3-pre](https://github.com/npm/npm-cli-release-please/compare/v2015.0.2-pre...v2015.0.3-pre) (2023-12-04)
+
+### Chores
+
+* [`c120602`](https://github.com/npm/npm-cli-release-please/commit/c120602e5faded9b4337b5e77462e1b28223c7d0) update pkg3 (@lukekarrys)
+
 ## [2015.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2015.0.1-pre...v2015.0.2-pre) (2023-12-04)
 
 ### Bug Fixes

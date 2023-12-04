@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "2015.0.2-pre",
+  "version": "2015.0.3-pre",
   "description": "",
   "main": "index.js",
   "scripts": {
