@@ -1,5 +1,16 @@
 # Changelog
 
+## [2015.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2015.0.1-pre...v2015.0.2-pre) (2023-12-04)
+
+### Bug Fixes
+
+* [`2301945`](https://github.com/npm/npm-cli-release-please/commit/230194504137445230d2a0909a908e53bd4137ee) update pkg3 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2015.0.2-pre): `pkg1@2015.0.2-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2015.0.2-pre): `pkg2@2015.0.2-pre`
+
 ## [2015.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/v2015.0.0-pre...v2015.0.1-pre) (2023-12-04)
 
 ### Bug Fixes
