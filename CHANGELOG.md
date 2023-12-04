@@ -1,5 +1,16 @@
 # Changelog
 
+## [2016.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2016.0.1-pre...v2016.0.2-pre) (2023-12-04)
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`d690bcb`](https://github.com/npm/npm-cli-release-please/commit/d690bcb622f954314086bc333cd56fa4d2b59897) this is a chore (@lukekarrys)
+* [`38acd0f`](https://github.com/npm/npm-cli-release-please/commit/38acd0f850907c357e51caa56faa42526ace49d9) update template-oss (@lukekarrys)
+
+</details>
+
 ## [2016.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/v2016.0.0-pre...v2016.0.1-pre) (2023-12-04)
 
 ### Bug Fixes
