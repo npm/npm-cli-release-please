@@ -1,5 +1,15 @@
 # Changelog
 
+## [2016.0.0-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2016.0.0-pre...pkg4-v2016.0.0-pre.1) (2023-12-04)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`8918852`](https://github.com/npm/npm-cli-release-please/commit/89188529a63c75fc863383008cddcfbb75d69097) update all packages (@lukekarrys)
+
 ## [2016.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg4-v2015.0.1-pre...pkg4-v2016.0.0-pre) (2023-12-04)
 
 ### ⚠️ BREAKING CHANGES

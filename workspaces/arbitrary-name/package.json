@@ -1,6 +1,6 @@
 {
   "name": "pkg5",
-  "version": "2016.0.0-pre",
+  "version": "2016.0.0-pre.1",
   "description": "",
   "main": "index.js",
   "scripts": {
