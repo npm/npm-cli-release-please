@@ -60,6 +60,5 @@
   "last-release-sha": "2c83cdbb75b09d8d74e98bb65812aa48e789f811",
   "release-search-depth": 7,
   "commit-search-depth": 1,
-  "sequential-calls": true,
-  "prerelease": true
+  "sequential-calls": true
 }
