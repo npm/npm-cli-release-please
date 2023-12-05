@@ -1,5 +1,15 @@
 # Changelog
 
+## [2018.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2017.0.2-pre...pkg3-v2018.0.0-pre) (2023-12-05)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`ba3537a`](https://github.com/npm/npm-cli-release-please/commit/ba3537aac714f5e8c69afc215af5cfcb128433fb) update all packages (@lukekarrys)
+
 ## [2017.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2017.0.1-pre...pkg3-v2017.0.2-pre) (2023-12-05)
 
 ### Bug Fixes

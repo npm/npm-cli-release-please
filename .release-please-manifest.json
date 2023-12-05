@@ -1,9 +1,9 @@
 {
-  ".": "2017.0.3-pre",
-  "pkg1": "2017.0.2-pre",
-  "pkg2": "2017.0.2-pre",
-  "pkg3": "2017.0.2-pre",
-  "workspaces/arbitrary-name": "2016.0.1-pre.1",
-  "workspaces/not-the-name": "2016.0.1-pre.1",
-  "workspaces/pkg6": "2016.0.1-pre.1"
+  ".": "2018.0.0-pre",
+  "pkg1": "2018.0.0-pre",
+  "pkg2": "2018.0.0-pre",
+  "pkg3": "2018.0.0-pre",
+  "workspaces/arbitrary-name": "2017.0.0-pre.1",
+  "workspaces/not-the-name": "2017.0.0-pre.1",
+  "workspaces/pkg6": "2017.0.0-pre.1"
 }
