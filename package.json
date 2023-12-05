@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "2017.0.1-pre",
+  "version": "2017.0.2-pre",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -54,8 +54,8 @@
   "dependencies": {
     "@npmcli/pkg6": "^2016.0.1-pre.1",
     "abbrev": "^2.0.0",
-    "pkg1": "^2017.0.1-pre",
-    "pkg2": "^2017.0.1-pre",
+    "pkg1": "^2017.0.2-pre",
+    "pkg2": "^2017.0.2-pre",
     "pkg4": "^2016.0.1-pre.1",
     "pkg5": "^2016.0.1-pre.1"
   },

@@ -1,5 +1,16 @@
 # Changelog
 
+## [2017.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.1-pre...v2017.0.2-pre) (2023-12-05)
+
+### Bug Fixes
+
+* [`c9eaf9c`](https://github.com/npm/npm-cli-release-please/commit/c9eaf9c0e8943bef862e7695a9e0c7d083731ee4) update pkg3 (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2017.0.2-pre): `pkg1@2017.0.2-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2017.0.2-pre): `pkg2@2017.0.2-pre`
+
 ## [2017.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.0-pre...v2017.0.1-pre) (2023-12-05)
 
 ### Bug Fixes
