@@ -1,5 +1,11 @@
 # Changelog
 
+## [2017.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2017.0.1-pre...pkg3-v2017.0.2-pre) (2023-12-05)
+
+### Bug Fixes
+
+* [`c9eaf9c`](https://github.com/npm/npm-cli-release-please/commit/c9eaf9c0e8943bef862e7695a9e0c7d083731ee4) update pkg3 (@lukekarrys)
+
 ## [2017.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg3-v2017.0.0-pre...pkg3-v2017.0.1-pre) (2023-12-05)
 
 ### Bug Fixes
