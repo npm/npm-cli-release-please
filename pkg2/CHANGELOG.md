@@ -24,6 +24,41 @@
   * dependencies
     * @npmcli/pkg3 bumped from ^1014.0.0 to ^1015.0.0-pre
 
+## [2017.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2017.0.0-pre...pkg2-v2017.0.1-pre) (2023-12-05)
+
+### Bug Fixes
+
+* [`f4e5851`](https://github.com/npm/npm-cli-release-please/commit/f4e5851372f77cb41f5395e928dd6003f0c5496b) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2017.0.1-pre): `@npmcli/pkg3@2017.0.1-pre`
+## [2017.0.1-pre](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2017.0.0-pre...pkg2-v2017.0.1-pre) (2023-12-05)
+
+### Bug Fixes
+
+* [`f4e5851`](https://github.com/npm/npm-cli-release-please/commit/f4e5851372f77cb41f5395e928dd6003f0c5496b) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v2017.0.1-pre): `@npmcli/pkg3@2017.0.1-pre`
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`9b16fc8`](https://github.com/npm/npm-cli-release-please/commit/9b16fc8e90c2cf9e61fe4ab9ecefe9a42be62ec6) update template-oss (@lukekarrys)
+
+</details>
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`9b16fc8`](https://github.com/npm/npm-cli-release-please/commit/9b16fc8e90c2cf9e61fe4ab9ecefe9a42be62ec6) update template-oss (@lukekarrys)
+
+</details>
+
 ## [2017.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/pkg2-v2016.0.1-pre...pkg2-v2017.0.0-pre) (2023-12-04)
 
 ### ⚠️ BREAKING CHANGES
