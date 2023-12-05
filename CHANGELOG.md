@@ -1,5 +1,15 @@
 # Changelog
 
+## [2017.0.3-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.2-pre...v2017.0.3-pre) (2023-12-05)
+
+### Chores
+
+<details><summary>Commits</summary>
+
+* [`f936a4b`](https://github.com/npm/npm-cli-release-please/commit/f936a4be5f739048163b8346568f8bc49b7b53f9) this is a chore (@lukekarrys)
+
+</details>
+
 ## [2017.0.2-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.1-pre...v2017.0.2-pre) (2023-12-05)
 
 ### Bug Fixes
