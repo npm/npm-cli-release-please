@@ -1,5 +1,23 @@
 # Changelog
 
+## [2018.0.0-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.3-pre...v2018.0.0-pre) (2023-12-05)
+
+### ⚠️ BREAKING CHANGES
+
+* update all packages
+
+### Features
+
+* [`ba3537a`](https://github.com/npm/npm-cli-release-please/commit/ba3537aac714f5e8c69afc215af5cfcb128433fb) update all packages (@lukekarrys)
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v2017.0.0-pre.1): `@npmcli/pkg6@2017.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v2018.0.0-pre): `pkg1@2018.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v2018.0.0-pre): `pkg2@2018.0.0-pre`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v2017.0.0-pre.1): `pkg4@2017.0.0-pre.1`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v2017.0.0-pre.1): `pkg5@2017.0.0-pre.1`
+
 ## [2017.0.3-pre](https://github.com/npm/npm-cli-release-please/compare/v2017.0.2-pre...v2017.0.3-pre) (2023-12-05)
 
 ### Chores
