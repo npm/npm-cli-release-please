@@ -59,7 +59,7 @@
     "pkg4": "^3.0.3",
     "pkg5": "^3.0.3"
   },
-  "date": "1",
+  "date": "2",
   "tap": {
     "test-ignore": "^(pkg1|pkg2|pkg3|workspaces)/",
     "nyc-arg": [
