@@ -23,7 +23,7 @@
     {
       "type": "chore",
       "section": "Chores",
-      "hidden": false
+      "hidden": true
     }
   ],
   "packages": {

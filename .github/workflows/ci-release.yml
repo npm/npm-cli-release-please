@@ -28,7 +28,7 @@ jobs:
         shell: bash
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ inputs.ref }}
       - name: Setup Git User
@@ -44,11 +44,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ inputs.check-sha }}
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         id: node
         with:
-          node-version: 20.x
-          check-latest: contains('20.x', '.x')
+          node-version: 22.x
+          check-latest: contains('22.x', '.x')
           cache: npm
       - name: Install Latest npm
         uses: ./.github/actions/install-latest-npm
@@ -79,14 +79,14 @@ jobs:
             os: ubuntu-latest
             shell: bash
         node-version:
-          - 20.x
+          - 22.x
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ inputs.ref }}
       - name: Setup Git User
@@ -102,7 +102,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ inputs.check-sha }}
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         id: node
         with:
           node-version: ${{ matrix.node-version }}
