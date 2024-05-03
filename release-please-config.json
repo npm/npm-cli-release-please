@@ -50,6 +50,6 @@
   "group-pull-request-title-pattern": "chore: release ${version}",
   "pull-request-title-pattern": "chore: release${component} ${version}",
   "prerelease-type": "pre",
-  "prerelease": true,
+  "prerelease": false,
   "last-release-sha": "01ca77ea45e1a175d889abb047bc9c6d17606629"
 }
