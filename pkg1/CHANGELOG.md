@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.0.5](https://github.com/npm/npm-cli-release-please/compare/pkg1-v6.0.4...pkg1-v6.0.5) (2024-08-26)
+### Bug Fixes
+* touch pkg1 [`7b11a09`](https://github.com/npm/npm-cli-release-please/commit/7b11a0974193340810bf6feea0ed4d8b060e1097) [#245](https://github.com/npm/npm-cli-release-please/pull/245) (@lukekarrys)
+### Chores
+* update template-oss [`e93ce0c`](https://github.com/npm/npm-cli-release-please/commit/e93ce0ce38bb8e628c6ea5de0087d62664121a24) (@lukekarrys)
+* update template-oss [`540f354`](https://github.com/npm/npm-cli-release-please/commit/540f354cdcd1f9229a7038148254ded028d991a6) (@lukekarrys)
+* update template-oss [`8bdee7d`](https://github.com/npm/npm-cli-release-please/commit/8bdee7d531d9475c63771399e62de2c983e9cf4f) (@lukekarrys)
+* update template-oss [`b020bd0`](https://github.com/npm/npm-cli-release-please/commit/b020bd0b791a2f20d2b6e23e5dc5ad2a73ebc207) (@lukekarrys)
+
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.0.5): `pkg2@5.0.5`
+
 ## [6.0.4](https://github.com/npm/npm-cli-release-please/compare/pkg1-v6.0.3...pkg1-v6.0.4) (2023-11-19)
 
 ### Bug Fixes
