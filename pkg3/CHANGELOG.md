@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.0.4-pre.1](https://github.com/npm/npm-cli-release-please/compare/pkg3-v4.0.4-pre.0...pkg3-v4.0.4-pre.1) (2024-11-22)
+
+### Bug Fixes
+
+* [`46b4f5f`](https://github.com/npm/npm-cli-release-please/commit/46b4f5ff6a87b87caa8d38b729bf29ecb7de32e4) pkg 3 update (@lukekarrys)
+
+### Chores
+
+* [`0541bae`](https://github.com/npm/npm-cli-release-please/commit/0541baeb0784fb9cc7e87d5d9cf3b07dfbd113f2) [#281](https://github.com/npm/npm-cli-release-please/pull/281) release 5.0.0-pre.0 (#281) (@wraithgar)
+* [`e93ce0c`](https://github.com/npm/npm-cli-release-please/commit/e93ce0ce38bb8e628c6ea5de0087d62664121a24) update template-oss (@lukekarrys)
+* [`540f354`](https://github.com/npm/npm-cli-release-please/commit/540f354cdcd1f9229a7038148254ded028d991a6) update template-oss (@lukekarrys)
+* [`8bdee7d`](https://github.com/npm/npm-cli-release-please/commit/8bdee7d531d9475c63771399e62de2c983e9cf4f) update template-oss (@lukekarrys)
+* [`b020bd0`](https://github.com/npm/npm-cli-release-please/commit/b020bd0b791a2f20d2b6e23e5dc5ad2a73ebc207) update template-oss (@lukekarrys)
+
 ## [4.0.4-pre.0](https://github.com/npm/npm-cli-release-please/compare/pkg3-v4.0.3...pkg3-v4.0.4-pre.0) (2024-11-22)
 
 ### Bug Fixes
