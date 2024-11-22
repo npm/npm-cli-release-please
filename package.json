@@ -2,7 +2,7 @@
   "name": "npm-cli-release-please",
   "version": "4.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "lib",
   "scripts": {
     "test": "tap",
     "lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
