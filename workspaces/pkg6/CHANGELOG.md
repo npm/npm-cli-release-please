@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg6-v3.0.3...pkg6-v3.1.0) (2024-12-11)
+### Features
+* [`46805ea`](https://github.com/npm/npm-cli-release-please/commit/46805ea6c5d60ec78a358231b0ba60ec50a909fa) [#286](https://github.com/npm/npm-cli-release-please/pull/286) trigger release process (@wraithgar)
+* [`e245b20`](https://github.com/npm/npm-cli-release-please/commit/e245b20f04cf3e058008063f3844b0554e4de656) [#285](https://github.com/npm/npm-cli-release-please/pull/285) trigger release process (#285) (@wraithgar)
+### Chores
+* [`609fa2a`](https://github.com/npm/npm-cli-release-please/commit/609fa2afa4f606df6ac3ed3fed1d73cf8c0adc5c) bump @npmcli/template-oss to 4.23.5 (@wraithgar)
+* [`e93ce0c`](https://github.com/npm/npm-cli-release-please/commit/e93ce0ce38bb8e628c6ea5de0087d62664121a24) update template-oss (@lukekarrys)
+* [`540f354`](https://github.com/npm/npm-cli-release-please/commit/540f354cdcd1f9229a7038148254ded028d991a6) update template-oss (@lukekarrys)
+* [`8bdee7d`](https://github.com/npm/npm-cli-release-please/commit/8bdee7d531d9475c63771399e62de2c983e9cf4f) update template-oss (@lukekarrys)
+* [`b020bd0`](https://github.com/npm/npm-cli-release-please/commit/b020bd0b791a2f20d2b6e23e5dc5ad2a73ebc207) update template-oss (@lukekarrys)
+
 ## [3.0.3](https://github.com/npm/npm-cli-release-please/compare/pkg6-v3.0.2...pkg6-v3.0.3) (2023-11-19)
 
 ### Bug Fixes

@@ -1,5 +1,24 @@
 # Changelog
 
+## [5.1.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.5-pre.0...pkg2-v5.1.0) (2024-12-11)
+### Features
+* [`46805ea`](https://github.com/npm/npm-cli-release-please/commit/46805ea6c5d60ec78a358231b0ba60ec50a909fa) [#286](https://github.com/npm/npm-cli-release-please/pull/286) trigger release process (@wraithgar)
+* [`e245b20`](https://github.com/npm/npm-cli-release-please/commit/e245b20f04cf3e058008063f3844b0554e4de656) [#285](https://github.com/npm/npm-cli-release-please/pull/285) trigger release process (#285) (@wraithgar)
+### Bug Fixes
+* [`527dc8b`](https://github.com/npm/npm-cli-release-please/commit/527dc8b847cd8521deee605057f028980dd3545b) update pk2 only (@lukekarrys)
+### Chores
+* [`609fa2a`](https://github.com/npm/npm-cli-release-please/commit/609fa2afa4f606df6ac3ed3fed1d73cf8c0adc5c) bump @npmcli/template-oss to 4.23.5 (@wraithgar)
+* [`0541bae`](https://github.com/npm/npm-cli-release-please/commit/0541baeb0784fb9cc7e87d5d9cf3b07dfbd113f2) [#281](https://github.com/npm/npm-cli-release-please/pull/281) release 5.0.0-pre.0 (#281) (@wraithgar)
+* [`e93ce0c`](https://github.com/npm/npm-cli-release-please/commit/e93ce0ce38bb8e628c6ea5de0087d62664121a24) update template-oss (@lukekarrys)
+* [`540f354`](https://github.com/npm/npm-cli-release-please/commit/540f354cdcd1f9229a7038148254ded028d991a6) update template-oss (@lukekarrys)
+* [`8bdee7d`](https://github.com/npm/npm-cli-release-please/commit/8bdee7d531d9475c63771399e62de2c983e9cf4f) update template-oss (@lukekarrys)
+* [`b020bd0`](https://github.com/npm/npm-cli-release-please/commit/b020bd0b791a2f20d2b6e23e5dc5ad2a73ebc207) update template-oss (@lukekarrys)
+
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg3-v4.1.0): `@npmcli/pkg3@4.1.0`
+
 ## [5.0.5-pre.0](https://github.com/npm/npm-cli-release-please/compare/pkg2-v5.0.4...pkg2-v5.0.5-pre.0) (2024-11-22)
 
 ### Bug Fixes

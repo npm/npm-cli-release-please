@@ -1,5 +1,39 @@
 # Changelog
 
+## [5.0.0](https://github.com/npm/npm-cli-release-please/compare/v5.0.0-pre.0...v5.0.0) (2024-12-11)
+### ⚠️ BREAKING CHANGES
+* this has a main that you can require now
+### Features
+* [`8c2d387`](https://github.com/npm/npm-cli-release-please/commit/8c2d387dbb6954786b688a88142f915585d36926) [#280](https://github.com/npm/npm-cli-release-please/pull/280) add main declaraion (#280) (@wraithgar)
+* [`f94f978`](https://github.com/npm/npm-cli-release-please/commit/f94f9783b323bdd19f8e0b72ffbae7d32e06c540) [#245](https://github.com/npm/npm-cli-release-please/pull/245) touch root (@lukekarrys)
+### Bug Fixes
+* [`055cbd3`](https://github.com/npm/npm-cli-release-please/commit/055cbd3f3d97d83c8f123213faa7833a7b01b103) no pre (@lukekarrys)
+### Documentation
+* [`b7abf06`](https://github.com/npm/npm-cli-release-please/commit/b7abf06b79cc577786f929287b98de347fe2c019) update readme (@wraithgar)
+### Chores
+* [`6150356`](https://github.com/npm/npm-cli-release-please/commit/6150356a993c1c65af4b3b56536bdb94a675bb2f) [#286](https://github.com/npm/npm-cli-release-please/pull/286) drop prerelease mode (@wraithgar)
+* [`609fa2a`](https://github.com/npm/npm-cli-release-please/commit/609fa2afa4f606df6ac3ed3fed1d73cf8c0adc5c) bump @npmcli/template-oss to 4.23.5 (@wraithgar)
+* [`0541bae`](https://github.com/npm/npm-cli-release-please/commit/0541baeb0784fb9cc7e87d5d9cf3b07dfbd113f2) [#281](https://github.com/npm/npm-cli-release-please/pull/281) release 5.0.0-pre.0 (#281) (@wraithgar)
+* [`c229f86`](https://github.com/npm/npm-cli-release-please/commit/c229f86fa92205482a5065e16ff78e6a1b4954fa) [#277](https://github.com/npm/npm-cli-release-please/pull/277) prerelease with number? (#277) (@wraithgar)
+* [`e93ce0c`](https://github.com/npm/npm-cli-release-please/commit/e93ce0ce38bb8e628c6ea5de0087d62664121a24) update template-oss (@lukekarrys)
+* [`ecdadb0`](https://github.com/npm/npm-cli-release-please/commit/ecdadb012cd91b71f714ce37c199404408a814a3) [#272](https://github.com/npm/npm-cli-release-please/pull/272) deps-dev: bump undici from 5.27.2 to 5.28.4 (#272) (@dependabot[bot])
+* [`540f354`](https://github.com/npm/npm-cli-release-please/commit/540f354cdcd1f9229a7038148254ded028d991a6) update template-oss (@lukekarrys)
+* [`2852114`](https://github.com/npm/npm-cli-release-please/commit/28521145ac4e01cdb484932e8df12637c44be27b) prerelease (@lukekarrys)
+* [`8bdee7d`](https://github.com/npm/npm-cli-release-please/commit/8bdee7d531d9475c63771399e62de2c983e9cf4f) update template-oss (@lukekarrys)
+* [`b020bd0`](https://github.com/npm/npm-cli-release-please/commit/b020bd0b791a2f20d2b6e23e5dc5ad2a73ebc207) update template-oss (@lukekarrys)
+* [`16cc199`](https://github.com/npm/npm-cli-release-please/commit/16cc199e421531623c9c2b0c7fb97d5d485119a9) [#271](https://github.com/npm/npm-cli-release-please/pull/271) deps-dev: bump ip from 2.0.0 to 2.0.1 (#271) (@dependabot[bot])
+* [`9b856b0`](https://github.com/npm/npm-cli-release-please/commit/9b856b00c1570669647abdf8f8def76f50c6a09b) update config (@lukekarrys)
+* [`0687383`](https://github.com/npm/npm-cli-release-please/commit/0687383bce69719d00f668dd4b8d6113083189d5) [#274](https://github.com/npm/npm-cli-release-please/pull/274) postinstall for dependabot template-oss PR (#274) (@lukekarrys)
+
+
+### Dependencies
+
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg6-v3.1.0): `@npmcli/pkg6@3.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg1-v6.1.0): `pkg1@6.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg2-v5.1.0): `pkg2@5.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg4-v3.1.0): `pkg4@3.1.0`
+* [workspace](https://github.com/npm/npm-cli-release-please/releases/tag/pkg5-v3.1.0): `pkg5@3.1.0`
+
 ## [5.0.0-pre.0](https://github.com/npm/npm-cli-release-please/compare/v4.0.4...v5.0.0-pre.0) (2024-11-22)
 
 ### ⚠️ BREAKING CHANGES
