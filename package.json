@@ -1,6 +1,6 @@
 {
   "name": "npm-cli-release-please",
-  "version": "5.0.0-pre.0",
+  "version": "5.0.0",
   "description": "",
   "main": "lib",
   "scripts": {
@@ -53,12 +53,12 @@
     "content": "./scripts/template-oss"
   },
   "dependencies": {
-    "@npmcli/pkg6": "^3.0.3",
+    "@npmcli/pkg6": "^3.1.0",
     "abbrev": "^2.0.0",
-    "pkg1": "^6.0.5-pre.0",
-    "pkg2": "^5.0.5-pre.0",
-    "pkg4": "^3.0.3",
-    "pkg5": "^3.0.3"
+    "pkg1": "^6.1.0",
+    "pkg2": "^5.1.0",
+    "pkg4": "^3.1.0",
+    "pkg5": "^3.1.0"
   },
   "date": "3",
   "tap": {
